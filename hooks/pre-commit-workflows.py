@@ -12,9 +12,9 @@ import re
 import yaml
 
 # Configuration
-BASE_DIR = Path(__file__).parent.parent.parent
-SKILLS_DIR = BASE_DIR / ".agents" / "skills"
-WORKFLOWS_DIR = BASE_DIR / ".agents" / "workflows"
+BASE_DIR = Path(__file__).parent.parent  # .agents directory
+SKILLS_DIR = BASE_DIR / "skills"
+WORKFLOWS_DIR = BASE_DIR / "workflows"
 
 
 class WorkflowValidator:

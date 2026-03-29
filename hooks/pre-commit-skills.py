@@ -12,8 +12,8 @@ import re
 import yaml
 
 # Configuration
-BASE_DIR = Path(__file__).parent.parent.parent
-SKILLS_DIR = BASE_DIR / ".agents" / "skills"
+BASE_DIR = Path(__file__).parent.parent  # .agents directory
+SKILLS_DIR = BASE_DIR / "skills"
 
 # Valid domains for skill names
 VALID_DOMAINS = {
