@@ -19,16 +19,16 @@ SKILLS_DIR = BASE_DIR / "skills"
 # Valid domains for skill names
 VALID_DOMAINS = {
     'advanced', 'animation', 'audio', 'ai', 'analytics', 'anomaly', 'api',
-    'architecture', 'asset', 'automated', 'behavior', 'blueprint', 'build', 'ci-cd', 'cinemachine',
-    'clustering', 'collision', 'component', 'compute', 'computer-vision', 'console', 'constraint',
-    'configuration', 'controller', 'cross-engine', 'cross-validation', 'csharp', 'custom',
+    'architecture', 'asset', 'automated', 'behavior', 'blueprint', 'build', 'ci', 'ci-cd', 'cinemachine',
+    'clustering', 'collision', 'compatibility', 'component', 'compute', 'computer', 'computer-vision', 'console', 'constraint',
+    'configuration', 'controller', 'cross', 'cross-engine', 'cross-validation', 'csharp', 'custom',
     'data', 'debug', 'decision', 'deployment', 'development', 'dialogue', 'distribution',
-    'dynamic', 'edge', 'editor', 'ensemble', 'engine', 'feature', 'federated', 'fine-tuning',
+    'dynamic', 'edge', 'editor', 'ensemble', 'engine', 'feature', 'federated', 'fine', 'fine-tuning',
     'garbage-collection', 'gesture', 'godot', 'graphics', 'gpu', 'hierarchy', 'hyperparameter',
     'il', 'inference', 'injection', 'input', 'inspector', 'interpolation', 'ik', 'joint',
-    'language', 'layer', 'level', 'lighting', 'localization', 'machine-learning', 'material',
+    'language', 'layer', 'level', 'lighting', 'localization', 'machine', 'machine-learning', 'material',
     'math', 'memory', 'mesh', 'metrics', 'ml', 'mobile', 'model', 'module', 'motion', 'motor',
-    'movement', 'multiplayer', 'navmesh', 'navigation', 'neural-network', 'nlp', 'node',
+    'movement', 'multiplayer', 'navmesh', 'navigation', 'neural', 'neural-network', 'nlp', 'node',
     'networking', 'normalization', 'object', 'optimization', 'particle', 'pathfinding',
     'performance', 'persistence', 'physics', 'pipeline', 'platform', 'plugin', 'pooling',
     'prediction', 'privacy', 'procedural', 'profiler', 'profiling', 'projection', 'property',
@@ -148,7 +148,7 @@ class SkillValidator:
 
     def _validate_skill_name(self, name: str) -> bool:
         """Validate skill name follows {domain}-{specialty} pattern."""
-        if not re.match(r'^[a-z]+-[a-z\-]+$', name):
+        if not re.match(r'^[a-z0-9]+-[a-zA-Z0-9\-]+$', name):
             return False
 
         parts = name.split('-', 1)
@@ -157,7 +157,7 @@ class SkillValidator:
 
         domain, specialty = parts
 
-        # Check if domain is valid
+        # Check if domain is valid (allows hyphenated domains split on first hyphen)
         if domain not in VALID_DOMAINS:
             return False
 
