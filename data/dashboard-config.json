@@ -1,0 +1,71 @@
+{
+  "title": ".agents Analytics Dashboard",
+  "refreshInterval": 5000,
+  "metrics": [
+    {
+      "id": "skills_discovered_24h",
+      "name": "Skills Discovered (24h)",
+      "type": "counter",
+      "event": "skill_discovered",
+      "timeWindow": "24h",
+      "target": ">100"
+    },
+    {
+      "id": "adoption_rate",
+      "name": "Adoption Rate",
+      "type": "percentage",
+      "formula": "skill_adopted / skill_discovered",
+      "timeWindow": "7d",
+      "target": ">30%"
+    },
+    {
+      "id": "workflow_completion_rate",
+      "name": "Workflow Completion",
+      "type": "percentage",
+      "formula": "workflow_completed / workflow_created",
+      "timeWindow": "7d",
+      "target": ">80%"
+    },
+    {
+      "id": "validation_pass_rate",
+      "name": "Validation Pass Rate",
+      "type": "percentage",
+      "formula": "gatesPassed / (gatesPassed + gatesFailed)",
+      "timeWindow": "24h",
+      "target": ">99%"
+    },
+    {
+      "id": "avg_workflow_duration",
+      "name": "Avg Workflow Duration",
+      "type": "duration",
+      "metric": "workflow_completed.duration",
+      "aggregation": "average",
+      "timeWindow": "7d",
+      "target": "<5 minutes"
+    },
+    {
+      "id": "error_rate",
+      "name": "Error Rate",
+      "type": "percentage",
+      "event": "error_reported",
+      "timeWindow": "24h",
+      "target": "<5%"
+    },
+    {
+      "id": "top_skills_24h",
+      "name": "Top Skills (24h Discoveries)",
+      "type": "leaderboard",
+      "event": "skill_discovered",
+      "groupBy": "skillId",
+      "limit": 10
+    },
+    {
+      "id": "skill_sharing_network",
+      "name": "Sharing Network",
+      "type": "graph",
+      "event": "skill_shared",
+      "nodes": "userId",
+      "edges": "skillId"
+    }
+  ]
+}

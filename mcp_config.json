@@ -1,0 +1,32 @@
+{
+  "version": "7.0.3",
+  "mcpServers": {
+    "mcp-for-unity": {
+      "type": "http",
+      "url": "http://localhost:8080",
+      "description": "MCP-FOR-UNITY HTTP Server (started automatically by Unity Editor)",
+      "env": {
+        "UNITY_PROJECT_PATH": "${workspaceFolder}"
+      }
+    }
+  },
+  "optimization": {
+    "description": "Token optimization for LLM context efficiency",
+    "compression": {
+      "enabled": true,
+      "skill_compression": true,
+      "response_truncation": true,
+      "schema_caching": true
+    },
+    "truncation": {
+      "max_output_chars": 2000,
+      "max_array_items": 10,
+      "max_code_lines": 20,
+      "max_nested_depth": 3,
+      "collapse_indicator": "→",
+      "cache_ttl_seconds": 3600
+    },
+    "rules_file": "docs/TRUNCATION_RULES.md",
+    "guide_file": "docs/TOKEN_OPTIMIZATION.md"
+  }
+}

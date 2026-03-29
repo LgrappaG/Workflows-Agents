@@ -1,0 +1,63 @@
+name: Improvement Suite
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  schedule:
+    - cron: '0 3 * * *'
+
+jobs:
+  quality-and-growth:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python deps
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Fast validation
+        run: |
+          python hooks/pre-commit-skills.py
+          python hooks/pre-commit-workflows.py
+
+      - name: Skill version index
+        run: node scripts/skill-version-manager.js generate
+
+      - name: Enrichment drift check
+        run: node scripts/enrich-skills.js
+
+      - name: Benchmark suite
+        run: node scripts/benchmark-suite.js
+
+      - name: Analytics dashboard
+        run: node scripts/analytics-dashboard.js
+
+      - name: Marketplace index
+        run: node scripts/marketplace-index.js
+
+      - name: Upload reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: agents-improvement-reports
+          path: |
+            reports/analytics
+            reports/benchmarks
+            data/skill-versions.json
+            data/compatibility-matrix.json
+            marketplace/index.json

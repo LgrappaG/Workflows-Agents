@@ -1,0 +1,3573 @@
+{
+  "timestamp": "2026-03-29T21:03:47.176Z",
+  "totalSkills": 594,
+  "usedSkills": 0,
+  "unusedSkills": 594,
+  "totalWorkflows": 64,
+  "skillUsage": [
+    {
+      "skill": "advanced-architecture-patterns",
+      "usageCount": 0,
+      "category": "advanced",
+      "workflows": []
+    },
+    {
+      "skill": "advanced-custom-attributes",
+      "usageCount": 0,
+      "category": "advanced",
+      "workflows": []
+    },
+    {
+      "skill": "advanced-il-emit",
+      "usageCount": 0,
+      "category": "advanced",
+      "workflows": []
+    },
+    {
+      "skill": "advanced-memory-profiling",
+      "usageCount": 0,
+      "category": "advanced",
+      "workflows": []
+    },
+    {
+      "skill": "advanced-meta-programming",
+      "usageCount": 0,
+      "category": "advanced",
+      "workflows": []
+    },
+    {
+      "skill": "advanced-performance-tuning",
+      "usageCount": 0,
+      "category": "advanced",
+      "workflows": []
+    },
+    {
+      "skill": "advanced-reflection-caching",
+      "usageCount": 0,
+      "category": "advanced",
+      "workflows": []
+    },
+    {
+      "skill": "advanced-runtime-compilation",
+      "usageCount": 0,
+      "category": "advanced",
+      "workflows": []
+    },
+    {
+      "skill": "advanced-scalability-design",
+      "usageCount": 0,
+      "category": "advanced",
+      "workflows": []
+    },
+    {
+      "skill": "advanced-type-discovery",
+      "usageCount": 0,
+      "category": "advanced",
+      "workflows": []
+    },
+    {
+      "skill": "ai-behavior-switching",
+      "usageCount": 0,
+      "category": "ai",
+      "workflows": []
+    },
+    {
+      "skill": "ai-communication-network",
+      "usageCount": 0,
+      "category": "ai",
+      "workflows": []
+    },
+    {
+      "skill": "ai-crowd-simulation",
+      "usageCount": 0,
+      "category": "ai",
+      "workflows": []
+    },
+    {
+      "skill": "ai-debugging-tools",
+      "usageCount": 0,
+      "category": "ai",
+      "workflows": []
+    },
+    {
+      "skill": "ai-environmental-awareness",
+      "usageCount": 0,
+      "category": "ai",
+      "workflows": []
+    },
+    {
+      "skill": "ai-formation-control",
+      "usageCount": 0,
+      "category": "ai",
+      "workflows": []
+    },
+    {
+      "skill": "ai-learning-adaptation",
+      "usageCount": 0,
+      "category": "ai",
+      "workflows": []
+    },
+    {
+      "skill": "ai-llm-runtime-integration",
+      "usageCount": 0,
+      "category": "ai",
+      "workflows": []
+    },
+    {
+      "skill": "ai-perception-system",
+      "usageCount": 0,
+      "category": "ai",
+      "workflows": []
+    },
+    {
+      "skill": "ai-squad-tactics",
+      "usageCount": 0,
+      "category": "ai",
+      "workflows": []
+    },
+    {
+      "skill": "ai-threat-assessment",
+      "usageCount": 0,
+      "category": "ai",
+      "workflows": []
+    },
+    {
+      "skill": "analytics-event-tracking",
+      "usageCount": 0,
+      "category": "analytics",
+      "workflows": []
+    },
+    {
+      "skill": "analytics-funnel-attribution",
+      "usageCount": 0,
+      "category": "analytics",
+      "workflows": []
+    },
+    {
+      "skill": "analytics-integration",
+      "usageCount": 0,
+      "category": "analytics",
+      "workflows": []
+    },
+    {
+      "skill": "analytics-privacy-anonymization",
+      "usageCount": 0,
+      "category": "analytics",
+      "workflows": []
+    },
+    {
+      "skill": "analytics-user-segmentation",
+      "usageCount": 0,
+      "category": "analytics",
+      "workflows": []
+    },
+    {
+      "skill": "animation-baking-setup",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-blend-trees",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-blending",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-bone-mapping",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-clip-management",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-constraint-rigging",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-curve-editing",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-curves",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-debug-visualization",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-editor-tools",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-events",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-footik-sync",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-frame-stepping",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-humanoid-setup",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-ik-setup",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-import-settings",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-layering",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-memory-optimization",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-mirror-setup",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-mocap-setup",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-motion-capture",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-nla-editor",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-optimization",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-parameter-binding",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-performance-profiling",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-playback-control",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-preview",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-preview-window",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-procedural-generation",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-retargeting",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-rigging-tools",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-runtime-switching",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-state-machine",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-streaming",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "animation-timing-sync",
+      "usageCount": 0,
+      "category": "animation",
+      "workflows": []
+    },
+    {
+      "skill": "anomaly-detection",
+      "usageCount": 0,
+      "category": "anomaly",
+      "workflows": []
+    },
+    {
+      "skill": "api-design-patterns",
+      "usageCount": 0,
+      "category": "api",
+      "workflows": []
+    },
+    {
+      "skill": "architecture-event-bus-pattern",
+      "usageCount": 0,
+      "category": "architecture",
+      "workflows": []
+    },
+    {
+      "skill": "architecture-plugin-system",
+      "usageCount": 0,
+      "category": "architecture",
+      "workflows": []
+    },
+    {
+      "skill": "architecture-service-locator",
+      "usageCount": 0,
+      "category": "architecture",
+      "workflows": []
+    },
+    {
+      "skill": "asset-management-system",
+      "usageCount": 0,
+      "category": "asset",
+      "workflows": []
+    },
+    {
+      "skill": "asset-pipeline-conversion",
+      "usageCount": 0,
+      "category": "asset",
+      "workflows": []
+    },
+    {
+      "skill": "audio-adaptive-bitrate",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-ambient-soundscapes",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-ambisonics-support",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-attenuation-curves",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-binaural-rendering",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-compression-codecs",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-dialogue-system",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-ducking-sidechains",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-dynamic-music",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-effects-compression",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-effects-distortion",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-effects-eq",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-effects-pitch-shift",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-effects-reverb",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-effects-time-stretch",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-environmental-acoustics",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-fmod-integration",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-footstep-generation",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-frequency-analysis",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-headphone-optimization",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-impact-sounds",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-mixer-setup",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-multi-output-routing",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-object-pooling",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-parameter-automation",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-performance-profiling",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-platform-specific-codecs",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-prioritization-system",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-procedural-generation",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-spatial-3d",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-streaming-audio",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "audio-voice-chat",
+      "usageCount": 0,
+      "category": "audio",
+      "workflows": []
+    },
+    {
+      "skill": "automated-testing-framework",
+      "usageCount": 0,
+      "category": "automated",
+      "workflows": []
+    },
+    {
+      "skill": "behavior-decision-making",
+      "usageCount": 0,
+      "category": "behavior",
+      "workflows": []
+    },
+    {
+      "skill": "behavior-formation-control",
+      "usageCount": 0,
+      "category": "behavior",
+      "workflows": []
+    },
+    {
+      "skill": "behavior-goal-planning",
+      "usageCount": 0,
+      "category": "behavior",
+      "workflows": []
+    },
+    {
+      "skill": "behavior-group-tactics",
+      "usageCount": 0,
+      "category": "behavior",
+      "workflows": []
+    },
+    {
+      "skill": "behavior-memory-management",
+      "usageCount": 0,
+      "category": "behavior",
+      "workflows": []
+    },
+    {
+      "skill": "behavior-perception-system",
+      "usageCount": 0,
+      "category": "behavior",
+      "workflows": []
+    },
+    {
+      "skill": "behavior-state-machines",
+      "usageCount": 0,
+      "category": "behavior",
+      "workflows": []
+    },
+    {
+      "skill": "behavior-tree-basics",
+      "usageCount": 0,
+      "category": "behavior",
+      "workflows": []
+    },
+    {
+      "skill": "behavior-tree-composites",
+      "usageCount": 0,
+      "category": "behavior",
+      "workflows": []
+    },
+    {
+      "skill": "behavior-tree-decorators",
+      "usageCount": 0,
+      "category": "behavior",
+      "workflows": []
+    },
+    {
+      "skill": "benchmark-regression-gates",
+      "usageCount": 0,
+      "category": "benchmark",
+      "workflows": []
+    },
+    {
+      "skill": "build-addressable-system",
+      "usageCount": 0,
+      "category": "build",
+      "workflows": []
+    },
+    {
+      "skill": "build-bundle-optimization",
+      "usageCount": 0,
+      "category": "build",
+      "workflows": []
+    },
+    {
+      "skill": "build-caching-strategy",
+      "usageCount": 0,
+      "category": "build",
+      "workflows": []
+    },
+    {
+      "skill": "build-incremental-compilation",
+      "usageCount": 0,
+      "category": "build",
+      "workflows": []
+    },
+    {
+      "skill": "build-parallel-processing",
+      "usageCount": 0,
+      "category": "build",
+      "workflows": []
+    },
+    {
+      "skill": "build-shader-stripping",
+      "usageCount": 0,
+      "category": "build",
+      "workflows": []
+    },
+    {
+      "skill": "build-size-analysis",
+      "usageCount": 0,
+      "category": "build",
+      "workflows": []
+    },
+    {
+      "skill": "build-system-optimization",
+      "usageCount": 0,
+      "category": "build",
+      "workflows": []
+    },
+    {
+      "skill": "ci-cd-pipeline-setup",
+      "usageCount": 0,
+      "category": "ci",
+      "workflows": []
+    },
+    {
+      "skill": "cinemachine-aim-assist",
+      "usageCount": 0,
+      "category": "cinemachine",
+      "workflows": []
+    },
+    {
+      "skill": "cinemachine-blending",
+      "usageCount": 0,
+      "category": "cinemachine",
+      "workflows": []
+    },
+    {
+      "skill": "cinemachine-collision-response",
+      "usageCount": 0,
+      "category": "cinemachine",
+      "workflows": []
+    },
+    {
+      "skill": "cinemachine-extensions",
+      "usageCount": 0,
+      "category": "cinemachine",
+      "workflows": []
+    },
+    {
+      "skill": "cinemachine-first-person",
+      "usageCount": 0,
+      "category": "cinemachine",
+      "workflows": []
+    },
+    {
+      "skill": "cinemachine-follow-target",
+      "usageCount": 0,
+      "category": "cinemachine",
+      "workflows": []
+    },
+    {
+      "skill": "cinemachine-framing",
+      "usageCount": 0,
+      "category": "cinemachine",
+      "workflows": []
+    },
+    {
+      "skill": "cinemachine-impulse-effects",
+      "usageCount": 0,
+      "category": "cinemachine",
+      "workflows": []
+    },
+    {
+      "skill": "cinemachine-orbits",
+      "usageCount": 0,
+      "category": "cinemachine",
+      "workflows": []
+    },
+    {
+      "skill": "cinemachine-top-down",
+      "usageCount": 0,
+      "category": "cinemachine",
+      "workflows": []
+    },
+    {
+      "skill": "cinemachine-transitions",
+      "usageCount": 0,
+      "category": "cinemachine",
+      "workflows": []
+    },
+    {
+      "skill": "cinemachine-virtual-camera",
+      "usageCount": 0,
+      "category": "cinemachine",
+      "workflows": []
+    },
+    {
+      "skill": "clustering-systems",
+      "usageCount": 0,
+      "category": "clustering",
+      "workflows": []
+    },
+    {
+      "skill": "community-marketplace-governance",
+      "usageCount": 0,
+      "category": "community",
+      "workflows": []
+    },
+    {
+      "skill": "compatibility-testing",
+      "usageCount": 0,
+      "category": "compatibility",
+      "workflows": []
+    },
+    {
+      "skill": "compliance-audit-logging",
+      "usageCount": 0,
+      "category": "compliance",
+      "workflows": []
+    },
+    {
+      "skill": "compliance-gdpr-requirements",
+      "usageCount": 0,
+      "category": "compliance",
+      "workflows": []
+    },
+    {
+      "skill": "compliance-regulatory-reporting",
+      "usageCount": 0,
+      "category": "compliance",
+      "workflows": []
+    },
+    {
+      "skill": "computer-vision-basics",
+      "usageCount": 0,
+      "category": "computer",
+      "workflows": []
+    },
+    {
+      "skill": "configuration-environment-variables",
+      "usageCount": 0,
+      "category": "configuration",
+      "workflows": []
+    },
+    {
+      "skill": "configuration-feature-flags",
+      "usageCount": 0,
+      "category": "configuration",
+      "workflows": []
+    },
+    {
+      "skill": "configuration-hot-reload",
+      "usageCount": 0,
+      "category": "configuration",
+      "workflows": []
+    },
+    {
+      "skill": "configuration-platform-override",
+      "usageCount": 0,
+      "category": "configuration",
+      "workflows": []
+    },
+    {
+      "skill": "configuration-profile-management",
+      "usageCount": 0,
+      "category": "configuration",
+      "workflows": []
+    },
+    {
+      "skill": "configuration-remote-config",
+      "usageCount": 0,
+      "category": "configuration",
+      "workflows": []
+    },
+    {
+      "skill": "configuration-schema-validation",
+      "usageCount": 0,
+      "category": "configuration",
+      "workflows": []
+    },
+    {
+      "skill": "configuration-version-control",
+      "usageCount": 0,
+      "category": "configuration",
+      "workflows": []
+    },
+    {
+      "skill": "console-extensions",
+      "usageCount": 0,
+      "category": "console",
+      "workflows": []
+    },
+    {
+      "skill": "controller-button-combos",
+      "usageCount": 0,
+      "category": "controller",
+      "workflows": []
+    },
+    {
+      "skill": "controller-haptic-feedback",
+      "usageCount": 0,
+      "category": "controller",
+      "workflows": []
+    },
+    {
+      "skill": "cross-engine-architecture",
+      "usageCount": 0,
+      "category": "cross",
+      "workflows": []
+    },
+    {
+      "skill": "cross-engine-portability-layer",
+      "usageCount": 0,
+      "category": "cross",
+      "workflows": []
+    },
+    {
+      "skill": "cross-validation",
+      "usageCount": 0,
+      "category": "cross",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-adapter-pattern",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-async-await",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-bridge-pattern",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-builder-pattern",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-chain-of-responsibility",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-command-pattern",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-composite-pattern",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-concurrent-structures",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-coroutines-async",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-decorator-pattern",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-delegates-lambdas",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-dependency-injection",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-event-systems",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-factory-patterns",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-flyweight-pattern",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-generics-patterns",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-interpreter-pattern",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-json-parsing",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-mediator-pattern",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-memento-pattern",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-memory-management",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-observer-pattern",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-performance-optimization",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-pooling-patterns",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-proxy-pattern",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-reflection-systems",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-serialization-advanced",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-singleton-patterns",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-state-pattern",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-strategy-pattern",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-string-optimization",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-template-method",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-thread-safety",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-threading-basics",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "csharp-visitor-pattern",
+      "usageCount": 0,
+      "category": "csharp",
+      "workflows": []
+    },
+    {
+      "skill": "custom-inspector-tools",
+      "usageCount": 0,
+      "category": "custom",
+      "workflows": []
+    },
+    {
+      "skill": "custom-mcp-server",
+      "usageCount": 0,
+      "category": "custom",
+      "workflows": []
+    },
+    {
+      "skill": "custom-scripting-engine",
+      "usageCount": 0,
+      "category": "custom",
+      "workflows": []
+    },
+    {
+      "skill": "custom-workflow-builder",
+      "usageCount": 0,
+      "category": "custom",
+      "workflows": []
+    },
+    {
+      "skill": "data-augmentation",
+      "usageCount": 0,
+      "category": "data",
+      "workflows": []
+    },
+    {
+      "skill": "data-pipeline-setup",
+      "usageCount": 0,
+      "category": "data",
+      "workflows": []
+    },
+    {
+      "skill": "debug-allocation-tracking",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-asset-dependencies",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-asset-loading",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-breakpoints",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-build-diagnostic",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-call-stack",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-conditional-breakpoints",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-console-system",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-custom-tools",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-error-handling",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-frame-debugger",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-gc-profiling",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-heap-snapshot",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-hierarchy-inspection",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-hot-reload",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-log-filtering",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-memory-profiler",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-missing-reference-cleaner",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-network-inspection",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-network-monitoring",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-performance-charts",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-performance-metrics",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-performance-profiler",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-physics-debugger",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-profiler-integration",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-remote-debugging-protocol",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-remote-profiling",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-renderer-debugging",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-runtime-metrics",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-scene-viewer",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-script-debugging",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-shader-debugging",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-stack-traces",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "debug-variable-inspection",
+      "usageCount": 0,
+      "category": "debug",
+      "workflows": []
+    },
+    {
+      "skill": "decision-trees",
+      "usageCount": 0,
+      "category": "decision",
+      "workflows": []
+    },
+    {
+      "skill": "development-asset-hot-swap",
+      "usageCount": 0,
+      "category": "development",
+      "workflows": []
+    },
+    {
+      "skill": "development-hot-reload-code",
+      "usageCount": 0,
+      "category": "development",
+      "workflows": []
+    },
+    {
+      "skill": "development-live-collaboration-sessions",
+      "usageCount": 0,
+      "category": "development",
+      "workflows": []
+    },
+    {
+      "skill": "development-live-edit-scenes",
+      "usageCount": 0,
+      "category": "development",
+      "workflows": []
+    },
+    {
+      "skill": "edge-deployment",
+      "usageCount": 0,
+      "category": "edge",
+      "workflows": []
+    },
+    {
+      "skill": "editor-extension-development",
+      "usageCount": 0,
+      "category": "editor",
+      "workflows": []
+    },
+    {
+      "skill": "engine-agnostic-patterns",
+      "usageCount": 0,
+      "category": "engine",
+      "workflows": []
+    },
+    {
+      "skill": "engine-feature-mapping",
+      "usageCount": 0,
+      "category": "engine",
+      "workflows": []
+    },
+    {
+      "skill": "engine-migration-guide",
+      "usageCount": 0,
+      "category": "engine",
+      "workflows": []
+    },
+    {
+      "skill": "ensemble-methods",
+      "usageCount": 0,
+      "category": "ensemble",
+      "workflows": []
+    },
+    {
+      "skill": "feature-engineering",
+      "usageCount": 0,
+      "category": "feature",
+      "workflows": []
+    },
+    {
+      "skill": "federated-learning",
+      "usageCount": 0,
+      "category": "federated",
+      "workflows": []
+    },
+    {
+      "skill": "fine-tuning-models",
+      "usageCount": 0,
+      "category": "fine",
+      "workflows": []
+    },
+    {
+      "skill": "gesture-multitouch-gestures",
+      "usageCount": 0,
+      "category": "gesture",
+      "workflows": []
+    },
+    {
+      "skill": "gesture-recognition-engine",
+      "usageCount": 0,
+      "category": "gesture",
+      "workflows": []
+    },
+    {
+      "skill": "godot-animation-setup",
+      "usageCount": 0,
+      "category": "godot",
+      "workflows": []
+    },
+    {
+      "skill": "godot-editor-tools",
+      "usageCount": 0,
+      "category": "godot",
+      "workflows": []
+    },
+    {
+      "skill": "godot-gdscript-integration",
+      "usageCount": 0,
+      "category": "godot",
+      "workflows": []
+    },
+    {
+      "skill": "godot-physics-system",
+      "usageCount": 0,
+      "category": "godot",
+      "workflows": []
+    },
+    {
+      "skill": "godot-setup",
+      "usageCount": 0,
+      "category": "godot",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-ambient-occlusion",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-batching-optimization",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-bloom-effect",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-culling-strategies",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-depth-of-field",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-dynamic-lighting",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-frame-debugger",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-geometry-optimization",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-gpu-profiling",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-hdrp-setup",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-light-baking",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-lightmap-setup",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-memory-profiling",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-motion-blur",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-postprocessing",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-probe-placement",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-realtime-gi",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-reflection-probes",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-render-queue",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-screen-space-reflections",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-shader-compiler",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-shadow-optimization",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-sorting-layers",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-temporal-antialiasing",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "graphics-urp-setup",
+      "usageCount": 0,
+      "category": "graphics",
+      "workflows": []
+    },
+    {
+      "skill": "hyperparameter-tuning",
+      "usageCount": 0,
+      "category": "hyperparameter",
+      "workflows": []
+    },
+    {
+      "skill": "inference-optimization",
+      "usageCount": 0,
+      "category": "inference",
+      "workflows": []
+    },
+    {
+      "skill": "injection-automatic-wiring",
+      "usageCount": 0,
+      "category": "injection",
+      "workflows": []
+    },
+    {
+      "skill": "injection-container-configuration",
+      "usageCount": 0,
+      "category": "injection",
+      "workflows": []
+    },
+    {
+      "skill": "injection-context-isolation",
+      "usageCount": 0,
+      "category": "injection",
+      "workflows": []
+    },
+    {
+      "skill": "input-accessibility-alternative-controls",
+      "usageCount": 0,
+      "category": "input",
+      "workflows": []
+    },
+    {
+      "skill": "input-analog-curve-shaping",
+      "usageCount": 0,
+      "category": "input",
+      "workflows": []
+    },
+    {
+      "skill": "input-cross-platform-mapping",
+      "usageCount": 0,
+      "category": "input",
+      "workflows": []
+    },
+    {
+      "skill": "input-deadzone-calibration",
+      "usageCount": 0,
+      "category": "input",
+      "workflows": []
+    },
+    {
+      "skill": "input-rebinding-system",
+      "usageCount": 0,
+      "category": "input",
+      "workflows": []
+    },
+    {
+      "skill": "machine-learning-setup",
+      "usageCount": 0,
+      "category": "machine",
+      "workflows": []
+    },
+    {
+      "skill": "material-advanced-blending",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-ambient-occlusion",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-anisotropic-filtering",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-atlasing-techniques",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-blending-modes",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-compression-settings",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-contact-hardening",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-custom-nodes",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-decal-projection",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-disney-workflow",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-dynamic-properties",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-emission-control",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-format-selection",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-height-mapping",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-layered-materials",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-material-transitions",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-memory-optimization",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-metallic-workflow",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-mipmap-chains",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-normal-mapping",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-parallax-mapping",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-parallax-occlusion",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-pbr-setup",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-performance-profiling",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-physics-interactions",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-procedural-generation",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-refraction",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-roughness-control",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-runtime-modification",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-shader-graphs",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-snow-accumulation",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-sound-reactivity",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-specular-workflow",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-streaming",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-subsurface-scattering",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-texture-channels",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-texture-optimization",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-time-of-day",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-translucency-setup",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-triplanar-mapping",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-uv-mapping",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-variant-switching",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-visual-debugging",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-weather-effects",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "material-wetness-simulation",
+      "usageCount": 0,
+      "category": "material",
+      "workflows": []
+    },
+    {
+      "skill": "metrics-custom-dashboards",
+      "usageCount": 0,
+      "category": "metrics",
+      "workflows": []
+    },
+    {
+      "skill": "metrics-data-aggregation",
+      "usageCount": 0,
+      "category": "metrics",
+      "workflows": []
+    },
+    {
+      "skill": "ml-model-serving-unity",
+      "usageCount": 0,
+      "category": "ml",
+      "workflows": []
+    },
+    {
+      "skill": "model-interpretability",
+      "usageCount": 0,
+      "category": "model",
+      "workflows": []
+    },
+    {
+      "skill": "model-validation",
+      "usageCount": 0,
+      "category": "model",
+      "workflows": []
+    },
+    {
+      "skill": "module-lazy-loading",
+      "usageCount": 0,
+      "category": "module",
+      "workflows": []
+    },
+    {
+      "skill": "module-versioning-management",
+      "usageCount": 0,
+      "category": "module",
+      "workflows": []
+    },
+    {
+      "skill": "navmesh-agent-movement",
+      "usageCount": 0,
+      "category": "navmesh",
+      "workflows": []
+    },
+    {
+      "skill": "navmesh-areas-types",
+      "usageCount": 0,
+      "category": "navmesh",
+      "workflows": []
+    },
+    {
+      "skill": "navmesh-baking-setup",
+      "usageCount": 0,
+      "category": "navmesh",
+      "workflows": []
+    },
+    {
+      "skill": "navmesh-obstacles-dynamic",
+      "usageCount": 0,
+      "category": "navmesh",
+      "workflows": []
+    },
+    {
+      "skill": "networking-account-recovery",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-achievement-tracking",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-analytics-tracking",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-antiCheat-detection",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-auction-system",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-authentication",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-ban-system",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-bandwidth-optimization",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-battle-pass",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-chat-system",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-client-authority",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-cloud-saves",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-connection-management",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-cross-progression",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-encryption",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-friend-system",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-guild-system",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-interpolation",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-lag-compensation",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-leaderboard",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-lobby-system",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-matchmaking",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-message-ordering",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-ngo-setup",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-packet-loss-handling",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-performance-monitoring",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-player-persistence",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-player-spawning",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-prediction-reconciliation",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-presence-system",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-pvp-ranking",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-region-selection",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-replay-system",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-reward-distribution",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-rollback-resimulation",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-rpc-system",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-server-authority",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-server-load-balancing",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-server-maintenance",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-server-replication",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-server-security",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-spectator-mode",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-state-synchronization",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-statistics-synchronization",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "networking-trading-system",
+      "usageCount": 0,
+      "category": "networking",
+      "workflows": []
+    },
+    {
+      "skill": "neural-network-inference",
+      "usageCount": 0,
+      "category": "neural",
+      "workflows": []
+    },
+    {
+      "skill": "nlp-integration",
+      "usageCount": 0,
+      "category": "nlp",
+      "workflows": []
+    },
+    {
+      "skill": "pathfinding-avoidance-steering",
+      "usageCount": 0,
+      "category": "pathfinding",
+      "workflows": []
+    },
+    {
+      "skill": "pathfinding-custom-graphs",
+      "usageCount": 0,
+      "category": "pathfinding",
+      "workflows": []
+    },
+    {
+      "skill": "pathfinding-waypoints",
+      "usageCount": 0,
+      "category": "pathfinding",
+      "workflows": []
+    },
+    {
+      "skill": "performance-dashboard",
+      "usageCount": 0,
+      "category": "performance",
+      "workflows": []
+    },
+    {
+      "skill": "performance-geometry-lod-automation",
+      "usageCount": 0,
+      "category": "performance",
+      "workflows": []
+    },
+    {
+      "skill": "performance-profiling-cross-engine",
+      "usageCount": 0,
+      "category": "performance",
+      "workflows": []
+    },
+    {
+      "skill": "performance-scene-optimization-analyzer",
+      "usageCount": 0,
+      "category": "performance",
+      "workflows": []
+    },
+    {
+      "skill": "persistence-async-loading",
+      "usageCount": 0,
+      "category": "persistence",
+      "workflows": []
+    },
+    {
+      "skill": "persistence-hot-reload-systems",
+      "usageCount": 0,
+      "category": "persistence",
+      "workflows": []
+    },
+    {
+      "skill": "persistence-transaction-safety",
+      "usageCount": 0,
+      "category": "persistence",
+      "workflows": []
+    },
+    {
+      "skill": "physics-aerodynamics",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-angular-momentum",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-buoyancy",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-center-of-mass",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-chain-dynamics",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-cloth-simulation",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-collision-callbacks",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-constraint-optimization",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-continuous-collision",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-debug-visualization",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-destruction-system",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-drift-mechanics",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-explosion-forces",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-fluid-dynamics",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-force-fields",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-friction-models",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-hair-dynamics",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-inertia-calculation",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-joint-constraints",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-layer-masking",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-networked-synchronization",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-object-pooling",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-particle-collisions",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-performance-metrics",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-performance-profiling",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-ragdoll-physics",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-rolling-resistance",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-rope-simulation",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-solver-configuration",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-spring-dynamics",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-suspension-tuning",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-terrain-deformation",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-time-scaling",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-trigger-callbacks",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-trigger-volumes",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-vehicle-setup",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-vehicle-wheels",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "physics-water-waves",
+      "usageCount": 0,
+      "category": "physics",
+      "workflows": []
+    },
+    {
+      "skill": "platform-abstraction-layers",
+      "usageCount": 0,
+      "category": "platform",
+      "workflows": []
+    },
+    {
+      "skill": "plugin-architecture",
+      "usageCount": 0,
+      "category": "plugin",
+      "workflows": []
+    },
+    {
+      "skill": "prediction-models",
+      "usageCount": 0,
+      "category": "prediction",
+      "workflows": []
+    },
+    {
+      "skill": "privacy-consent-tracking",
+      "usageCount": 0,
+      "category": "privacy",
+      "workflows": []
+    },
+    {
+      "skill": "privacy-data-deletion",
+      "usageCount": 0,
+      "category": "privacy",
+      "workflows": []
+    },
+    {
+      "skill": "privacy-preservation",
+      "usageCount": 0,
+      "category": "privacy",
+      "workflows": []
+    },
+    {
+      "skill": "profiler-extensions",
+      "usageCount": 0,
+      "category": "profiler",
+      "workflows": []
+    },
+    {
+      "skill": "quality-metrics-collection",
+      "usageCount": 0,
+      "category": "quality",
+      "workflows": []
+    },
+    {
+      "skill": "quality-performance-regression",
+      "usageCount": 0,
+      "category": "quality",
+      "workflows": []
+    },
+    {
+      "skill": "reinforcement-learning",
+      "usageCount": 0,
+      "category": "reinforcement",
+      "workflows": []
+    },
+    {
+      "skill": "savedata-compression-strategy",
+      "usageCount": 0,
+      "category": "savedata",
+      "workflows": []
+    },
+    {
+      "skill": "savedata-encryption-security",
+      "usageCount": 0,
+      "category": "savedata",
+      "workflows": []
+    },
+    {
+      "skill": "savedata-version-migration",
+      "usageCount": 0,
+      "category": "savedata",
+      "workflows": []
+    },
+    {
+      "skill": "security-data-encryption-at-rest",
+      "usageCount": 0,
+      "category": "security",
+      "workflows": []
+    },
+    {
+      "skill": "security-data-retention-policies",
+      "usageCount": 0,
+      "category": "security",
+      "workflows": []
+    },
+    {
+      "skill": "security-secure-communication",
+      "usageCount": 0,
+      "category": "security",
+      "workflows": []
+    },
+    {
+      "skill": "serialization-binary-format",
+      "usageCount": 0,
+      "category": "serialization",
+      "workflows": []
+    },
+    {
+      "skill": "serialization-compatibility",
+      "usageCount": 0,
+      "category": "serialization",
+      "workflows": []
+    },
+    {
+      "skill": "serialization-custom-types",
+      "usageCount": 0,
+      "category": "serialization",
+      "workflows": []
+    },
+    {
+      "skill": "serialization-json-integration",
+      "usageCount": 0,
+      "category": "serialization",
+      "workflows": []
+    },
+    {
+      "skill": "shader-cross-compilation",
+      "usageCount": 0,
+      "category": "shader",
+      "workflows": []
+    },
+    {
+      "skill": "SKILLS_INDEX.txt",
+      "usageCount": 0,
+      "category": "SKILLS_INDEX.txt",
+      "workflows": []
+    },
+    {
+      "skill": "telemetry-crash-reporting",
+      "usageCount": 0,
+      "category": "telemetry",
+      "workflows": []
+    },
+    {
+      "skill": "telemetry-performance-monitoring",
+      "usageCount": 0,
+      "category": "telemetry",
+      "workflows": []
+    },
+    {
+      "skill": "telemetry-real-time-alerts",
+      "usageCount": 0,
+      "category": "telemetry",
+      "workflows": []
+    },
+    {
+      "skill": "telemetry-system",
+      "usageCount": 0,
+      "category": "telemetry",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-advanced-editing",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-biome-definition",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-blending-shaders",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-brush-settings",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-cave-systems",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-cliff-generation",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-detail-meshes",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-dynamic-modification",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-erosion-simulation",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-grass-placement",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-heightfield-editing",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-heightmap-import",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-layer-management",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-lightmap-generation",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-lod-optimization",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-memory-management",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-multi-layer-textures",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-neighbor-blending",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-noise-functions",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-normal-generation",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-path-carving",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-performance-tuning",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-physics-colliders",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-procedural-generation",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-shadow-caching",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-shape-tools",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-sound-surfaces",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-splat-mapping",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-streaming",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-texture-painting",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-transition-zones",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-tree-painting",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-vegetation-placement",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-water-integration",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "terrain-wind-zones",
+      "usageCount": 0,
+      "category": "terrain",
+      "workflows": []
+    },
+    {
+      "skill": "testing-automated-regression",
+      "usageCount": 0,
+      "category": "testing",
+      "workflows": []
+    },
+    {
+      "skill": "testing-integration-test-framework",
+      "usageCount": 0,
+      "category": "testing",
+      "workflows": []
+    },
+    {
+      "skill": "testing-snapshot-comparison",
+      "usageCount": 0,
+      "category": "testing",
+      "workflows": []
+    },
+    {
+      "skill": "testing-stress-load-testing",
+      "usageCount": 0,
+      "category": "testing",
+      "workflows": []
+    },
+    {
+      "skill": "time-series-forecasting",
+      "usageCount": 0,
+      "category": "time",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-animation-binding",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-audio-sync",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-branching-paths",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-camera-transitions",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-control-rig",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-curve-editing",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-cutscene-director",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-data-persistence",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-debug-visualization",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-editor-tools",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-event-triggers",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-footstep-sync",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-light-animation",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-mask-integration",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-material-morphing",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-multi-character-coordination",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-nested-sequences",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-parameter-binding",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-particle-effects",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-performance-profiling",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-procedural-generation",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-recording-playback",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-scripting-integration",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-streaming-optimization",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-time-dilation",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-track-basics",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-transition-blending",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "timeline-vfx-coordination",
+      "usageCount": 0,
+      "category": "timeline",
+      "workflows": []
+    },
+    {
+      "skill": "training-datasets",
+      "usageCount": 0,
+      "category": "training",
+      "workflows": []
+    },
+    {
+      "skill": "transfer-learning",
+      "usageCount": 0,
+      "category": "transfer",
+      "workflows": []
+    },
+    {
+      "skill": "ui-accessibility",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-anchor-positioning",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-animation-states",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-animation-tweens",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-auto-layout",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-button-events",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-context-menus",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-data-binding",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-docking-windows",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-drag-drop",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-dynamic-styling",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-event-handlers",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-focus-navigation",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-form-submission",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-grid-layout",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-hierarchy-panel",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-input-validation",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-keyboard-shortcuts",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-list-repeater",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-list-virtualization",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-modal-dialogs",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-mouse-interaction",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-overflow-handling",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-panel-layout",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-performance-optimization",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-prefab-variants",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-resize-scaling",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-responsive-design",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-scrolling-behavior",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-style-sheets",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-text-binding",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-theme-switching",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-tooltips",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-touch-input",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-transition-timing",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-two-way-binding",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-visual-feedback",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "ui-z-ordering",
+      "usageCount": 0,
+      "category": "ui",
+      "workflows": []
+    },
+    {
+      "skill": "unreal-animation",
+      "usageCount": 0,
+      "category": "unreal",
+      "workflows": []
+    },
+    {
+      "skill": "unreal-blueprints",
+      "usageCount": 0,
+      "category": "unreal",
+      "workflows": []
+    },
+    {
+      "skill": "unreal-cpp-integration",
+      "usageCount": 0,
+      "category": "unreal",
+      "workflows": []
+    },
+    {
+      "skill": "unreal-engine-compatibility",
+      "usageCount": 0,
+      "category": "unreal",
+      "workflows": []
+    },
+    {
+      "skill": "unreal-physics",
+      "usageCount": 0,
+      "category": "unreal",
+      "workflows": []
+    },
+    {
+      "skill": "validation-compatibility-matrix",
+      "usageCount": 0,
+      "category": "validation",
+      "workflows": []
+    },
+    {
+      "skill": "validation-gate-enforcement",
+      "usageCount": 0,
+      "category": "validation",
+      "workflows": []
+    },
+    {
+      "skill": "version-control-integration",
+      "usageCount": 0,
+      "category": "version",
+      "workflows": []
+    },
+    {
+      "skill": "vfx-builtin-particles",
+      "usageCount": 0,
+      "category": "vfx",
+      "workflows": []
+    },
+    {
+      "skill": "vfx-burst-optimization",
+      "usageCount": 0,
+      "category": "vfx",
+      "workflows": []
+    },
+    {
+      "skill": "vfx-cloth-simulation",
+      "usageCount": 0,
+      "category": "vfx",
+      "workflows": []
+    },
+    {
+      "skill": "vfx-decal-system",
+      "usageCount": 0,
+      "category": "vfx",
+      "workflows": []
+    },
+    {
+      "skill": "vfx-gpu-instancing",
+      "usageCount": 0,
+      "category": "vfx",
+      "workflows": []
+    },
+    {
+      "skill": "vfx-lifetime-management",
+      "usageCount": 0,
+      "category": "vfx",
+      "workflows": []
+    },
+    {
+      "skill": "vfx-lod-system",
+      "usageCount": 0,
+      "category": "vfx",
+      "workflows": []
+    },
+    {
+      "skill": "vfx-particle-collision",
+      "usageCount": 0,
+      "category": "vfx",
+      "workflows": []
+    },
+    {
+      "skill": "vfx-particle-systems",
+      "usageCount": 0,
+      "category": "vfx",
+      "workflows": []
+    },
+    {
+      "skill": "vfx-shader-graph-advanced",
+      "usageCount": 0,
+      "category": "vfx",
+      "workflows": []
+    },
+    {
+      "skill": "vfx-shader-optimization",
+      "usageCount": 0,
+      "category": "vfx",
+      "workflows": []
+    },
+    {
+      "skill": "vfx-spawn-systems",
+      "usageCount": 0,
+      "category": "vfx",
+      "workflows": []
+    },
+    {
+      "skill": "vfx-texture-streaming",
+      "usageCount": 0,
+      "category": "vfx",
+      "workflows": []
+    },
+    {
+      "skill": "vfx-trail-rendering",
+      "usageCount": 0,
+      "category": "vfx",
+      "workflows": []
+    },
+    {
+      "skill": "vfx-visual-effects-basics",
+      "usageCount": 0,
+      "category": "vfx",
+      "workflows": []
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-03-29T21:03:46.952Z",
+  "jobs": [
+    {
+      "name": "token-benchmark",
+      "duration_ms": 86,
+      "exit_code": 0,
+      "stdout_tail": "   development-live-edit-scenes               387      2,364\n   debug-network-inspection                   376      2,298\n   analytics-privacy-anonymization            311      1,967\n   development-hot-reload-code                297      1,728\n   controller-haptic-feedback                 294      1,739\n   debug-remote-profiling                     288      1,765\n   testing-stress-load-testing                284      1,700\n   controller-button-combos                   281      1,703\n\n📊 Summary:\n   Total Skills: 593\n   Total Tokens (all skills): 128,576\n   Average per Skill: 217 tokens\n   Largest Skill: development-asset-hot-swap (414 tokens)\n   Smallest Skill: community-marketplace-governance (108 tokens)\n\n🎯 With Compression (45% estimated):\n   Compressed Total: 70,717 tokens\n   Potential Savings: 57,859 tokens (-45%)\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "compression-validation",
+      "duration_ms": 105,
+      "exit_code": 0,
+      "stdout_tail": "     • Code blocks: 0\n     • Lines: 49\n\n✅ vfx-visual-effects-basics\n   WARNINGS (1):\n     ⚠️  YAML frontmatter not detected; running content-only compression checks\n   INFO:\n     • Description: 0/200 chars\n     • Sections: 7\n     • Code blocks: 0\n     • Lines: 49\n\n============================================================\n📊 Summary:\n   Valid: 593/593\n   Warnings: 587\n   Errors: 0\n\n   ⚠️  All skills are valid, but 587 have optimization suggestions.\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "coverage-analysis",
+      "duration_ms": 38,
+      "exit_code": 0,
+      "stdout_tail": "├── security              0/3 (0%) - 0 total uses\n├── serialization         0/4 (0%) - 0 total uses\n├── shader                0/1 (0%) - 0 total uses\n├── SKILLS_INDEX.txt      0/1 (0%) - 0 total uses\n├── telemetry             0/4 (0%) - 0 total uses\n├── terrain               0/35 (0%) - 0 total uses\n├── testing               0/4 (0%) - 0 total uses\n├── time                  0/1 (0%) - 0 total uses\n├── timeline              0/28 (0%) - 0 total uses\n├── training              0/1 (0%) - 0 total uses\n├── transfer              0/1 (0%) - 0 total uses\n├── ui                    0/38 (0%) - 0 total uses\n├── unreal                0/5 (0%) - 0 total uses\n├── validation            0/2 (0%) - 0 total uses\n├── version               0/1 (0%) - 0 total uses\n├── vfx                   0/15 (0%) - 0 total uses\n\n\n✅ Coverage report saved to C:\\Users\\idris\\Desktop\\Agent Project\\.agents\\reports\\coverage\\skill-usage-matrix.json\n",
+      "stderr_tail": ""
+    }
+  ],
+  "failed": 0
+}

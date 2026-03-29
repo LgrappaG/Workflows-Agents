@@ -1,0 +1,18 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: "📖 Documentation & Quick Start"
+    url: "https://github.com/LgrappaG/Workflows-Agents/tree/main/docs"
+    about: "Read our guides for setup and usage"
+
+  - name: "💬 GitHub Discussions"
+    url: "https://github.com/LgrappaG/Workflows-Agents/discussions"
+    about: "Ask questions or share feedback with the community"
+
+  - name: "🔒 Security Issues"
+    url: "https://github.com/LgrappaG/Workflows-Agents/security/advisories"
+    about: "Report security vulnerabilities privately"
+
+  - name: "📊 View Project Status"
+    url: "https://github.com/LgrappaG/Workflows-Agents/projects"
+    about: "Check what's in progress and planned"

@@ -1,0 +1,4156 @@
+{
+  "updated_at": "2026-03-29T21:03:55.976Z",
+  "skills": {
+    "advanced-architecture-patterns": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "advanced",
+      "path": "skills/advanced-architecture-patterns/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "advanced-custom-attributes": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "advanced",
+      "path": "skills/advanced-custom-attributes/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "advanced-il-emit": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "advanced",
+      "path": "skills/advanced-il-emit/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "advanced-memory-profiling": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "advanced",
+      "path": "skills/advanced-memory-profiling/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "advanced-meta-programming": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "advanced",
+      "path": "skills/advanced-meta-programming/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "advanced-performance-tuning": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "advanced",
+      "path": "skills/advanced-performance-tuning/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "advanced-reflection-caching": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "advanced",
+      "path": "skills/advanced-reflection-caching/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "advanced-runtime-compilation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "advanced",
+      "path": "skills/advanced-runtime-compilation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "advanced-scalability-design": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "advanced",
+      "path": "skills/advanced-scalability-design/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "advanced-type-discovery": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "advanced",
+      "path": "skills/advanced-type-discovery/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ai-behavior-switching": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ai",
+      "path": "skills/ai-behavior-switching/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ai-communication-network": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ai",
+      "path": "skills/ai-communication-network/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ai-crowd-simulation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ai",
+      "path": "skills/ai-crowd-simulation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ai-debugging-tools": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ai",
+      "path": "skills/ai-debugging-tools/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ai-environmental-awareness": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ai",
+      "path": "skills/ai-environmental-awareness/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ai-formation-control": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ai",
+      "path": "skills/ai-formation-control/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ai-learning-adaptation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ai",
+      "path": "skills/ai-learning-adaptation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ai-llm-runtime-integration": {
+      "version": "1.0.0",
+      "risk": "high",
+      "domain": "ai",
+      "path": "skills/ai-llm-runtime-integration/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ai-perception-system": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ai",
+      "path": "skills/ai-perception-system/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ai-squad-tactics": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ai",
+      "path": "skills/ai-squad-tactics/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ai-threat-assessment": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ai",
+      "path": "skills/ai-threat-assessment/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "analytics-event-tracking": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "analytics",
+      "path": "skills/analytics-event-tracking/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "analytics-funnel-attribution": {
+      "version": "1.0.0",
+      "risk": "medium",
+      "domain": "analytics",
+      "path": "skills/analytics-funnel-attribution/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "analytics-integration": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "analytics",
+      "path": "skills/analytics-integration/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "analytics-privacy-anonymization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "analytics",
+      "path": "skills/analytics-privacy-anonymization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "analytics-user-segmentation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "analytics",
+      "path": "skills/analytics-user-segmentation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-baking-setup": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-baking-setup/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-blend-trees": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-blend-trees/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-blending": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-blending/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-bone-mapping": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-bone-mapping/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-clip-management": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-clip-management/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-constraint-rigging": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-constraint-rigging/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-curve-editing": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-curve-editing/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-curves": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-curves/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-debug-visualization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-debug-visualization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-editor-tools": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-editor-tools/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-events": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-events/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-footik-sync": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-footik-sync/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-frame-stepping": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-frame-stepping/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-humanoid-setup": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-humanoid-setup/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-ik-setup": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-ik-setup/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-import-settings": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-import-settings/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-layering": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-layering/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-memory-optimization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-memory-optimization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-mirror-setup": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-mirror-setup/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-mocap-setup": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-mocap-setup/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-motion-capture": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-motion-capture/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-nla-editor": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-nla-editor/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-optimization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-optimization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-parameter-binding": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-parameter-binding/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-performance-profiling": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-performance-profiling/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-playback-control": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-playback-control/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-preview": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-preview/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-preview-window": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-preview-window/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-procedural-generation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-procedural-generation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-retargeting": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-retargeting/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-rigging-tools": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-rigging-tools/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-runtime-switching": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-runtime-switching/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-state-machine": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-state-machine/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-streaming": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-streaming/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "animation-timing-sync": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "animation",
+      "path": "skills/animation-timing-sync/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "anomaly-detection": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "anomaly",
+      "path": "skills/anomaly-detection/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "api-design-patterns": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "api",
+      "path": "skills/api-design-patterns/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "architecture-event-bus-pattern": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "architecture",
+      "path": "skills/architecture-event-bus-pattern/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "architecture-plugin-system": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "architecture",
+      "path": "skills/architecture-plugin-system/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "architecture-service-locator": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "architecture",
+      "path": "skills/architecture-service-locator/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "asset-management-system": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "asset",
+      "path": "skills/asset-management-system/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "asset-pipeline-conversion": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "asset",
+      "path": "skills/asset-pipeline-conversion/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-adaptive-bitrate": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-adaptive-bitrate/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-ambient-soundscapes": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-ambient-soundscapes/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-ambisonics-support": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-ambisonics-support/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-attenuation-curves": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-attenuation-curves/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-binaural-rendering": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-binaural-rendering/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-compression-codecs": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-compression-codecs/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-dialogue-system": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-dialogue-system/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-ducking-sidechains": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-ducking-sidechains/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-dynamic-music": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-dynamic-music/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-effects-compression": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-effects-compression/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-effects-distortion": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-effects-distortion/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-effects-eq": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-effects-eq/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-effects-pitch-shift": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-effects-pitch-shift/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-effects-reverb": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-effects-reverb/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-effects-time-stretch": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-effects-time-stretch/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-environmental-acoustics": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-environmental-acoustics/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-fmod-integration": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-fmod-integration/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-footstep-generation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-footstep-generation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-frequency-analysis": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-frequency-analysis/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-headphone-optimization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-headphone-optimization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-impact-sounds": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-impact-sounds/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-mixer-setup": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-mixer-setup/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-multi-output-routing": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-multi-output-routing/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-object-pooling": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-object-pooling/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-parameter-automation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-parameter-automation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-performance-profiling": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-performance-profiling/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-platform-specific-codecs": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-platform-specific-codecs/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-prioritization-system": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-prioritization-system/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-procedural-generation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-procedural-generation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-spatial-3d": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-spatial-3d/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-streaming-audio": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-streaming-audio/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "audio-voice-chat": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "audio",
+      "path": "skills/audio-voice-chat/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "automated-testing-framework": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "automated",
+      "path": "skills/automated-testing-framework/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "behavior-decision-making": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "behavior",
+      "path": "skills/behavior-decision-making/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "behavior-formation-control": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "behavior",
+      "path": "skills/behavior-formation-control/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "behavior-goal-planning": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "behavior",
+      "path": "skills/behavior-goal-planning/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "behavior-group-tactics": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "behavior",
+      "path": "skills/behavior-group-tactics/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "behavior-memory-management": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "behavior",
+      "path": "skills/behavior-memory-management/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "behavior-perception-system": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "behavior",
+      "path": "skills/behavior-perception-system/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "behavior-state-machines": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "behavior",
+      "path": "skills/behavior-state-machines/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "behavior-tree-basics": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "behavior",
+      "path": "skills/behavior-tree-basics/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "behavior-tree-composites": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "behavior",
+      "path": "skills/behavior-tree-composites/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "behavior-tree-decorators": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "behavior",
+      "path": "skills/behavior-tree-decorators/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "benchmark-regression-gates": {
+      "version": "1.0.0",
+      "risk": "high",
+      "domain": "benchmark",
+      "path": "skills/benchmark-regression-gates/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "build-addressable-system": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "build",
+      "path": "skills/build-addressable-system/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "build-bundle-optimization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "build",
+      "path": "skills/build-bundle-optimization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "build-caching-strategy": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "build",
+      "path": "skills/build-caching-strategy/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "build-incremental-compilation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "build",
+      "path": "skills/build-incremental-compilation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "build-parallel-processing": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "build",
+      "path": "skills/build-parallel-processing/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "build-shader-stripping": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "build",
+      "path": "skills/build-shader-stripping/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "build-size-analysis": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "build",
+      "path": "skills/build-size-analysis/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "build-system-optimization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "build",
+      "path": "skills/build-system-optimization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ci-cd-pipeline-setup": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ci",
+      "path": "skills/ci-cd-pipeline-setup/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "cinemachine-aim-assist": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "cinemachine",
+      "path": "skills/cinemachine-aim-assist/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "cinemachine-blending": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "cinemachine",
+      "path": "skills/cinemachine-blending/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "cinemachine-collision-response": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "cinemachine",
+      "path": "skills/cinemachine-collision-response/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "cinemachine-extensions": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "cinemachine",
+      "path": "skills/cinemachine-extensions/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "cinemachine-first-person": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "cinemachine",
+      "path": "skills/cinemachine-first-person/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "cinemachine-follow-target": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "cinemachine",
+      "path": "skills/cinemachine-follow-target/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "cinemachine-framing": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "cinemachine",
+      "path": "skills/cinemachine-framing/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "cinemachine-impulse-effects": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "cinemachine",
+      "path": "skills/cinemachine-impulse-effects/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "cinemachine-orbits": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "cinemachine",
+      "path": "skills/cinemachine-orbits/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "cinemachine-top-down": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "cinemachine",
+      "path": "skills/cinemachine-top-down/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "cinemachine-transitions": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "cinemachine",
+      "path": "skills/cinemachine-transitions/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "cinemachine-virtual-camera": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "cinemachine",
+      "path": "skills/cinemachine-virtual-camera/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "clustering-systems": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "clustering",
+      "path": "skills/clustering-systems/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "community-marketplace-governance": {
+      "version": "1.0.0",
+      "risk": "medium",
+      "domain": "community",
+      "path": "skills/community-marketplace-governance/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "compatibility-testing": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "compatibility",
+      "path": "skills/compatibility-testing/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "compliance-audit-logging": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "compliance",
+      "path": "skills/compliance-audit-logging/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "compliance-gdpr-requirements": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "compliance",
+      "path": "skills/compliance-gdpr-requirements/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "compliance-regulatory-reporting": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "compliance",
+      "path": "skills/compliance-regulatory-reporting/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "computer-vision-basics": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "computer",
+      "path": "skills/computer-vision-basics/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "configuration-environment-variables": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "configuration",
+      "path": "skills/configuration-environment-variables/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "configuration-feature-flags": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "configuration",
+      "path": "skills/configuration-feature-flags/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "configuration-hot-reload": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "configuration",
+      "path": "skills/configuration-hot-reload/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "configuration-platform-override": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "configuration",
+      "path": "skills/configuration-platform-override/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "configuration-profile-management": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "configuration",
+      "path": "skills/configuration-profile-management/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "configuration-remote-config": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "configuration",
+      "path": "skills/configuration-remote-config/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "configuration-schema-validation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "configuration",
+      "path": "skills/configuration-schema-validation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "configuration-version-control": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "configuration",
+      "path": "skills/configuration-version-control/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "console-extensions": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "console",
+      "path": "skills/console-extensions/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "controller-button-combos": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "controller",
+      "path": "skills/controller-button-combos/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "controller-haptic-feedback": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "controller",
+      "path": "skills/controller-haptic-feedback/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "cross-engine-architecture": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "cross",
+      "path": "skills/cross-engine-architecture/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "cross-engine-portability-layer": {
+      "version": "1.0.0",
+      "risk": "medium",
+      "domain": "cross",
+      "path": "skills/cross-engine-portability-layer/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "cross-validation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "cross",
+      "path": "skills/cross-validation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-adapter-pattern": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-adapter-pattern/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-async-await": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-async-await/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-bridge-pattern": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-bridge-pattern/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-builder-pattern": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-builder-pattern/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-chain-of-responsibility": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-chain-of-responsibility/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-command-pattern": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-command-pattern/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-composite-pattern": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-composite-pattern/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-concurrent-structures": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-concurrent-structures/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-coroutines-async": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-coroutines-async/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-decorator-pattern": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-decorator-pattern/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-delegates-lambdas": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-delegates-lambdas/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-dependency-injection": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-dependency-injection/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-event-systems": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-event-systems/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-factory-patterns": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-factory-patterns/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-flyweight-pattern": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-flyweight-pattern/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-generics-patterns": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-generics-patterns/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-interpreter-pattern": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-interpreter-pattern/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-json-parsing": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-json-parsing/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-mediator-pattern": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-mediator-pattern/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-memento-pattern": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-memento-pattern/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-memory-management": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-memory-management/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-observer-pattern": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-observer-pattern/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-performance-optimization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-performance-optimization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-pooling-patterns": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-pooling-patterns/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-proxy-pattern": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-proxy-pattern/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-reflection-systems": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-reflection-systems/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-serialization-advanced": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-serialization-advanced/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-singleton-patterns": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-singleton-patterns/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-state-pattern": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-state-pattern/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-strategy-pattern": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-strategy-pattern/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-string-optimization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-string-optimization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-template-method": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-template-method/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-thread-safety": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-thread-safety/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-threading-basics": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-threading-basics/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "csharp-visitor-pattern": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "csharp",
+      "path": "skills/csharp-visitor-pattern/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "custom-inspector-tools": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "custom",
+      "path": "skills/custom-inspector-tools/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "custom-mcp-server": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "custom",
+      "path": "skills/custom-mcp-server/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "custom-scripting-engine": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "custom",
+      "path": "skills/custom-scripting-engine/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "custom-workflow-builder": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "custom",
+      "path": "skills/custom-workflow-builder/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "data-augmentation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "data",
+      "path": "skills/data-augmentation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "data-pipeline-setup": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "data",
+      "path": "skills/data-pipeline-setup/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-allocation-tracking": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-allocation-tracking/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-asset-dependencies": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-asset-dependencies/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-asset-loading": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-asset-loading/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-breakpoints": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-breakpoints/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-build-diagnostic": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-build-diagnostic/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-call-stack": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-call-stack/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-conditional-breakpoints": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-conditional-breakpoints/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-console-system": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-console-system/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-custom-tools": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-custom-tools/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-error-handling": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-error-handling/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-frame-debugger": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-frame-debugger/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-gc-profiling": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-gc-profiling/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-heap-snapshot": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-heap-snapshot/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-hierarchy-inspection": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-hierarchy-inspection/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-hot-reload": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-hot-reload/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-log-filtering": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-log-filtering/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-memory-profiler": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-memory-profiler/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-missing-reference-cleaner": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-missing-reference-cleaner/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-network-inspection": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-network-inspection/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-network-monitoring": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-network-monitoring/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-performance-charts": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-performance-charts/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-performance-metrics": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-performance-metrics/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-performance-profiler": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-performance-profiler/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-physics-debugger": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-physics-debugger/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-profiler-integration": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-profiler-integration/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-remote-debugging-protocol": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-remote-debugging-protocol/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-remote-profiling": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-remote-profiling/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-renderer-debugging": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-renderer-debugging/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-runtime-metrics": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-runtime-metrics/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-scene-viewer": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-scene-viewer/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-script-debugging": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-script-debugging/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-shader-debugging": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-shader-debugging/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-stack-traces": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-stack-traces/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "debug-variable-inspection": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "debug",
+      "path": "skills/debug-variable-inspection/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "decision-trees": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "decision",
+      "path": "skills/decision-trees/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "development-asset-hot-swap": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "development",
+      "path": "skills/development-asset-hot-swap/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "development-hot-reload-code": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "development",
+      "path": "skills/development-hot-reload-code/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "development-live-collaboration-sessions": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "development",
+      "path": "skills/development-live-collaboration-sessions/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "development-live-edit-scenes": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "development",
+      "path": "skills/development-live-edit-scenes/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "edge-deployment": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "edge",
+      "path": "skills/edge-deployment/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "editor-extension-development": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "editor",
+      "path": "skills/editor-extension-development/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "engine-agnostic-patterns": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "engine",
+      "path": "skills/engine-agnostic-patterns/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "engine-feature-mapping": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "engine",
+      "path": "skills/engine-feature-mapping/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "engine-migration-guide": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "engine",
+      "path": "skills/engine-migration-guide/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ensemble-methods": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ensemble",
+      "path": "skills/ensemble-methods/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "feature-engineering": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "feature",
+      "path": "skills/feature-engineering/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "federated-learning": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "federated",
+      "path": "skills/federated-learning/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "fine-tuning-models": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "fine",
+      "path": "skills/fine-tuning-models/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "gesture-multitouch-gestures": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "gesture",
+      "path": "skills/gesture-multitouch-gestures/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "gesture-recognition-engine": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "gesture",
+      "path": "skills/gesture-recognition-engine/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "godot-animation-setup": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "godot",
+      "path": "skills/godot-animation-setup/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "godot-editor-tools": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "godot",
+      "path": "skills/godot-editor-tools/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "godot-gdscript-integration": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "godot",
+      "path": "skills/godot-gdscript-integration/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "godot-physics-system": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "godot",
+      "path": "skills/godot-physics-system/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "godot-setup": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "godot",
+      "path": "skills/godot-setup/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-ambient-occlusion": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-ambient-occlusion/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-batching-optimization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-batching-optimization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-bloom-effect": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-bloom-effect/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-culling-strategies": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-culling-strategies/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-depth-of-field": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-depth-of-field/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-dynamic-lighting": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-dynamic-lighting/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-frame-debugger": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-frame-debugger/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-geometry-optimization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-geometry-optimization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-gpu-profiling": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-gpu-profiling/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-hdrp-setup": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-hdrp-setup/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-light-baking": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-light-baking/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-lightmap-setup": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-lightmap-setup/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-memory-profiling": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-memory-profiling/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-motion-blur": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-motion-blur/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-postprocessing": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-postprocessing/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-probe-placement": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-probe-placement/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-realtime-gi": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-realtime-gi/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-reflection-probes": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-reflection-probes/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-render-queue": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-render-queue/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-screen-space-reflections": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-screen-space-reflections/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-shader-compiler": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-shader-compiler/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-shadow-optimization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-shadow-optimization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-sorting-layers": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-sorting-layers/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-temporal-antialiasing": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-temporal-antialiasing/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "graphics-urp-setup": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "graphics",
+      "path": "skills/graphics-urp-setup/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "hyperparameter-tuning": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "hyperparameter",
+      "path": "skills/hyperparameter-tuning/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "inference-optimization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "inference",
+      "path": "skills/inference-optimization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "injection-automatic-wiring": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "injection",
+      "path": "skills/injection-automatic-wiring/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "injection-container-configuration": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "injection",
+      "path": "skills/injection-container-configuration/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "injection-context-isolation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "injection",
+      "path": "skills/injection-context-isolation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "input-accessibility-alternative-controls": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "input",
+      "path": "skills/input-accessibility-alternative-controls/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "input-analog-curve-shaping": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "input",
+      "path": "skills/input-analog-curve-shaping/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "input-cross-platform-mapping": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "input",
+      "path": "skills/input-cross-platform-mapping/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "input-deadzone-calibration": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "input",
+      "path": "skills/input-deadzone-calibration/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "input-rebinding-system": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "input",
+      "path": "skills/input-rebinding-system/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "machine-learning-setup": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "machine",
+      "path": "skills/machine-learning-setup/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-advanced-blending": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-advanced-blending/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-ambient-occlusion": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-ambient-occlusion/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-anisotropic-filtering": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-anisotropic-filtering/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-atlasing-techniques": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-atlasing-techniques/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-blending-modes": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-blending-modes/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-compression-settings": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-compression-settings/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-contact-hardening": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-contact-hardening/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-custom-nodes": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-custom-nodes/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-decal-projection": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-decal-projection/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-disney-workflow": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-disney-workflow/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-dynamic-properties": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-dynamic-properties/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-emission-control": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-emission-control/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-format-selection": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-format-selection/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-height-mapping": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-height-mapping/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-layered-materials": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-layered-materials/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-material-transitions": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-material-transitions/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-memory-optimization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-memory-optimization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-metallic-workflow": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-metallic-workflow/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-mipmap-chains": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-mipmap-chains/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-normal-mapping": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-normal-mapping/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-parallax-mapping": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-parallax-mapping/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-parallax-occlusion": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-parallax-occlusion/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-pbr-setup": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-pbr-setup/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-performance-profiling": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-performance-profiling/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-physics-interactions": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-physics-interactions/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-procedural-generation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-procedural-generation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-refraction": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-refraction/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-roughness-control": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-roughness-control/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-runtime-modification": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-runtime-modification/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-shader-graphs": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-shader-graphs/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-snow-accumulation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-snow-accumulation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-sound-reactivity": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-sound-reactivity/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-specular-workflow": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-specular-workflow/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-streaming": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-streaming/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-subsurface-scattering": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-subsurface-scattering/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-texture-channels": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-texture-channels/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-texture-optimization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-texture-optimization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-time-of-day": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-time-of-day/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-translucency-setup": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-translucency-setup/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-triplanar-mapping": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-triplanar-mapping/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-uv-mapping": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-uv-mapping/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-variant-switching": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-variant-switching/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-visual-debugging": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-visual-debugging/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-weather-effects": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-weather-effects/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "material-wetness-simulation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "material",
+      "path": "skills/material-wetness-simulation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "metrics-custom-dashboards": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "metrics",
+      "path": "skills/metrics-custom-dashboards/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "metrics-data-aggregation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "metrics",
+      "path": "skills/metrics-data-aggregation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ml-model-serving-unity": {
+      "version": "1.0.0",
+      "risk": "high",
+      "domain": "ml",
+      "path": "skills/ml-model-serving-unity/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "model-interpretability": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "model",
+      "path": "skills/model-interpretability/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "model-validation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "model",
+      "path": "skills/model-validation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "module-lazy-loading": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "module",
+      "path": "skills/module-lazy-loading/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "module-versioning-management": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "module",
+      "path": "skills/module-versioning-management/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "navmesh-agent-movement": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "navmesh",
+      "path": "skills/navmesh-agent-movement/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "navmesh-areas-types": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "navmesh",
+      "path": "skills/navmesh-areas-types/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "navmesh-baking-setup": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "navmesh",
+      "path": "skills/navmesh-baking-setup/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "navmesh-obstacles-dynamic": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "navmesh",
+      "path": "skills/navmesh-obstacles-dynamic/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-account-recovery": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-account-recovery/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-achievement-tracking": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-achievement-tracking/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-analytics-tracking": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-analytics-tracking/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-antiCheat-detection": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-antiCheat-detection/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-auction-system": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-auction-system/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-authentication": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-authentication/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-ban-system": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-ban-system/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-bandwidth-optimization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-bandwidth-optimization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-battle-pass": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-battle-pass/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-chat-system": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-chat-system/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-client-authority": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-client-authority/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-cloud-saves": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-cloud-saves/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-connection-management": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-connection-management/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-cross-progression": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-cross-progression/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-encryption": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-encryption/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-friend-system": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-friend-system/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-guild-system": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-guild-system/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-interpolation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-interpolation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-lag-compensation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-lag-compensation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-leaderboard": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-leaderboard/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-lobby-system": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-lobby-system/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-matchmaking": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-matchmaking/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-message-ordering": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-message-ordering/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-ngo-setup": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-ngo-setup/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-packet-loss-handling": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-packet-loss-handling/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-performance-monitoring": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-performance-monitoring/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-player-persistence": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-player-persistence/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-player-spawning": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-player-spawning/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-prediction-reconciliation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-prediction-reconciliation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-presence-system": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-presence-system/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-pvp-ranking": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-pvp-ranking/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-region-selection": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-region-selection/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-replay-system": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-replay-system/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-reward-distribution": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-reward-distribution/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-rollback-resimulation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-rollback-resimulation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-rpc-system": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-rpc-system/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-server-authority": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-server-authority/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-server-load-balancing": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-server-load-balancing/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-server-maintenance": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-server-maintenance/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-server-replication": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-server-replication/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-server-security": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-server-security/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-spectator-mode": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-spectator-mode/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-state-synchronization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-state-synchronization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-statistics-synchronization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-statistics-synchronization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "networking-trading-system": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "networking",
+      "path": "skills/networking-trading-system/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "neural-network-inference": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "neural",
+      "path": "skills/neural-network-inference/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "nlp-integration": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "nlp",
+      "path": "skills/nlp-integration/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "pathfinding-avoidance-steering": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "pathfinding",
+      "path": "skills/pathfinding-avoidance-steering/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "pathfinding-custom-graphs": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "pathfinding",
+      "path": "skills/pathfinding-custom-graphs/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "pathfinding-waypoints": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "pathfinding",
+      "path": "skills/pathfinding-waypoints/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "performance-dashboard": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "performance",
+      "path": "skills/performance-dashboard/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "performance-geometry-lod-automation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "performance",
+      "path": "skills/performance-geometry-lod-automation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "performance-profiling-cross-engine": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "performance",
+      "path": "skills/performance-profiling-cross-engine/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "performance-scene-optimization-analyzer": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "performance",
+      "path": "skills/performance-scene-optimization-analyzer/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "persistence-async-loading": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "persistence",
+      "path": "skills/persistence-async-loading/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "persistence-hot-reload-systems": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "persistence",
+      "path": "skills/persistence-hot-reload-systems/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "persistence-transaction-safety": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "persistence",
+      "path": "skills/persistence-transaction-safety/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-aerodynamics": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-aerodynamics/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-angular-momentum": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-angular-momentum/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-buoyancy": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-buoyancy/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-center-of-mass": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-center-of-mass/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-chain-dynamics": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-chain-dynamics/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-cloth-simulation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-cloth-simulation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-collision-callbacks": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-collision-callbacks/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-constraint-optimization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-constraint-optimization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-continuous-collision": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-continuous-collision/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-debug-visualization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-debug-visualization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-destruction-system": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-destruction-system/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-drift-mechanics": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-drift-mechanics/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-explosion-forces": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-explosion-forces/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-fluid-dynamics": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-fluid-dynamics/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-force-fields": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-force-fields/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-friction-models": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-friction-models/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-hair-dynamics": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-hair-dynamics/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-inertia-calculation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-inertia-calculation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-joint-constraints": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-joint-constraints/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-layer-masking": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-layer-masking/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-networked-synchronization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-networked-synchronization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-object-pooling": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-object-pooling/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-particle-collisions": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-particle-collisions/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-performance-metrics": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-performance-metrics/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-performance-profiling": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-performance-profiling/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-ragdoll-physics": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-ragdoll-physics/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-rolling-resistance": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-rolling-resistance/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-rope-simulation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-rope-simulation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-solver-configuration": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-solver-configuration/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-spring-dynamics": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-spring-dynamics/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-suspension-tuning": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-suspension-tuning/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-terrain-deformation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-terrain-deformation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-time-scaling": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-time-scaling/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-trigger-callbacks": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-trigger-callbacks/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-trigger-volumes": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-trigger-volumes/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-vehicle-setup": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-vehicle-setup/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-vehicle-wheels": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-vehicle-wheels/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "physics-water-waves": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "physics",
+      "path": "skills/physics-water-waves/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "platform-abstraction-layers": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "platform",
+      "path": "skills/platform-abstraction-layers/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "plugin-architecture": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "plugin",
+      "path": "skills/plugin-architecture/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "prediction-models": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "prediction",
+      "path": "skills/prediction-models/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "privacy-consent-tracking": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "privacy",
+      "path": "skills/privacy-consent-tracking/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "privacy-data-deletion": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "privacy",
+      "path": "skills/privacy-data-deletion/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "privacy-preservation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "privacy",
+      "path": "skills/privacy-preservation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "profiler-extensions": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "profiler",
+      "path": "skills/profiler-extensions/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "quality-metrics-collection": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "quality",
+      "path": "skills/quality-metrics-collection/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "quality-performance-regression": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "quality",
+      "path": "skills/quality-performance-regression/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "reinforcement-learning": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "reinforcement",
+      "path": "skills/reinforcement-learning/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "savedata-compression-strategy": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "savedata",
+      "path": "skills/savedata-compression-strategy/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "savedata-encryption-security": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "savedata",
+      "path": "skills/savedata-encryption-security/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "savedata-version-migration": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "savedata",
+      "path": "skills/savedata-version-migration/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "security-data-encryption-at-rest": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "security",
+      "path": "skills/security-data-encryption-at-rest/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "security-data-retention-policies": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "security",
+      "path": "skills/security-data-retention-policies/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "security-secure-communication": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "security",
+      "path": "skills/security-secure-communication/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "serialization-binary-format": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "serialization",
+      "path": "skills/serialization-binary-format/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "serialization-compatibility": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "serialization",
+      "path": "skills/serialization-compatibility/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "serialization-custom-types": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "serialization",
+      "path": "skills/serialization-custom-types/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "serialization-json-integration": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "serialization",
+      "path": "skills/serialization-json-integration/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "shader-cross-compilation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "shader",
+      "path": "skills/shader-cross-compilation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "telemetry-crash-reporting": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "telemetry",
+      "path": "skills/telemetry-crash-reporting/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "telemetry-performance-monitoring": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "telemetry",
+      "path": "skills/telemetry-performance-monitoring/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "telemetry-real-time-alerts": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "telemetry",
+      "path": "skills/telemetry-real-time-alerts/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "telemetry-system": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "telemetry",
+      "path": "skills/telemetry-system/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-advanced-editing": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-advanced-editing/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-biome-definition": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-biome-definition/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-blending-shaders": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-blending-shaders/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-brush-settings": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-brush-settings/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-cave-systems": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-cave-systems/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-cliff-generation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-cliff-generation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-detail-meshes": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-detail-meshes/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-dynamic-modification": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-dynamic-modification/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-erosion-simulation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-erosion-simulation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-grass-placement": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-grass-placement/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-heightfield-editing": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-heightfield-editing/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-heightmap-import": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-heightmap-import/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-layer-management": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-layer-management/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-lightmap-generation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-lightmap-generation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-lod-optimization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-lod-optimization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-memory-management": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-memory-management/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-multi-layer-textures": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-multi-layer-textures/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-neighbor-blending": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-neighbor-blending/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-noise-functions": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-noise-functions/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-normal-generation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-normal-generation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-path-carving": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-path-carving/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-performance-tuning": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-performance-tuning/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-physics-colliders": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-physics-colliders/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-procedural-generation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-procedural-generation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-shadow-caching": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-shadow-caching/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-shape-tools": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-shape-tools/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-sound-surfaces": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-sound-surfaces/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-splat-mapping": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-splat-mapping/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-streaming": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-streaming/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-texture-painting": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-texture-painting/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-transition-zones": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-transition-zones/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-tree-painting": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-tree-painting/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-vegetation-placement": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-vegetation-placement/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-water-integration": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-water-integration/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "terrain-wind-zones": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "terrain",
+      "path": "skills/terrain-wind-zones/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "testing-automated-regression": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "testing",
+      "path": "skills/testing-automated-regression/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "testing-integration-test-framework": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "testing",
+      "path": "skills/testing-integration-test-framework/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "testing-snapshot-comparison": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "testing",
+      "path": "skills/testing-snapshot-comparison/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "testing-stress-load-testing": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "testing",
+      "path": "skills/testing-stress-load-testing/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "time-series-forecasting": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "time",
+      "path": "skills/time-series-forecasting/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-animation-binding": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-animation-binding/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-audio-sync": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-audio-sync/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-branching-paths": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-branching-paths/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-camera-transitions": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-camera-transitions/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-control-rig": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-control-rig/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-curve-editing": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-curve-editing/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-cutscene-director": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-cutscene-director/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-data-persistence": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-data-persistence/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-debug-visualization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-debug-visualization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-editor-tools": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-editor-tools/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-event-triggers": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-event-triggers/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-footstep-sync": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-footstep-sync/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-light-animation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-light-animation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-mask-integration": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-mask-integration/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-material-morphing": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-material-morphing/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-multi-character-coordination": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-multi-character-coordination/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-nested-sequences": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-nested-sequences/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-parameter-binding": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-parameter-binding/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-particle-effects": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-particle-effects/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-performance-profiling": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-performance-profiling/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-procedural-generation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-procedural-generation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-recording-playback": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-recording-playback/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-scripting-integration": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-scripting-integration/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-streaming-optimization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-streaming-optimization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-time-dilation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-time-dilation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-track-basics": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-track-basics/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-transition-blending": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-transition-blending/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "timeline-vfx-coordination": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "timeline",
+      "path": "skills/timeline-vfx-coordination/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "training-datasets": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "training",
+      "path": "skills/training-datasets/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "transfer-learning": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "transfer",
+      "path": "skills/transfer-learning/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-accessibility": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-accessibility/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-anchor-positioning": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-anchor-positioning/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-animation-states": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-animation-states/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-animation-tweens": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-animation-tweens/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-auto-layout": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-auto-layout/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-button-events": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-button-events/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-context-menus": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-context-menus/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-data-binding": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-data-binding/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-docking-windows": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-docking-windows/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-drag-drop": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-drag-drop/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-dynamic-styling": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-dynamic-styling/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-event-handlers": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-event-handlers/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-focus-navigation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-focus-navigation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-form-submission": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-form-submission/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-grid-layout": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-grid-layout/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-hierarchy-panel": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-hierarchy-panel/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-input-validation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-input-validation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-keyboard-shortcuts": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-keyboard-shortcuts/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-list-repeater": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-list-repeater/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-list-virtualization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-list-virtualization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-modal-dialogs": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-modal-dialogs/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-mouse-interaction": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-mouse-interaction/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-overflow-handling": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-overflow-handling/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-panel-layout": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-panel-layout/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-performance-optimization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-performance-optimization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-prefab-variants": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-prefab-variants/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-resize-scaling": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-resize-scaling/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-responsive-design": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-responsive-design/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-scrolling-behavior": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-scrolling-behavior/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-style-sheets": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-style-sheets/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-text-binding": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-text-binding/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-theme-switching": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-theme-switching/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-tooltips": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-tooltips/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-touch-input": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-touch-input/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-transition-timing": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-transition-timing/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-two-way-binding": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-two-way-binding/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-visual-feedback": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-visual-feedback/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "ui-z-ordering": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "ui",
+      "path": "skills/ui-z-ordering/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "unreal-animation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "unreal",
+      "path": "skills/unreal-animation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "unreal-blueprints": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "unreal",
+      "path": "skills/unreal-blueprints/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "unreal-cpp-integration": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "unreal",
+      "path": "skills/unreal-cpp-integration/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "unreal-engine-compatibility": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "unreal",
+      "path": "skills/unreal-engine-compatibility/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "unreal-physics": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "unreal",
+      "path": "skills/unreal-physics/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "validation-compatibility-matrix": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "validation",
+      "path": "skills/validation-compatibility-matrix/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "validation-gate-enforcement": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "validation",
+      "path": "skills/validation-gate-enforcement/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "version-control-integration": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "version",
+      "path": "skills/version-control-integration/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "vfx-builtin-particles": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "vfx",
+      "path": "skills/vfx-builtin-particles/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "vfx-burst-optimization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "vfx",
+      "path": "skills/vfx-burst-optimization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "vfx-cloth-simulation": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "vfx",
+      "path": "skills/vfx-cloth-simulation/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "vfx-decal-system": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "vfx",
+      "path": "skills/vfx-decal-system/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "vfx-gpu-instancing": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "vfx",
+      "path": "skills/vfx-gpu-instancing/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "vfx-lifetime-management": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "vfx",
+      "path": "skills/vfx-lifetime-management/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "vfx-lod-system": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "vfx",
+      "path": "skills/vfx-lod-system/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "vfx-particle-collision": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "vfx",
+      "path": "skills/vfx-particle-collision/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "vfx-particle-systems": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "vfx",
+      "path": "skills/vfx-particle-systems/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "vfx-shader-graph-advanced": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "vfx",
+      "path": "skills/vfx-shader-graph-advanced/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "vfx-shader-optimization": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "vfx",
+      "path": "skills/vfx-shader-optimization/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "vfx-spawn-systems": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "vfx",
+      "path": "skills/vfx-spawn-systems/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "vfx-texture-streaming": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "vfx",
+      "path": "skills/vfx-texture-streaming/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "vfx-trail-rendering": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "vfx",
+      "path": "skills/vfx-trail-rendering/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    },
+    "vfx-visual-effects-basics": {
+      "version": "1.0.0",
+      "risk": "unknown",
+      "domain": "vfx",
+      "path": "skills/vfx-visual-effects-basics/SKILL.md",
+      "last_checked": "2026-03-29T21:03:55.976Z"
+    }
+  }
+}

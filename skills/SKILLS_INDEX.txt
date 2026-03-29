@@ -1,0 +1,170 @@
+ALL 150 PHASE 1 SKILLS INDEX
+============================
+
+MATERIALS SYSTEM (45 skills)
+----------------------------
+1. material-advanced-blending
+2. material-ambient-occlusion
+3. material-anisotropic-filtering
+4. material-atlasing-techniques
+5. material-blending-modes
+6. material-compression-settings
+7. material-contact-hardening
+8. material-custom-nodes
+9. material-decal-projection
+10. material-disney-workflow
+11. material-dynamic-properties
+12. material-emission-control
+13. material-format-selection
+14. material-height-mapping
+15. material-layered-materials
+16. material-material-transitions
+17. material-memory-optimization
+18. material-metallic-workflow
+19. material-mipmap-chains
+20. material-normal-mapping
+21. material-parallax-mapping
+22. material-parallax-occlusion
+23. material-pbr-setup
+24. material-performance-profiling
+25. material-physics-interactions
+26. material-procedural-generation
+27. material-refraction
+28. material-roughness-control
+29. material-runtime-modification
+30. material-shader-graphs
+31. material-snow-accumulation
+32. material-sound-reactivity
+33. material-specular-workflow
+34. material-streaming
+35. material-subsurface-scattering
+36. material-texture-channels
+37. material-texture-optimization
+38. material-time-of-day
+39. material-translucency-setup
+40. material-triplanar-mapping
+41. material-uv-mapping
+42. material-variant-switching
+43. material-visual-debugging
+44. material-weather-effects
+45. material-wetness-simulation
+
+UI TOOLKIT (38 skills)
+----------------------
+46. ui-accessibility
+47. ui-anchor-positioning
+48. ui-animation-states
+49. ui-animation-tweens
+50. ui-auto-layout
+51. ui-button-events
+52. ui-context-menus
+53. ui-data-binding
+54. ui-docking-windows
+55. ui-drag-drop
+56. ui-dynamic-styling
+57. ui-event-handlers
+58. ui-focus-navigation
+59. ui-form-submission
+60. ui-grid-layout
+61. ui-hierarchy-panel
+62. ui-input-validation
+63. ui-keyboard-shortcuts
+64. ui-list-repeater
+65. ui-list-virtualization
+66. ui-modal-dialogs
+67. ui-mouse-interaction
+68. ui-overflow-handling
+69. ui-panel-layout
+70. ui-performance-optimization
+71. ui-prefab-variants
+72. ui-responsive-design
+73. ui-resize-scaling
+74. ui-scrolling-behavior
+75. ui-style-sheets
+76. ui-text-binding
+77. ui-theme-switching
+78. ui-tooltips
+79. ui-touch-input
+80. ui-transition-timing
+81. ui-two-way-binding
+82. ui-visual-feedback
+83. ui-z-ordering
+
+TERRAIN SYSTEM (35 skills)
+---------------------------
+84. terrain-advanced-editing
+85. terrain-biome-definition
+86. terrain-blending-shaders
+87. terrain-brush-settings
+88. terrain-cave-systems
+89. terrain-cliff-generation
+90. terrain-detail-meshes
+91. terrain-dynamic-modification
+92. terrain-erosion-simulation
+93. terrain-grass-placement
+94. terrain-heightfield-editing
+95. terrain-heightmap-import
+96. terrain-layer-management
+97. terrain-lightmap-generation
+98. terrain-lod-optimization
+99. terrain-memory-management
+100. terrain-multi-layer-textures
+101. terrain-neighbor-blending
+102. terrain-noise-functions
+103. terrain-normal-generation
+104. terrain-path-carving
+105. terrain-performance-tuning
+106. terrain-physics-colliders
+107. terrain-procedural-generation
+108. terrain-shadow-caching
+109. terrain-shape-tools
+110. terrain-sound-surfaces
+111. terrain-splat-mapping
+112. terrain-streaming
+113. terrain-texture-painting
+114. terrain-transition-zones
+115. terrain-tree-painting
+116. terrain-vegetation-placement
+117. terrain-water-integration
+118. terrain-wind-zones
+
+NAVIGATION & AI (20 skills)
+----------------------------
+119. ai-behavior-switching
+120. ai-crowd-simulation
+121. ai-debugging-tools
+122. ai-formation-control
+123. behavior-decision-making
+124. behavior-goal-planning
+125. behavior-group-tactics
+126. behavior-memory-management
+127. behavior-perception-system
+128. behavior-state-machines
+129. behavior-tree-basics
+130. behavior-tree-composites
+131. behavior-tree-decorators
+132. navmesh-agent-movement
+133. navmesh-areas-types
+134. navmesh-baking-setup
+135. navmesh-obstacles-dynamic
+136. pathfinding-avoidance-steering
+137. pathfinding-custom-graphs
+138. pathfinding-waypoints
+
+CINEMACHINE (12 skills)
+-----------------------
+139. cinemachine-aim-assist
+140. cinemachine-blending
+141. cinemachine-collision-response
+142. cinemachine-extensions
+143. cinemachine-first-person
+144. cinemachine-follow-target
+145. cinemachine-framing
+146. cinemachine-impulse-effects
+147. cinemachine-orbits
+148. cinemachine-top-down
+149. cinemachine-transitions
+150. cinemachine-virtual-camera
+
+TOTAL: 150 SKILLS
+=================

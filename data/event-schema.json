@@ -1,0 +1,109 @@
+{
+  "skill_discovered": {
+    "required": [
+      "userId",
+      "skillId",
+      "source",
+      "timestamp"
+    ],
+    "optional": [
+      "domain",
+      "searchQuery",
+      "referrer"
+    ],
+    "description": "User discovers a skill via search, browse, or recommendation"
+  },
+  "skill_adopted": {
+    "required": [
+      "userId",
+      "skillId",
+      "workflowId",
+      "timestamp"
+    ],
+    "optional": [
+      "previousSkills",
+      "adoptedWithVariant"
+    ],
+    "description": "User officially adopts a skill into their workflow"
+  },
+  "workflow_created": {
+    "required": [
+      "userId",
+      "workflowId",
+      "skillIds",
+      "timestamp"
+    ],
+    "optional": [
+      "templateId",
+      "clonedFrom"
+    ],
+    "description": "User creates a new workflow combining multiple skills"
+  },
+  "workflow_completed": {
+    "required": [
+      "userId",
+      "workflowId",
+      "duration",
+      "timestamp"
+    ],
+    "optional": [
+      "successMetrics",
+      "errors",
+      "fallbacksUsed"
+    ],
+    "description": "User completes a full workflow execution"
+  },
+  "skill_shared": {
+    "required": [
+      "userId",
+      "skillId",
+      "recipientId",
+      "timestamp"
+    ],
+    "optional": [
+      "channel",
+      "feedback"
+    ],
+    "description": "User shares skill with colleague/team"
+  },
+  "validation_run": {
+    "required": [
+      "skillId",
+      "gatesPassed",
+      "gatesFailed",
+      "timestamp"
+    ],
+    "optional": [
+      "duration",
+      "checksPerformed"
+    ],
+    "description": "Skill validation gate execution result"
+  },
+  "benchmark_recorded": {
+    "required": [
+      "skillId",
+      "metric",
+      "value",
+      "timestamp"
+    ],
+    "optional": [
+      "hardware",
+      "variant"
+    ],
+    "description": "Performance benchmark metric recorded"
+  },
+  "error_reported": {
+    "required": [
+      "skillId",
+      "userId",
+      "errorType",
+      "timestamp"
+    ],
+    "optional": [
+      "stackTrace",
+      "environment",
+      "severity"
+    ],
+    "description": "User reports error in skill or workflow"
+  }
+}

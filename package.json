@@ -1,0 +1,21 @@
+{
+  "name": "unity-agents-workspace",
+  "version": "9.1.0",
+  "description": "AI automation framework for Unity game development across all platforms",
+  "private": true,
+  "scripts": {
+    "measure-tokens": "node scripts/measure-tokens.js",
+    "benchmark": "node scripts/measure-tokens.js benchmark",
+    "validate-compression": "node scripts/validate-compression.js",
+    "skill-browser": "node scripts/skill-browser-server.js",
+    "enrich-skills": "node scripts/enrich-skills.js",
+    "enrich-skills:apply": "node scripts/enrich-skills.js --apply",
+    "validation:watch": "node scripts/validation-watch.js",
+    "skills:version": "node scripts/skill-version-manager.js generate",
+    "skills:phase6": "node scripts/phase6-bootstrap.js",
+    "marketplace:index": "node scripts/marketplace-index.js",
+    "benchmark:suite": "node scripts/benchmark-suite.js",
+    "analytics:dashboard": "node scripts/analytics-dashboard.js",
+    "analytics:setup": "node scripts/analytics-setup.js"
+  }
+}

@@ -1,0 +1,3564 @@
+{
+  "updated_at": "2026-03-29T21:03:55.976Z",
+  "total_skills": 593,
+  "compatibility": [
+    {
+      "skill": "advanced-architecture-patterns",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "advanced-custom-attributes",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "advanced-il-emit",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "advanced-memory-profiling",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "advanced-meta-programming",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "advanced-performance-tuning",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "advanced-reflection-caching",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "advanced-runtime-compilation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "advanced-scalability-design",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "advanced-type-discovery",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ai-behavior-switching",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ai-communication-network",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ai-crowd-simulation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ai-debugging-tools",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ai-environmental-awareness",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ai-formation-control",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ai-learning-adaptation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ai-llm-runtime-integration",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ai-perception-system",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ai-squad-tactics",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ai-threat-assessment",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "analytics-event-tracking",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "analytics-funnel-attribution",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "analytics-integration",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "analytics-privacy-anonymization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "analytics-user-segmentation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-baking-setup",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-blend-trees",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-blending",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-bone-mapping",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-clip-management",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-constraint-rigging",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-curve-editing",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-curves",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-debug-visualization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-editor-tools",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-events",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-footik-sync",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-frame-stepping",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-humanoid-setup",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-ik-setup",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-import-settings",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-layering",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-memory-optimization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-mirror-setup",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-mocap-setup",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-motion-capture",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-nla-editor",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-optimization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-parameter-binding",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-performance-profiling",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-playback-control",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-preview",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-preview-window",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-procedural-generation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-retargeting",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-rigging-tools",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-runtime-switching",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-state-machine",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-streaming",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "animation-timing-sync",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "anomaly-detection",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "api-design-patterns",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "architecture-event-bus-pattern",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "architecture-plugin-system",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "architecture-service-locator",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "asset-management-system",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "asset-pipeline-conversion",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-adaptive-bitrate",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-ambient-soundscapes",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-ambisonics-support",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-attenuation-curves",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-binaural-rendering",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-compression-codecs",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-dialogue-system",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-ducking-sidechains",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-dynamic-music",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-effects-compression",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-effects-distortion",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-effects-eq",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-effects-pitch-shift",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-effects-reverb",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-effects-time-stretch",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-environmental-acoustics",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-fmod-integration",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-footstep-generation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-frequency-analysis",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-headphone-optimization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-impact-sounds",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-mixer-setup",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-multi-output-routing",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-object-pooling",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-parameter-automation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-performance-profiling",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-platform-specific-codecs",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-prioritization-system",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-procedural-generation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-spatial-3d",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-streaming-audio",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "audio-voice-chat",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "automated-testing-framework",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "behavior-decision-making",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "behavior-formation-control",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "behavior-goal-planning",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "behavior-group-tactics",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "behavior-memory-management",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "behavior-perception-system",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "behavior-state-machines",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "behavior-tree-basics",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "behavior-tree-composites",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "behavior-tree-decorators",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "benchmark-regression-gates",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "build-addressable-system",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "build-bundle-optimization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "build-caching-strategy",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "build-incremental-compilation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "build-parallel-processing",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "build-shader-stripping",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "build-size-analysis",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "build-system-optimization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ci-cd-pipeline-setup",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "cinemachine-aim-assist",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "cinemachine-blending",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "cinemachine-collision-response",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "cinemachine-extensions",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "cinemachine-first-person",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "cinemachine-follow-target",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "cinemachine-framing",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "cinemachine-impulse-effects",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "cinemachine-orbits",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "cinemachine-top-down",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "cinemachine-transitions",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "cinemachine-virtual-camera",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "clustering-systems",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "community-marketplace-governance",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "compatibility-testing",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "compliance-audit-logging",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "compliance-gdpr-requirements",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "compliance-regulatory-reporting",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "computer-vision-basics",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "configuration-environment-variables",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "configuration-feature-flags",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "configuration-hot-reload",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "configuration-platform-override",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "configuration-profile-management",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "configuration-remote-config",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "configuration-schema-validation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "configuration-version-control",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "console-extensions",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "controller-button-combos",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "controller-haptic-feedback",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "cross-engine-architecture",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "cross-engine-portability-layer",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "cross-validation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-adapter-pattern",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-async-await",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-bridge-pattern",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-builder-pattern",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-chain-of-responsibility",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-command-pattern",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-composite-pattern",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-concurrent-structures",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-coroutines-async",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-decorator-pattern",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-delegates-lambdas",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-dependency-injection",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-event-systems",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-factory-patterns",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-flyweight-pattern",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-generics-patterns",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-interpreter-pattern",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-json-parsing",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-mediator-pattern",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-memento-pattern",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-memory-management",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-observer-pattern",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-performance-optimization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-pooling-patterns",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-proxy-pattern",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-reflection-systems",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-serialization-advanced",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-singleton-patterns",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-state-pattern",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-strategy-pattern",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-string-optimization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-template-method",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-thread-safety",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-threading-basics",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "csharp-visitor-pattern",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "custom-inspector-tools",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "custom-mcp-server",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "custom-scripting-engine",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "custom-workflow-builder",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "data-augmentation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "data-pipeline-setup",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-allocation-tracking",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-asset-dependencies",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-asset-loading",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-breakpoints",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-build-diagnostic",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-call-stack",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-conditional-breakpoints",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-console-system",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-custom-tools",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-error-handling",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-frame-debugger",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-gc-profiling",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-heap-snapshot",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-hierarchy-inspection",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-hot-reload",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-log-filtering",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-memory-profiler",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-missing-reference-cleaner",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-network-inspection",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-network-monitoring",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-performance-charts",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-performance-metrics",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-performance-profiler",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-physics-debugger",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-profiler-integration",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-remote-debugging-protocol",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-remote-profiling",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-renderer-debugging",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-runtime-metrics",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-scene-viewer",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-script-debugging",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-shader-debugging",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-stack-traces",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "debug-variable-inspection",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "decision-trees",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "development-asset-hot-swap",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "development-hot-reload-code",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "development-live-collaboration-sessions",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "development-live-edit-scenes",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "edge-deployment",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "editor-extension-development",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "engine-agnostic-patterns",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "engine-feature-mapping",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "engine-migration-guide",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ensemble-methods",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "feature-engineering",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "federated-learning",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "fine-tuning-models",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "gesture-multitouch-gestures",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "gesture-recognition-engine",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "godot-animation-setup",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "godot-editor-tools",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "godot-gdscript-integration",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "godot-physics-system",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "godot-setup",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-ambient-occlusion",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-batching-optimization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-bloom-effect",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-culling-strategies",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-depth-of-field",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-dynamic-lighting",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-frame-debugger",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-geometry-optimization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-gpu-profiling",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-hdrp-setup",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-light-baking",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-lightmap-setup",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-memory-profiling",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-motion-blur",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-postprocessing",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-probe-placement",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-realtime-gi",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-reflection-probes",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-render-queue",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-screen-space-reflections",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-shader-compiler",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-shadow-optimization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-sorting-layers",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-temporal-antialiasing",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "graphics-urp-setup",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "hyperparameter-tuning",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "inference-optimization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "injection-automatic-wiring",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "injection-container-configuration",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "injection-context-isolation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "input-accessibility-alternative-controls",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "input-analog-curve-shaping",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "input-cross-platform-mapping",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "input-deadzone-calibration",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "input-rebinding-system",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "machine-learning-setup",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-advanced-blending",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-ambient-occlusion",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-anisotropic-filtering",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-atlasing-techniques",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-blending-modes",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-compression-settings",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-contact-hardening",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-custom-nodes",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-decal-projection",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-disney-workflow",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-dynamic-properties",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-emission-control",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-format-selection",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-height-mapping",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-layered-materials",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-material-transitions",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-memory-optimization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-metallic-workflow",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-mipmap-chains",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-normal-mapping",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-parallax-mapping",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-parallax-occlusion",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-pbr-setup",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-performance-profiling",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-physics-interactions",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-procedural-generation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-refraction",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-roughness-control",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-runtime-modification",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-shader-graphs",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-snow-accumulation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-sound-reactivity",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-specular-workflow",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-streaming",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-subsurface-scattering",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-texture-channels",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-texture-optimization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-time-of-day",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-translucency-setup",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-triplanar-mapping",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-uv-mapping",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-variant-switching",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-visual-debugging",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-weather-effects",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "material-wetness-simulation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "metrics-custom-dashboards",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "metrics-data-aggregation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ml-model-serving-unity",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "model-interpretability",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "model-validation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "module-lazy-loading",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "module-versioning-management",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "navmesh-agent-movement",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "navmesh-areas-types",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "navmesh-baking-setup",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "navmesh-obstacles-dynamic",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-account-recovery",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-achievement-tracking",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-analytics-tracking",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-antiCheat-detection",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-auction-system",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-authentication",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-ban-system",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-bandwidth-optimization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-battle-pass",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-chat-system",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-client-authority",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-cloud-saves",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-connection-management",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-cross-progression",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-encryption",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-friend-system",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-guild-system",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-interpolation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-lag-compensation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-leaderboard",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-lobby-system",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-matchmaking",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-message-ordering",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-ngo-setup",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-packet-loss-handling",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-performance-monitoring",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-player-persistence",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-player-spawning",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-prediction-reconciliation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-presence-system",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-pvp-ranking",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-region-selection",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-replay-system",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-reward-distribution",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-rollback-resimulation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-rpc-system",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-server-authority",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-server-load-balancing",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-server-maintenance",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-server-replication",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-server-security",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-spectator-mode",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-state-synchronization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-statistics-synchronization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "networking-trading-system",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "neural-network-inference",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "nlp-integration",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "pathfinding-avoidance-steering",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "pathfinding-custom-graphs",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "pathfinding-waypoints",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "performance-dashboard",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "performance-geometry-lod-automation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "performance-profiling-cross-engine",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "performance-scene-optimization-analyzer",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "persistence-async-loading",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "persistence-hot-reload-systems",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "persistence-transaction-safety",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-aerodynamics",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-angular-momentum",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-buoyancy",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-center-of-mass",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-chain-dynamics",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-cloth-simulation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-collision-callbacks",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-constraint-optimization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-continuous-collision",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-debug-visualization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-destruction-system",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-drift-mechanics",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-explosion-forces",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-fluid-dynamics",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-force-fields",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-friction-models",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-hair-dynamics",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-inertia-calculation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-joint-constraints",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-layer-masking",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-networked-synchronization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-object-pooling",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-particle-collisions",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-performance-metrics",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-performance-profiling",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-ragdoll-physics",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-rolling-resistance",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-rope-simulation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-solver-configuration",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-spring-dynamics",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-suspension-tuning",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-terrain-deformation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-time-scaling",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-trigger-callbacks",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-trigger-volumes",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-vehicle-setup",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-vehicle-wheels",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "physics-water-waves",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "platform-abstraction-layers",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "plugin-architecture",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "prediction-models",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "privacy-consent-tracking",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "privacy-data-deletion",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "privacy-preservation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "profiler-extensions",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "quality-metrics-collection",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "quality-performance-regression",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "reinforcement-learning",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "savedata-compression-strategy",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "savedata-encryption-security",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "savedata-version-migration",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "security-data-encryption-at-rest",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "security-data-retention-policies",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "security-secure-communication",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "serialization-binary-format",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "serialization-compatibility",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "serialization-custom-types",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "serialization-json-integration",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "shader-cross-compilation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "telemetry-crash-reporting",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "telemetry-performance-monitoring",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "telemetry-real-time-alerts",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "telemetry-system",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-advanced-editing",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-biome-definition",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-blending-shaders",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-brush-settings",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-cave-systems",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-cliff-generation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-detail-meshes",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-dynamic-modification",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-erosion-simulation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-grass-placement",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-heightfield-editing",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-heightmap-import",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-layer-management",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-lightmap-generation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-lod-optimization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-memory-management",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-multi-layer-textures",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-neighbor-blending",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-noise-functions",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-normal-generation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-path-carving",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-performance-tuning",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-physics-colliders",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-procedural-generation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-shadow-caching",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-shape-tools",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-sound-surfaces",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-splat-mapping",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-streaming",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-texture-painting",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-transition-zones",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-tree-painting",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-vegetation-placement",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-water-integration",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "terrain-wind-zones",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "testing-automated-regression",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "testing-integration-test-framework",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "testing-snapshot-comparison",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "testing-stress-load-testing",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "time-series-forecasting",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-animation-binding",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-audio-sync",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-branching-paths",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-camera-transitions",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-control-rig",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-curve-editing",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-cutscene-director",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-data-persistence",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-debug-visualization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-editor-tools",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-event-triggers",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-footstep-sync",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-light-animation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-mask-integration",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-material-morphing",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-multi-character-coordination",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-nested-sequences",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-parameter-binding",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-particle-effects",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-performance-profiling",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-procedural-generation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-recording-playback",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-scripting-integration",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-streaming-optimization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-time-dilation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-track-basics",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-transition-blending",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "timeline-vfx-coordination",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "training-datasets",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "transfer-learning",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-accessibility",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-anchor-positioning",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-animation-states",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-animation-tweens",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-auto-layout",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-button-events",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-context-menus",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-data-binding",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-docking-windows",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-drag-drop",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-dynamic-styling",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-event-handlers",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-focus-navigation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-form-submission",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-grid-layout",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-hierarchy-panel",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-input-validation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-keyboard-shortcuts",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-list-repeater",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-list-virtualization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-modal-dialogs",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-mouse-interaction",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-overflow-handling",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-panel-layout",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-performance-optimization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-prefab-variants",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-resize-scaling",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-responsive-design",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-scrolling-behavior",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-style-sheets",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-text-binding",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-theme-switching",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-tooltips",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-touch-input",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-transition-timing",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-two-way-binding",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-visual-feedback",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "ui-z-ordering",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "unreal-animation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "unreal-blueprints",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "unreal-cpp-integration",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "unreal-engine-compatibility",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "unreal-physics",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "validation-compatibility-matrix",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "validation-gate-enforcement",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "version-control-integration",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "vfx-builtin-particles",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "vfx-burst-optimization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "vfx-cloth-simulation",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "vfx-decal-system",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "vfx-gpu-instancing",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "vfx-lifetime-management",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "vfx-lod-system",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "vfx-particle-collision",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "vfx-particle-systems",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "vfx-shader-graph-advanced",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "vfx-shader-optimization",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "vfx-spawn-systems",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "vfx-texture-streaming",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "vfx-trail-rendering",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    },
+    {
+      "skill": "vfx-visual-effects-basics",
+      "compatible_with_framework": ">=9.0.3",
+      "requires": [],
+      "breaking_since": null
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "generated": "2026-03-29T21:06:39.114Z",
+  "timeRanges": {
+    "24h": {
+      "totalEvents": 150,
+      "eventsByType": {
+        "workflow_completed": 39,
+        "skill_adopted": 35,
+        "workflow_created": 37,
+        "skill_discovered": 39
+      },
+      "discoveryCount": 39,
+      "adoptionCount": 35,
+      "adoptionRate": "89.7",
+      "completionRate": 0,
+      "validationPassRate": 0.99,
+      "topSkills": {
+        "ml-model-serving-unity": 22,
+        "analytics-funnel-attribution": 22,
+        "ai-llm-runtime-integration": 23,
+        "cross-engine-portability-layer": 32,
+        "community-marketplace-governance": 27,
+        "benchmark-regression-gates": 24
+      },
+      "errorRate": 0
+    },
+    "7d": {
+      "totalEvents": 150,
+      "eventsByType": {
+        "workflow_completed": 39,
+        "skill_adopted": 35,
+        "workflow_created": 37,
+        "skill_discovered": 39
+      },
+      "discoveryCount": 39,
+      "adoptionCount": 35,
+      "adoptionRate": "89.7",
+      "completionRate": 0,
+      "validationPassRate": 0.99,
+      "topSkills": {
+        "ml-model-serving-unity": 22,
+        "analytics-funnel-attribution": 22,
+        "ai-llm-runtime-integration": 23,
+        "cross-engine-portability-layer": 32,
+        "community-marketplace-governance": 27,
+        "benchmark-regression-gates": 24
+      },
+      "errorRate": 0
+    }
+  },
+  "topSkills": [
+    [
+      "cross-engine-portability-layer",
+      32
+    ],
+    [
+      "community-marketplace-governance",
+      27
+    ],
+    [
+      "benchmark-regression-gates",
+      24
+    ],
+    [
+      "ai-llm-runtime-integration",
+      23
+    ],
+    [
+      "ml-model-serving-unity",
+      22
+    ],
+    [
+      "analytics-funnel-attribution",
+      22
+    ]
+  ]
+}
