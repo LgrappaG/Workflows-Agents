@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Dict, List, Tuple
 import re
 import yaml
+from datetime import date
 
 # Configuration
 BASE_DIR = Path(__file__).parent.parent  # .agents directory
@@ -18,26 +19,26 @@ SKILLS_DIR = BASE_DIR / "skills"
 # Valid domains for skill names
 VALID_DOMAINS = {
     'advanced', 'animation', 'audio', 'ai', 'analytics', 'anomaly', 'api',
-    'asset', 'automated', 'behavior', 'blueprint', 'build', 'ci-cd', 'clustering',
-    'collision', 'component', 'compute', 'computer-vision', 'console', 'constraint',
-    'cross-engine', 'custom', 'data', 'debug', 'decision', 'deployment', 'dialogue',
-    'distribution', 'dynamic', 'edge', 'ensemble', 'engine', 'feature', 'federated',
-    'fine-tuning', 'garbage-collection', 'godot', 'graphics', 'gpu', 'hierarchy',
-    'hyperparameter', 'il', 'inference', 'input', 'inspector', 'interpolation',
-    'ik', 'joint', 'language', 'layer', 'level', 'lighting', 'localization',
-    'machine-learning', 'math', 'memory', 'mesh', 'ml', 'mobile', 'model',
-    'motion', 'motor', 'movement', 'multiplayer', 'navigation', 'neural-network',
-    'nlp', 'node', 'networking', 'normalization', 'object', 'optimization',
-    'particle', 'performance', 'physics', 'pipeline', 'plugin', 'pooling',
-    'prediction', 'procedural', 'profiler', 'profiling', 'projection', 'property',
-    'rag', 'ray', 'reflection', 'reinforcement', 'rendering', 'resource',
-    'response', 'rigging', 'runtime', 'scripting', 'security', 'sensor',
-    'serialization', 'shader', 'socket', 'sound', 'spatial', 'specialized',
-    'state', 'streaming', 'string', 'structure', 'synchronization', 'system',
-    'task', 'telemetry', 'temporal', 'terrain', 'testing', 'texture', 'thread',
-    'tile', 'time', 'tool', 'trace', 'transfer', 'transform', 'transition',
-    'ui', 'unreal', 'validation', 'vfx', 'vr', 'world', 'xr',
-    # Add custom game-specific domains as needed
+    'architecture', 'asset', 'automated', 'behavior', 'blueprint', 'build', 'ci-cd', 'cinemachine',
+    'clustering', 'collision', 'component', 'compute', 'computer-vision', 'console', 'constraint',
+    'configuration', 'controller', 'cross-engine', 'cross-validation', 'csharp', 'custom',
+    'data', 'debug', 'decision', 'deployment', 'development', 'dialogue', 'distribution',
+    'dynamic', 'edge', 'editor', 'ensemble', 'engine', 'feature', 'federated', 'fine-tuning',
+    'garbage-collection', 'gesture', 'godot', 'graphics', 'gpu', 'hierarchy', 'hyperparameter',
+    'il', 'inference', 'injection', 'input', 'inspector', 'interpolation', 'ik', 'joint',
+    'language', 'layer', 'level', 'lighting', 'localization', 'machine-learning', 'material',
+    'math', 'memory', 'mesh', 'metrics', 'ml', 'mobile', 'model', 'module', 'motion', 'motor',
+    'movement', 'multiplayer', 'navmesh', 'navigation', 'neural-network', 'nlp', 'node',
+    'networking', 'normalization', 'object', 'optimization', 'particle', 'pathfinding',
+    'performance', 'persistence', 'physics', 'pipeline', 'platform', 'plugin', 'pooling',
+    'prediction', 'privacy', 'procedural', 'profiler', 'profiling', 'projection', 'property',
+    'quality', 'rag', 'ray', 'reflection', 'reinforcement', 'rendering', 'resource', 'response',
+    'rigging', 'runtime', 'savedata', 'scripting', 'security', 'sensor', 'serialization',
+    'shader', 'socket', 'sound', 'spatial', 'specialized', 'state', 'streaming', 'string',
+    'structure', 'synchronization', 'system', 'task', 'telemetry', 'temporal', 'terrain',
+    'testing', 'texture', 'thread', 'tile', 'time', 'timeline', 'tool', 'trace', 'training',
+    'transfer', 'transform', 'transition', 'ui', 'unreal', 'validation', 'version', 'vfx',
+    'vr', 'world', 'xr', 'community', 'compliance', 'benchmark'
 }
 
 REQUIRED_FIELDS = ['name', 'description', 'risk', 'source', 'date_added',
@@ -127,7 +128,10 @@ class SkillValidator:
 
             # Validate date format (YYYY-MM-DD)
             date_added = skill_data.get('date_added', '')
-            if not re.match(r'^\d{4}-\d{2}-\d{2}$', date_added):
+            # Convert datetime.date to string if needed
+            if isinstance(date_added, date):
+                date_added = date_added.isoformat()
+            if not isinstance(date_added, str) or not re.match(r'^\d{4}-\d{2}-\d{2}$', date_added):
                 self.errors.append(
                     f"{skill_path}: Invalid date format '{date_added}'. Expected YYYY-MM-DD"
                 )
