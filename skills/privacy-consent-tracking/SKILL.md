@@ -7,7 +7,7 @@ date_added: '2026-03-24'
 usage: GDPR consent management for EU players, CCPA opt-in for CA users, consent form versioning after privacy policy updates, user consent audit during regulatory inspections
 avoid: Pre-ticked consent boxes, implied consent without explicit action, consent versioning without tracking, bulk consent revocation without individual audit, consent records deletion during retention period
 mandates: Capture explicit consent (checkbox + timestamp) for each data processing purpose; version consent forms (v1.2.3); enable revocation within 48 hours; maintain consent audit for 7 years minimum
-response: 'Store consent records with: user_id, purpose_code (e, g, , 'analytics', 'marketing', 'profiling'), consent_version, timestamp_utc, ip_address, user_agent; implement database constraints requiring, Implement dual-submission pattern: frontend captures explicit opt-in with unique nonce; backend validates'
+response: "Store consent records with: user_id, purpose_code (e.g., 'analytics', 'marketing', 'profiling'), consent_version, timestamp_utc, ip_address, user_agent; implement database constraints requiring consent audit trail. Implement dual-submission pattern: frontend captures explicit opt-in with unique nonce; backend validates"
 ---
 
 # Privacy Consent Tracking
