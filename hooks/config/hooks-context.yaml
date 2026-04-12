@@ -1,0 +1,323 @@
+# Context-Specific Hooks Configuration
+# Version: 1.0
+# Last Updated: 2026-04-12
+# Defines validation rules specific to phases, environments, and branches
+
+metadata:
+  version: "1.0"
+  description: "Context-aware validation rules for different phases and environments"
+  last_updated: "2026-04-12"
+
+# ============================================================================
+# PHASE-SPECIFIC CONTEXTS
+# ============================================================================
+
+contexts:
+  default:
+    validation_mode: strict
+    description: "Default validation mode"
+    enabled_gates: [1, 2, 3, 4, 5, 6, 7, 8]
+    fail_fast: false
+
+  # PHASE 4: Final QA & Polish
+  phase_4:
+    validation_mode: strict
+    description: "Phase 4 - Production-ready validation"
+    enabled_gates: [1, 2, 3, 4, 5, 6, 7, 8]
+    fail_fast: true
+    parent_context: default
+    thresholds: {}  # Inherits all from global config
+
+  # PHASE 5: Enrichment
+  phase_5_enrichment:
+    validation_mode: lenient
+    description: "Phase 5 - Domain-specific YAML enrichment"
+    enabled_gates: [1, 2, 3, 4, 5, 6, 7, 8]
+    fail_fast: false
+    parent_context: default
+    thresholds:
+      file_size:
+        max_bytes: 1500  # Allow enriched content
+      description:
+        min_length: 50
+        max_length: 120  # Slightly more space for enrichment
+    phase_start_date: "2026-03-24"
+    phase_end_date: "2026-04-30"
+    notes: "Allow larger file sizes for domain-specific YAML enhancement"
+
+  # PHASE 6: Bootstrap (Future)
+  phase_6_bootstrap:
+    validation_mode: experimental
+    description: "Phase 6 - Bootstrap new frameworks and domains"
+    enabled_gates: [1, 2, 3, 4, 5]  # Gates 6-8 are optional
+    fail_fast: false
+    parent_context: default
+    thresholds:
+      description:
+        min_length: 30  # Relaxed for bootstrap
+        max_length: 150
+      mandates:
+        minimum_count: 2  # Relaxed requirement
+      file_size:
+        max_bytes: 2000
+    phase_start_date: "2026-05-01"
+    notes: "Relaxed validation to accommodate bootstrap phase requirements"
+
+  # PHASE 7: Growth & Evolution (Future)
+  phase_7_growth:
+    validation_mode: lenient
+    description: "Phase 7 - System growth with flexible requirements"
+    enabled_gates: [1, 2, 3, 4, 5, 6, 7, 8]
+    fail_fast: false
+    parent_context: default
+    thresholds:
+      file_size:
+        max_bytes: 1800
+    phase_start_date: "2026-06-01"
+    notes: "More lenient for ecosystem growth"
+
+# ============================================================================
+# ENVIRONMENT-SPECIFIC CONTEXTS
+# ============================================================================
+
+environments:
+  # CI/CD Strict - GitHub Actions
+  ci_strict:
+    validation_mode: strict
+    description: "Strict validation in CI/CD pipeline"
+    enabled_gates: [1, 2, 3, 4, 5, 6, 7, 8]
+    fail_fast: true
+    report_format: json
+    fail_on_warnings: true
+    slack_notification_on_fail: true
+    environment_type: ci
+    platform: github_actions
+
+  # CI/CD Lenient - Weekly runs
+  ci_lenient:
+    validation_mode: lenient
+    description: "Lenient validation for weekly benchmarks"
+    enabled_gates: [1, 2, 3, 4, 5, 6, 7, 8]
+    fail_fast: false
+    report_format: json
+    fail_on_warnings: false
+    environment_type: ci
+    platform: github_actions
+
+  # Local Development
+  local_development:
+    validation_mode: lenient
+    description: "Relaxed validation for local development"
+    enabled_gates: [1, 2, 3, 4, 5, 6, 7]  # Skip Gate 8 (consistency) locally
+    fail_fast: false
+    report_format: text  # Human-readable locally
+    fail_on_warnings: false
+    environment_type: local
+
+  # Git Pre-Commit Hook
+  pre_commit:
+    validation_mode: strict
+    description: "Pre-commit hook validation"
+    enabled_gates: [1, 2]  # Fast gates only (1-2)
+    fail_fast: true
+    report_format: text
+    fail_on_warnings: true
+    timeout_seconds: 5
+
+  # Interactive Review Mode
+  interactive_review:
+    validation_mode: lenient
+    description: "Interactive code review with detailed feedback"
+    enabled_gates: [1, 2, 3, 4, 5, 6, 7, 8]
+    fail_fast: false
+    report_format: html  # Rich UI format
+    include_suggestions: true
+    interactive_mode: true
+    environment_type: local
+
+# ============================================================================
+# BRANCH-SPECIFIC CONTEXTS
+# ============================================================================
+
+branches:
+  main:
+    validation_mode: strict
+    description: "Main branch requires strict validation"
+    enabled_gates: [1, 2, 3, 4, 5, 6, 7, 8]
+    fail_fast: true
+    require_approval: true
+
+  master:
+    validation_mode: strict
+    description: "Master branch requires strict validation"
+    enabled_gates: [1, 2, 3, 4, 5, 6, 7, 8]
+    fail_fast: true
+    require_approval: true
+
+  develop:
+    validation_mode: lenient
+    description: "Development branch allows some leniency"
+    enabled_gates: [1, 2, 3, 4, 5, 6, 7, 8]
+    fail_fast: false
+    require_approval: false
+
+  feature/*:
+    validation_mode: lenient
+    description: "Feature branches use lenient validation"
+    enabled_gates: [1, 2, 3, 4, 5, 6, 7]  # Skip Gate 8 locally
+    fail_fast: false
+
+  experimental/*:
+    validation_mode: experimental
+    description: "Experimental branches use relaxed validation"
+    enabled_gates: [1, 2, 3, 4, 5]  # Gates 1-5 only
+    fail_fast: false
+
+  hotfix/*:
+    validation_mode: strict
+    description: "Hotfix branches require strict validation"
+    enabled_gates: [1, 2, 3, 4, 5, 6, 7, 8]
+    fail_fast: true
+
+# ============================================================================
+# CONTEXT DETECTION RULES
+# ============================================================================
+
+context_detection:
+  # Environment Detection - How to detect current environment
+  environment:
+    # GitHub Actions Detection
+    github_actions:
+      conditions:
+        - env_var: GITHUB_ACTIONS
+          value: "true"
+        - env_var: CI
+          value: "true"
+      context: ci_strict
+
+    # Local Git Hook Detection
+    git_pre_commit:
+      conditions:
+        - git_hook: pre-commit
+      context: pre_commit
+
+    # Local Development
+    local:
+      conditions:
+        - env_var: GITHUB_ACTIONS
+          value_not: "true"
+        - env_var: CI
+          value_not: "true"
+      context: local_development
+
+  # Phase Detection - How to detect current phase
+  phase:
+    # Version File (Recommended)
+    version_file:
+      path: ".agents/version.yaml"
+      field: "current_phase"
+      enabled: true
+      priority: 100
+
+    # Git Tag Pattern
+    git_tag:
+      pattern: "^phase-\\d+$"
+      extract_phase: true
+      enabled: true
+      priority: 90
+
+    # Branch Pattern
+    branch_pattern:
+      patterns:
+        - pattern: "^phase-\\d+"
+          extract: true
+        - pattern: "enrichment"
+          phase: 5
+      enabled: true
+      priority: 80
+
+    # Date Range (for time-based phases)
+    date_range:
+      ranges:
+        - phase: 4
+          start: "2026-02-01"
+          end: "2026-04-30"
+        - phase: 5
+          start: "2026-04-01"
+          end: "2026-06-30"
+      enabled: true
+      priority: 70
+
+    # Environment Variable
+    env_var:
+      variable: "HOOKS_CONTEXT"
+      pattern: "phase_\\d+"
+      extract_phase: true
+      enabled: true
+      priority: 110  # Highest priority
+
+  # Fallback
+  fallback:
+    context: default
+    reason: "No context detected, using defaults"
+
+# ============================================================================
+# CONTEXT MERGING RULES
+# ============================================================================
+
+merging:
+  strategy: deep_merge
+  override_order:
+    1: "env_var:HOOKS_CONTEXT"  # Highest priority
+    2: "git_branch"
+    3: "git_tag"
+    4: "version_file"
+    5: "date_range"
+    6: "default"  # Lowest priority
+
+  # What fields can be overridden
+  mergeable_fields:
+    - validation_mode
+    - enabled_gates
+    - thresholds
+    - fail_fast
+    - report_format
+    - fail_on_warnings
+
+# ============================================================================
+# SPECIAL SCENARIOS
+# ============================================================================
+
+scenarios:
+  # AI Skill Validation (Tight constraints)
+  ai_ml_skills:
+    pattern: "skills/(ai-|ml-|machine-|neural-)"
+    validation_mode: strict
+    enabled_gates: [1, 2, 3, 4, 5, 6, 7, 8]
+    thresholds:
+      mandates:
+        minimum_count: 4  # AI/ML requires more validation
+      description:
+        max_length: 100
+    warning_keywords:
+      - unvalidated
+      - experimental
+      - untested
+
+  # Material System (Performance-sensitive)
+  material_skills:
+    pattern: "skills/material-*"
+    thresholds:
+      mandates:
+        minimum_count: 3
+    required_fields:
+      - shader_type
+      - performance_impact
+
+  # VR/XR Content (Specialized validation)
+  vr_xr_skills:
+    pattern: "skills/(vr-|xr-)"
+    enabled_gates: [1, 2, 3, 4, 5, 6, 7, 8]
+    thresholds:
+      response:
+        min_steps: 4  # VR/XR needs detailed steps

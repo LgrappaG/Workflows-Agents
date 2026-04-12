@@ -2,6 +2,8 @@
 """
 Pre-Commit Skills Validator for .agents Framework
 Validates YAML frontmatter and naming conventions before commit
+
+Uses DynamicHooksEngine for configuration.
 """
 
 import os
@@ -16,8 +18,18 @@ from datetime import date
 BASE_DIR = Path(__file__).parent.parent  # .agents directory
 SKILLS_DIR = BASE_DIR / "skills"
 
-# Valid domains for skill names
-VALID_DOMAINS = {
+# Add hooks engine to path
+hooks_path = Path(__file__).parent
+sys.path.insert(0, str(hooks_path))
+
+try:
+    from engine.dynamic_hooks_engine import DynamicHooksEngine
+    USE_DYNAMIC_ENGINE = True
+except ImportError:
+    USE_DYNAMIC_ENGINE = False
+
+# Fallback hardcoded values
+FALLBACK_DOMAINS = {
     'advanced', 'animation', 'audio', 'ai', 'analytics', 'anomaly', 'api',
     'architecture', 'asset', 'automated', 'behavior', 'blueprint', 'build', 'ci', 'ci-cd', 'cinemachine',
     'clustering', 'collision', 'compatibility', 'component', 'compute', 'computer', 'computer-vision', 'console', 'constraint',
@@ -41,21 +53,79 @@ VALID_DOMAINS = {
     'vr', 'world', 'xr', 'community', 'compliance', 'benchmark'
 }
 
-REQUIRED_FIELDS = ['name', 'description', 'risk', 'source', 'date_added',
-                   'usage', 'avoid', 'mandates', 'response']
+FALLBACK_REQUIRED_FIELDS = ['name', 'description', 'risk', 'source', 'date_added',
+                            'usage', 'avoid', 'mandates', 'response']
 
-VALID_RISK_LEVELS = ['low', 'medium', 'high']
+FALLBACK_RISK_LEVELS = ['low', 'medium', 'high']
+
+# Consolidated fallback configuration
+FALLBACK_CONFIG = {
+    'gates': {
+        'yaml_frontmatter': {
+            'required_fields': FALLBACK_REQUIRED_FIELDS
+        },
+        'naming_convention': {
+            'approved_domains': list(FALLBACK_DOMAINS)
+        },
+        'risk_level': {
+            'valid_levels': FALLBACK_RISK_LEVELS
+        },
+        'description': {
+            'min_length': 50,
+            'max_length': 100
+        }
+    }
+}
 
 
 class SkillValidator:
     """Validates skills against pre-commit requirements."""
 
-    def __init__(self):
+    def __init__(self, use_dynamic=USE_DYNAMIC_ENGINE):
         self.errors = []
         self.warnings = []
         self.skill_count = 0
         self.passed = 0
         self.failed = 0
+        self.use_dynamic = use_dynamic
+
+        # Initialize dynamic engine if available
+        self.engine = None
+        self.config = None
+        if self.use_dynamic:
+            try:
+                self.engine = DynamicHooksEngine(skip_plugin_loading=True)
+                self.config = self.engine.get_effective_config()
+            except Exception as e:
+                print(f"[WARNING] Could not load dynamic engine: {e}. Using hardcoded defaults.")
+                self.use_dynamic = False
+
+        # Set default config values
+        if not self.use_dynamic or not self.config:
+            self.config = FALLBACK_CONFIG
+
+    def get_required_fields(self):
+        """Get required YAML fields from config."""
+        return self.config.get('gates', {}).get('yaml_frontmatter', {}).get('required_fields', FALLBACK_REQUIRED_FIELDS)
+
+    def get_approved_domains(self):
+        """Get approved domains from config."""
+        domains = self.config.get('gates', {}).get('naming_convention', {}).get('approved_domains')
+        if isinstance(domains, list):
+            return set(domains)
+        return FALLBACK_DOMAINS
+
+    def get_valid_risk_levels(self):
+        """Get valid risk levels from config."""
+        return self.config.get('gates', {}).get('risk_level', {}).get('valid_levels', FALLBACK_RISK_LEVELS)
+
+    def get_description_min(self):
+        """Get min description length from config."""
+        return self.config.get('gates', {}).get('description', {}).get('min_length', 50)
+
+    def get_description_max(self):
+        """Get max description length from config."""
+        return self.config.get('gates', {}).get('description', {}).get('max_length', 100)
 
     def validate_file(self, skill_path: Path) -> bool:
         """Validate a single skill file."""
@@ -86,8 +156,14 @@ class SkillValidator:
                 self.errors.append(f"{skill_path}: Empty YAML frontmatter")
                 return False
 
+            # Get dynamic config values
+            required_fields = self.get_required_fields()
+            valid_risk_levels = self.get_valid_risk_levels()
+            desc_min = self.get_description_min()
+            desc_max = self.get_description_max()
+
             # Validate required fields
-            missing_fields = [f for f in REQUIRED_FIELDS if f not in skill_data]
+            missing_fields = [f for f in required_fields if f not in skill_data]
             if missing_fields:
                 self.errors.append(
                     f"{skill_path}: Missing required fields: {', '.join(missing_fields)}"
@@ -95,7 +171,7 @@ class SkillValidator:
                 return False
 
             # Validate field values
-            for field in REQUIRED_FIELDS:
+            for field in required_fields:
                 value = skill_data.get(field, '')
                 if not value or (isinstance(value, str) and not value.strip()):
                     self.errors.append(f"{skill_path}: Field '{field}' is empty")
@@ -109,21 +185,21 @@ class SkillValidator:
 
             # Validate risk level
             risk = skill_data.get('risk', '').lower()
-            if risk not in VALID_RISK_LEVELS:
+            if risk not in valid_risk_levels:
                 self.errors.append(
-                    f"{skill_path}: Invalid risk level '{risk}'. Must be one of: {', '.join(VALID_RISK_LEVELS)}"
+                    f"{skill_path}: Invalid risk level '{risk}'. Must be one of: {', '.join(valid_risk_levels)}"
                 )
                 return False
 
             # Validate description length
             desc = skill_data.get('description', '')
-            if len(desc) < 50:
+            if len(desc) < desc_min:
                 self.warnings.append(
-                    f"{skill_path}: Description too short ({len(desc)} chars, min 50)"
+                    f"{skill_path}: Description too short ({len(desc)} chars, min {desc_min})"
                 )
-            elif len(desc) > 100:
+            elif len(desc) > desc_max:
                 self.warnings.append(
-                    f"{skill_path}: Description too long ({len(desc)} chars, max 100)"
+                    f"{skill_path}: Description too long ({len(desc)} chars, max {desc_max})"
                 )
 
             # Validate date format (YYYY-MM-DD)
@@ -157,8 +233,9 @@ class SkillValidator:
 
         domain, specialty = parts
 
-        # Check if domain is valid (allows hyphenated domains split on first hyphen)
-        if domain not in VALID_DOMAINS:
+        # Check if domain is valid using dynamic config
+        approved_domains = self.get_approved_domains()
+        if domain not in approved_domains:
             return False
 
         # Specialty should have substance

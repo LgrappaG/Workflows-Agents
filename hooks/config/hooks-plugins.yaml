@@ -1,0 +1,264 @@
+# Plugin Registry & Configuration
+# Version: 1.0
+# Last Updated: 2026-04-12
+# Defines plugins that extend the validation system
+
+metadata:
+  version: "1.0"
+  description: "Plugin registry for dynamic hooks system"
+  last_updated: "2026-04-12"
+  plugin_api_version: "1.0"
+
+# ============================================================================
+# CORE PLUGINS (Built-in, Provided by Framework)
+# ============================================================================
+
+plugins:
+  # Built-in Domain Validator (Checks skills use approved domains)
+  built_in_domain_validator:
+    id: "domain-validator-builtin"
+    enabled: true
+    type: built-in
+    module: "hooks.plugins.domain_validator"
+    class: "DomainValidator"
+
+    version: "1.0.0"
+    description: "Validate skill domain against approved list"
+    hooks:
+      - validate_skill
+
+    config:
+      respect_aliases: true
+      allow_custom_domains: false
+      action: "block"  # or "warn"
+
+    consensus_weight: 1
+    active_in_phases: [4, 5, 6, 7]
+
+  # Built-in ML Skill Validator
+  built_in_ml_validator:
+    id: "ml-skill-validator-builtin"
+    enabled: true
+    type: built-in
+    module: "hooks.plugins.ml_skill_validator"
+    class: "MLSkillValidator"
+
+    version: "1.0.0"
+    description: "Enhanced validation for ML/AI skills"
+    hooks:
+      - validate_skill
+    pattern: "(ml-|machine-|ai-|neural-|reinforcement-)"
+
+    config:
+      require_model_type: true
+      require_training_approach: true
+      require_validation_method: true
+
+    consensus_weight: 1.5  # Higher weight for ML skills
+    active_in_phases: [4, 5, 6, 7]
+
+  # Built-in Material Validator
+  built_in_material_validator:
+    id: "material-validator-builtin"
+    enabled: true
+    type: built-in
+    module: "hooks.plugins.material_validator"
+    class: "MaterialValidator"
+
+    version: "1.0.0"
+    description: "Specialized validation for material skills"
+    hooks:
+      - validate_skill
+    pattern: "material-*"
+
+    config:
+      require_performance_notes: true
+      require_shader_details: true
+
+    consensus_weight: 1
+    active_in_phases: [4, 5, 6, 7]
+
+  # Built-in VR/XR Validator
+  built_in_vr_validator:
+    id: "vr-xr-validator-builtin"
+    enabled: true
+    type: built-in
+    module: "hooks.plugins.vr_validator"
+    class: "VRXRValidator"
+
+    version: "1.0.0"
+    description: "Specialized validation for VR/XR skills"
+    hooks:
+      - validate_skill
+    pattern: "(vr-|xr-)"
+
+    config:
+      min_response_steps: 4
+      require_platform_notes: true
+
+    consensus_weight: 1
+    active_in_phases: [4, 5, 6, 7]
+
+# ============================================================================
+# OPTIONAL PLUGINS (Third-party or User-created)
+# ============================================================================
+
+optional_plugins:
+  # Example: Custom Organization Domain Validator
+  # Users can enable this and configure their own domains
+  custom_domain_validator:
+    id: "custom-domain-validator"
+    enabled: false  # Disabled by default
+    type: user-created
+    module: "plugins.custom_domain_validator"
+    class: "CustomDomainValidator"
+
+    version: "1.0.0"
+    description: "Support custom domains beyond the approved list"
+    author: "YourOrg"
+    repository: "https://github.com/yourorg/hooks-plugins"
+
+    hooks:
+      - validate_skill
+
+    config:
+      extra_domains:
+        - custom-domain-1
+        - custom-domain-2
+      domain_prefix_allowed: true
+      allow_override_strict_mode: false
+
+    consensus_weight: 0.5
+    active_in_phases: [5, 6, 7]  # Not in Phase 4
+    notes: "Add custom domains to extend validation"
+
+  # Performance Validator (Tracks metrics over time)
+  performance_tracker:
+    id: "performance-tracker"
+    enabled: false
+    type: user-created
+    module: "plugins.performance_tracker"
+    class: "PerformanceTracker"
+
+    version: "1.0.0"
+    description: "Track validation performance metrics and suggest optimizations"
+    author: "Performance Team"
+
+    hooks:
+      - post_validation
+
+    config:
+      track_metrics: true
+      alert_on_slow_gates: true
+      alert_threshold_ms: 100
+      generate_performance_report: true
+
+    consensus_weight: 0.0  # Informational only, doesn't affect pass/fail
+    active_in_phases: [4, 5, 6, 7]
+
+  # AI-Powered Rule Optimizer (Future)
+  ai_rule_optimizer:
+    id: "ai-rule-optimizer"
+    enabled: false
+    type: user-created
+    module: "plugins.ai_rule_optimizer"
+    class: "AIRuleOptimizer"
+
+    version: "0.1.0"
+    description: "AI-powered suggestion system for rule optimization (Experimental)"
+    author: "Research Team"
+
+    hooks:
+      - post_validation
+      - learning_analysis
+
+    config:
+      model: "claude-opus-4-6"
+      enable_auto_suggestions: false  # Manual review required
+      min_confidence_for_suggestion: 0.85
+      analysis_window_days: 30
+
+    consensus_weight: 0.0  # Informational
+    active_in_phases: [6, 7]
+    experimental: true
+    notes: "Experimental: requires Claude API key in .env.local"
+
+# ============================================================================
+# PLUGIN EXECUTION RULES
+# ============================================================================
+
+execution:
+  # Consensus Voting
+  consensus:
+    strategy: majority_vote
+    description: "Multiple plugins vote PASS/FAIL/WARN on validation"
+    minimum_consensus: 2  # At least 2 plugins must agree
+    voting_rules:
+      - if_vote_count < 2: use_framework_default
+      - if_consensus >= 66%: accept_result
+      - if_consensus < 66%: use_framework_default_with_warning
+    weighted_voting: true  # Use consensus_weight from plugin config
+
+  # Execution Order
+  order: serial  # or parallel
+  timeout_per_plugin: 10  # seconds
+  stop_on_first_fail: false  # Continue executing all plugins
+
+  # Plugin Isolation
+  isolation: subprocess  # Each plugin runs in isolated Python subprocess
+  error_handling: continue_on_error  # Don't crash if plugin fails
+
+# ============================================================================
+# PLUGIN INSTALLATION
+# ============================================================================
+
+installation:
+  # Where to look for plugins
+  search_paths:
+    - ".agents/hooks/plugins/"  # Local plugins
+    - "~/.claude/hooks/plugins/"  # User global plugins
+    - "./.claude/hooks/plugins/"  # Project-specific plugins
+
+  # Plugin Discovery
+  discovery:
+    auto_discover: true
+    patterns:
+      - "*_plugin.py"
+      - "*_validator.py"
+
+  # Plugin Requirements
+  requirements:
+    python_min_version: "3.8"
+    required_base_class: "BasePlugin"
+    required_methods:
+      - execute()
+      - get_plugin_info()
+
+# ============================================================================
+# PLUGIN DEVELOPMENT GUIDE
+# ============================================================================
+
+development:
+  template_available: true
+  template_path: ".agents/hooks/plugins/plugin_template.py"
+  documentation: ".agents/hooks/plugins/PLUGIN_DEVELOPMENT.md"
+  examples:
+    - ".agents/hooks/plugins/example_domain_validator.py"
+    - ".agents/hooks/plugins/example_performance_tracker.py"
+
+  api_version: "1.0"
+  breaking_changes:
+    - version: "2.0"
+      description: "Consensus voting system (current)"
+
+# ============================================================================
+# STATISTICS
+# ============================================================================
+
+statistics:
+  total_plugins: 8
+  built_in_plugins: 4
+  optional_plugins: 4
+  enabled_plugins: 4
+  disabled_plugins: 4
+  third_party_plugins: 0

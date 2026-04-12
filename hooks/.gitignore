@@ -1,0 +1,50 @@
+# Generated files (auto-created at runtime, NOT tracked in git)
+metrics/validation_metrics.json
+metrics/suggestions.json
+.env.local
+
+# Python (standard)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.coverage
+*.cover
+
+# IDE (standard)
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# System files
+*.log
+*.tmp
+
+# ═══════════════════════════════════════════════════════════════════════════
+# INTENTIONAL: These SHOULD be tracked in git (configuration as code)
+# ═══════════════════════════════════════════════════════════════════════════
+# - config/*.yaml         ← Configuration is source-controlled for audit trail
+# - engine/*.py           ← Core logic is source-controlled
+# - .env.example          ← Template is source-controlled (users copy it)
+# - schemas/*.json        ← Schemas are source-controlled (validation rules)
+# - CLAUDE.md             ← AI context is source-controlled
+# - DECISIONS.md          ← Architectural decisions are documented
+# - MODIFICATION_CHECKLIST.md ← Safeguards are documented
+# - DEPENDENCIES.md       ← System understanding is documented
+# - ONBOARDING.md         ← Training material is source-controlled
+# - AI_SESSION_TEMPLATE.md ← Memory format is standardized
+# - hooks.sh              ← CLI tool is source-controlled
+# - All documentation (*.md files) ← Docs are version-controlled
+
+# DO NOT add these patterns:
+# - Don't add config/*.yaml (WRONG: these are intentional config)
+# - Don't add engine/*.py (WRONG: these are core logic)
+# - Don't add .env.example (WRONG: this is the template)

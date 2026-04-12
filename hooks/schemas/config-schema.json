@@ -1,0 +1,148 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://agents.local/schemas/hooks-config.json",
+  "title": "Dynamic Hooks Configuration Schema",
+  "description": "JSON Schema for validating hooks-config.yaml and hooks-context.yaml",
+  "type": "object",
+
+  "definitions": {
+    "gate_config": {
+      "type": "object",
+      "properties": {
+        "min_length": { "type": "integer", "minimum": 0 },
+        "max_length": { "type": "integer", "minimum": 0 },
+        "min_bytes": { "type": "integer", "minimum": 0 },
+        "max_bytes": { "type": "integer", "minimum": 0 },
+        "minimum_count": { "type": "integer", "minimum": 0 },
+        "min_steps": { "type": "integer", "minimum": 1 },
+        "max_steps": { "type": "integer", "minimum": 1 },
+        "required_fields": { "type": "array", "items": { "type": "string" } },
+        "approved_domains": { "type": "array", "items": { "type": "string" } },
+        "action_verbs": { "type": "array", "items": { "type": "string" } },
+        "vague_words": { "type": "array", "items": { "type": "string" } },
+        "filler_words": { "type": "array", "items": { "type": "string" } },
+        "field_requirements": { "type": "object" },
+        "domain_aliases": { "type": "object" }
+      }
+    },
+
+    "validation_mode": {
+      "type": "object",
+      "required": ["name", "description", "multiplier", "fail_on_warnings"],
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "multiplier": { "type": "number", "minimum": 0.5, "maximum": 3.0 },
+        "fail_on_warnings": { "type": "boolean" },
+        "enabled_gates": {
+          "type": "array",
+          "items": { "type": "integer", "minimum": 1, "maximum": 8 }
+        },
+        "threshold_adjustments": { "type": "object" }
+      }
+    },
+
+    "context": {
+      "type": "object",
+      "required": ["validation_mode", "description"],
+      "properties": {
+        "validation_mode": { "type": "string", "enum": ["strict", "lenient", "experimental"] },
+        "description": { "type": "string" },
+        "enabled_gates": {
+          "type": "array",
+          "items": { "type": "integer", "minimum": 1, "maximum": 8 }
+        },
+        "fail_fast": { "type": "boolean" },
+        "parent_context": { "type": "string" },
+        "thresholds": { "type": "object" },
+        "phase_start_date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "phase_end_date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" }
+      }
+    }
+  },
+
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["version", "description"],
+      "properties": {
+        "version": { "type": "string", "pattern": "^\\d+\\.\\d+" },
+        "framework": { "type": "string" },
+        "description": { "type": "string" },
+        "last_updated": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}" }
+      }
+    },
+
+    "gates": {
+      "type": "object",
+      "properties": {
+        "yaml_frontmatter": { "$ref": "#/definitions/gate_config" },
+        "naming_convention": { "$ref": "#/definitions/gate_config" },
+        "description": { "$ref": "#/definitions/gate_config" },
+        "risk_level": { "$ref": "#/definitions/gate_config" },
+        "mandates": { "$ref": "#/definitions/gate_config" },
+        "response": { "$ref": "#/definitions/gate_config" },
+        "file_size": { "$ref": "#/definitions/gate_config" },
+        "workflow": { "$ref": "#/definitions/gate_config" }
+      }
+    },
+
+    "validation_modes": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/definitions/validation_mode" }
+    },
+
+    "contexts": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/definitions/context" }
+    },
+
+    "environments": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/definitions/context" }
+    },
+
+    "branches": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/definitions/context" }
+    },
+
+    "commit_message": {
+      "type": "object",
+      "properties": {
+        "format": { "type": "string" },
+        "valid_types": { "type": "array", "items": { "type": "string" } },
+        "valid_scopes": { "type": "array", "items": { "type": "string" } },
+        "subject": {
+          "type": "object",
+          "properties": {
+            "min_length": { "type": "integer", "minimum": 1 },
+            "max_length": { "type": "integer", "minimum": 1 },
+            "must_start_with_lowercase": { "type": "boolean" },
+            "allowed_uppercase_acronyms": { "type": "array", "items": { "type": "string" } }
+          }
+        }
+      }
+    },
+
+    "performance": {
+      "type": "object",
+      "properties": {
+        "max_validation_time_seconds": { "type": "integer", "minimum": 5 },
+        "parallel_validation_enabled": { "type": "boolean" },
+        "cache_validation_results": { "type": "boolean" }
+      }
+    },
+
+    "logging": {
+      "type": "object",
+      "properties": {
+        "level": { "type": "string", "enum": ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"] },
+        "format": { "type": "string", "enum": ["json", "text"] },
+        "output_file": { "type": "string" }
+      }
+    }
+  },
+
+  "additionalProperties": true
+}

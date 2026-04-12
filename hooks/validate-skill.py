@@ -2,6 +2,8 @@
 """
 Comprehensive Skill Validator for .agents Framework
 Validates all 8 quality gates for skills
+
+Uses DynamicHooksEngine for configuration.
 """
 
 import os
@@ -16,50 +18,87 @@ from datetime import datetime
 BASE_DIR = Path(__file__).parent.parent.parent
 SKILLS_DIR = BASE_DIR / ".agents" / "skills"
 
-# Valid domains (same as pre-commit-skills.py)
-VALID_DOMAINS = {
-    'advanced', 'animation', 'audio', 'ai', 'analytics', 'anomaly', 'api',
-    'asset', 'automated', 'behavior', 'blueprint', 'build', 'ci-cd', 'clustering',
-    'collision', 'component', 'compute', 'computer-vision', 'console', 'constraint',
-    'cross-engine', 'custom', 'data', 'debug', 'decision', 'deployment', 'dialogue',
-    'distribution', 'dynamic', 'edge', 'ensemble', 'engine', 'feature', 'federated',
-    'fine-tuning', 'garbage-collection', 'godot', 'graphics', 'gpu', 'hierarchy',
-    'hyperparameter', 'il', 'inference', 'input', 'inspector', 'interpolation',
-    'ik', 'joint', 'language', 'layer', 'level', 'lighting', 'localization',
-    'machine-learning', 'math', 'memory', 'mesh', 'ml', 'mobile', 'model',
-    'motion', 'motor', 'movement', 'multiplayer', 'navigation', 'neural-network',
-    'nlp', 'node', 'networking', 'normalization', 'object', 'optimization',
-    'particle', 'performance', 'physics', 'pipeline', 'plugin', 'pooling',
-    'prediction', 'procedural', 'profiler', 'profiling', 'projection', 'property',
-    'rag', 'ray', 'reflection', 'reinforcement', 'rendering', 'resource',
-    'response', 'rigging', 'runtime', 'scripting', 'security', 'sensor',
-    'serialization', 'shader', 'socket', 'sound', 'spatial', 'specialized',
-    'state', 'streaming', 'string', 'structure', 'synchronization', 'system',
-    'task', 'telemetry', 'temporal', 'terrain', 'testing', 'texture', 'thread',
-    'tile', 'time', 'tool', 'trace', 'transfer', 'transform', 'transition',
-    'ui', 'unreal', 'validation', 'vfx', 'vr', 'world', 'xr',
+# Add hooks engine to path
+hooks_path = Path(__file__).parent
+sys.path.insert(0, str(hooks_path))
+
+try:
+    from engine.dynamic_hooks_engine import DynamicHooksEngine
+    USE_DYNAMIC_ENGINE = True
+except ImportError:
+    USE_DYNAMIC_ENGINE = False
+
+# Fallback configuration
+FALLBACK_CONFIG = {
+    'gates': {
+        'yaml_frontmatter': {
+            'required_fields': ['name', 'description', 'risk', 'source', 'date_added',
+                              'usage', 'avoid', 'mandates', 'response']
+        },
+        'naming_convention': {
+            'approved_domains': ['advanced', 'animation', 'audio', 'ai', 'analytics', 'anomaly', 'api',
+                'asset', 'automated', 'behavior', 'blueprint', 'build', 'ci-cd', 'clustering',
+                'collision', 'component', 'compute', 'computer-vision', 'console', 'constraint',
+                'cross-engine', 'custom', 'data', 'debug', 'decision', 'deployment', 'dialogue',
+                'distribution', 'dynamic', 'edge', 'ensemble', 'engine', 'feature', 'federated',
+                'fine-tuning', 'garbage-collection', 'godot', 'graphics', 'gpu', 'hierarchy',
+                'hyperparameter', 'il', 'inference', 'input', 'inspector', 'interpolation',
+                'ik', 'joint', 'language', 'layer', 'level', 'lighting', 'localization',
+                'machine-learning', 'math', 'memory', 'mesh', 'ml', 'mobile', 'model',
+                'motion', 'motor', 'movement', 'multiplayer', 'navigation', 'neural-network',
+                'nlp', 'node', 'networking', 'normalization', 'object', 'optimization',
+                'particle', 'performance', 'physics', 'pipeline', 'plugin', 'pooling',
+                'prediction', 'procedural', 'profiler', 'profiling', 'projection', 'property',
+                'rag', 'ray', 'reflection', 'reinforcement', 'rendering', 'resource',
+                'response', 'rigging', 'runtime', 'scripting', 'security', 'sensor',
+                'serialization', 'shader', 'socket', 'sound', 'spatial', 'specialized',
+                'state', 'streaming', 'string', 'structure', 'synchronization', 'system',
+                'task', 'telemetry', 'temporal', 'terrain', 'testing', 'texture', 'thread',
+                'tile', 'time', 'tool', 'trace', 'transfer', 'transform', 'transition',
+                'ui', 'unreal', 'validation', 'vfx', 'vr', 'world', 'xr']
+        },
+        'description': {
+            'min_length': 50,
+            'max_length': 100
+        },
+        'risk_level': {
+            'valid_levels': ['low', 'medium', 'high']
+        },
+        'mandates': {
+            'minimum_count': 3
+        },
+        'response': {
+            'min_steps': 3,
+            'max_steps': 4
+        },
+        'file_size': {
+            'min_bytes': 600,
+            'max_bytes': 1200
+        }
+    }
 }
 
-REQUIRED_FIELDS = ['name', 'description', 'risk', 'source', 'date_added',
-                   'usage', 'avoid', 'mandates', 'response']
-VALID_RISK_LEVELS = ['low', 'medium', 'high']
-DESCRIPTION_MIN = 50
-DESCRIPTION_MAX = 100
-FILE_SIZE_MIN = 600
-FILE_SIZE_MAX = 1200
+
+class GateValidator:
+    """Base class for gate validators with dynamic config support."""
+
+    def __init__(self, config: Dict):
+        self.config = config
+        self.gates_config = config.get('gates', FALLBACK_CONFIG['gates'])
 
 
-class Gate1Validator:
+class Gate1Validator(GateValidator):
     """Gate 1: YAML Frontmatter Validation"""
 
-    @staticmethod
-    def validate(skill_data: Dict, skill_path: Path) -> Tuple[bool, str]:
+    def validate(self, skill_data: Dict, skill_path: Path) -> Tuple[bool, str]:
         """Validate YAML frontmatter completeness."""
-        missing_fields = [f for f in REQUIRED_FIELDS if f not in skill_data]
+        required_fields = self.gates_config.get('yaml_frontmatter', {}).get('required_fields', [])
+
+        missing_fields = [f for f in required_fields if f not in skill_data]
         if missing_fields:
             return False, f"Missing required fields: {', '.join(missing_fields)}"
 
-        for field in REQUIRED_FIELDS:
+        for field in required_fields:
             value = skill_data.get(field, '')
             if not value or (isinstance(value, str) and not value.strip()):
                 return False, f"Field '{field}' is empty or whitespace-only"
@@ -67,13 +106,13 @@ class Gate1Validator:
         return True, "All required fields present and populated"
 
 
-class Gate2Validator:
+class Gate2Validator(GateValidator):
     """Gate 2: Skill Naming Convention"""
 
-    @staticmethod
-    def validate(skill_data: Dict, skill_path: Path) -> Tuple[bool, str]:
+    def validate(self, skill_data: Dict, skill_path: Path) -> Tuple[bool, str]:
         """Validate skill name follows {domain}-{specialty} pattern."""
         name = skill_data.get('name', '')
+        approved_domains = self.gates_config.get('naming_convention', {}).get('approved_domains', [])
 
         if not re.match(r'^[a-z]+-[a-z\-]+$', name):
             return False, f"Name doesn't match pattern: must be lowercase with hyphens"
@@ -84,7 +123,7 @@ class Gate2Validator:
 
         domain, specialty = parts
 
-        if domain not in VALID_DOMAINS:
+        if domain not in approved_domains:
             return False, f"Invalid domain: '{domain}'. Must be from approved list"
 
         if len(specialty) < 2:
@@ -97,19 +136,21 @@ class Gate2Validator:
         return True, f"Valid naming pattern for domain '{domain}'"
 
 
-class Gate3Validator:
+class Gate3Validator(GateValidator):
     """Gate 3: Description Quality & Optimization"""
 
-    @staticmethod
-    def validate(skill_data: Dict, skill_path: Path) -> Tuple[bool, str]:
+    def validate(self, skill_data: Dict, skill_path: Path) -> Tuple[bool, str]:
         """Validate description is concise, clear, and action-oriented."""
         desc = skill_data.get('description', '')
+        desc_config = self.gates_config.get('description', {})
+        desc_min = desc_config.get('min_length', 50)
+        desc_max = desc_config.get('max_length', 100)
 
-        if len(desc) < DESCRIPTION_MIN:
-            return False, f"Description too short: {len(desc)} chars (min {DESCRIPTION_MIN})"
+        if len(desc) < desc_min:
+            return False, f"Description too short: {len(desc)} chars (min {desc_min})"
 
-        if len(desc) > DESCRIPTION_MAX:
-            return False, f"Description too long: {len(desc)} chars (max {DESCRIPTION_MAX})"
+        if len(desc) > desc_max:
+            return False, f"Description too long: {len(desc)} chars (max {desc_max})"
 
         # Check for action-oriented start
         first_word = desc.split()[0].lower() if desc.split() else ''
@@ -124,16 +165,16 @@ class Gate3Validator:
         return True, f"Description quality optimal ({len(desc)} chars)"
 
 
-class Gate4Validator:
+class Gate4Validator(GateValidator):
     """Gate 4: Risk Level Appropriateness"""
 
-    @staticmethod
-    def validate(skill_data: Dict, skill_path: Path) -> Tuple[bool, str]:
+    def validate(self, skill_data: Dict, skill_path: Path) -> Tuple[bool, str]:
         """Validate risk level is appropriate for complexity."""
         risk = skill_data.get('risk', '').lower()
+        valid_risk_levels = self.gates_config.get('risk_level', {}).get('valid_levels', [])
 
-        if risk not in VALID_RISK_LEVELS:
-            return False, f"Invalid risk level: '{risk}'. Must be one of: {', '.join(VALID_RISK_LEVELS)}"
+        if risk not in valid_risk_levels:
+            return False, f"Invalid risk level: '{risk}'. Must be one of: {', '.join(valid_risk_levels)}"
 
         name = skill_data.get('name', '')
 
@@ -161,21 +202,22 @@ class Gate4Validator:
         return True, f"Risk level '{risk}' is appropriate for this skill"
 
 
-class Gate5Validator:
+class Gate5Validator(GateValidator):
     """Gate 5: Mandates Clarity & Specificity"""
 
-    @staticmethod
-    def validate(skill_data: Dict, skill_path: Path) -> Tuple[bool, str]:
+    def validate(self, skill_data: Dict, skill_path: Path) -> Tuple[bool, str]:
         """Validate mandates are clear, specific, and actionable."""
         mandates_str = skill_data.get('mandates', '')
+        mandates_config = self.gates_config.get('mandates', {})
+        min_mandates = mandates_config.get('minimum_count', 3)
 
         if not mandates_str:
             return False, "Mandates field is empty"
 
         mandates = [m.strip() for m in mandates_str.split(',')]
 
-        if len(mandates) < 3:
-            return False, f"Too few mandates: {len(mandates)} (minimum 3)"
+        if len(mandates) < min_mandates:
+            return False, f"Too few mandates: {len(mandates)} (minimum {min_mandates})"
 
         vague_words = {'good', 'bad', 'well', 'properly', 'correct', 'proper', 'appropriate'}
         action_verbs = {'validate', 'test', 'check', 'verify', 'implement', 'ensure', 'maintain',
@@ -197,21 +239,23 @@ class Gate5Validator:
         return True, f"Mandates are clear and specific ({len(mandates)} mandates)"
 
 
-class Gate6Validator:
+class Gate6Validator(GateValidator):
     """Gate 6: Response Patterns Actionability"""
 
-    @staticmethod
-    def validate(skill_data: Dict, skill_path: Path) -> Tuple[bool, str]:
+    def validate(self, skill_data: Dict, skill_path: Path) -> Tuple[bool, str]:
         """Validate response patterns are specific and achievable."""
         response_str = skill_data.get('response', '')
+        response_config = self.gates_config.get('response', {})
+        min_steps = response_config.get('min_steps', 3)
+        max_steps = response_config.get('max_steps', 4)
 
         if not response_str:
             return False, "Response field is empty"
 
         steps = [s.strip() for s in response_str.split(',')]
 
-        if len(steps) < 3 or len(steps) > 4:
-            return False, f"Response should have 3-4 steps, found {len(steps)}"
+        if len(steps) < min_steps or len(steps) > max_steps:
+            return False, f"Response should have {min_steps}-{max_steps} steps, found {len(steps)}"
 
         for step in steps:
             if not step or len(step) < 3:
@@ -224,35 +268,37 @@ class Gate6Validator:
         return True, f"Response pattern is clear and actionable ({len(steps)} steps)"
 
 
-class Gate7Validator:
+class Gate7Validator(GateValidator):
     """Gate 7: Token Efficiency & File Size"""
 
-    @staticmethod
-    def validate(skill_data: Dict, skill_path: Path) -> Tuple[bool, str]:
+    def validate(self, skill_data: Dict, skill_path: Path) -> Tuple[bool, str]:
         """Validate token efficiency and file size."""
+        file_size_config = self.gates_config.get('file_size', {})
+        min_bytes = file_size_config.get('min_bytes', 600)
+        max_bytes = file_size_config.get('max_bytes', 1200)
+
         try:
             file_size = skill_path.stat().st_size
         except:
             return False, "Unable to determine file size"
 
-        if file_size > FILE_SIZE_MAX:
-            return False, f"File size too large: {file_size} bytes (max {FILE_SIZE_MAX})"
+        if file_size > max_bytes:
+            return False, f"File size too large: {file_size} bytes (max {max_bytes})"
 
-        if file_size < FILE_SIZE_MIN:
-            return False, f"File size too small: {file_size} bytes (min {FILE_SIZE_MIN})"
+        if file_size < min_bytes:
+            return False, f"File size too small: {file_size} bytes (min {min_bytes})"
 
         # Estimate token count (rough: ~4 chars per token)
         estimated_tokens = file_size // 4
-        max_tokens = FILE_SIZE_MAX // 4
+        max_tokens = max_bytes // 4
 
         return True, f"Token efficiency optimal ({file_size} bytes, ~{estimated_tokens} tokens)"
 
 
-class Gate8Validator:
+class Gate8Validator(GateValidator):
     """Gate 8: Cross-Skill Consistency"""
 
-    @staticmethod
-    def validate(skill_data: Dict, skill_path: Path) -> Tuple[bool, str]:
+    def validate(self, skill_data: Dict, skill_path: Path) -> Tuple[bool, str]:
         """Validate consistency with other skills."""
         name = skill_data.get('name', '')
         domain = name.split('-')[0] if '-' in name else ''
@@ -260,7 +306,6 @@ class Gate8Validator:
         # Find related skills (same domain)
         related_skills = []
         if domain:
-            related_dir = SKILLS_DIR.parent.glob(f'*{domain}*')
             related_skills = list(SKILLS_DIR.glob(f'{domain}-*'))
 
         risk = skill_data.get('risk', '').lower()
@@ -295,14 +340,31 @@ class Gate8Validator:
 
 
 class ComprehensiveValidator:
-    """Runs all 8 validation gates."""
+    """Runs all 8 validation gates with dynamic configuration."""
 
-    def __init__(self, skill_path: Path):
+    def __init__(self, skill_path: Path, use_dynamic=USE_DYNAMIC_ENGINE):
         self.skill_path = skill_path
         self.skill_data = {}
         self.results = {}
         self.passed_gates = 0
         self.total_gates = 8
+        self.use_dynamic = use_dynamic
+
+        # Initialize dynamic engine if available
+        self.engine = None
+        self.config = None
+        if self.use_dynamic:
+            try:
+                self.engine = DynamicHooksEngine(skip_plugin_loading=True)
+                self.config = self.engine.get_effective_config()
+            except Exception as e:
+                import sys
+                print(f"[WARNING] Could not load dynamic engine: {e}. Using hardcoded defaults.")
+                self.use_dynamic = False
+
+        # Set default config values
+        if not self.use_dynamic or not self.config:
+            self.config = FALLBACK_CONFIG
 
     def load_skill(self) -> bool:
         """Load and parse skill file."""
@@ -333,15 +395,15 @@ class ComprehensiveValidator:
 
     def validate_all(self) -> bool:
         """Run all validation gates."""
-        gates = [
-            (1, "YAML Frontmatter", Gate1Validator.validate),
-            (2, "Naming Convention", Gate2Validator.validate),
-            (3, "Description Quality", Gate3Validator.validate),
-            (4, "Risk Level Appropriateness", Gate4Validator.validate),
-            (5, "Mandates Clarity", Gate5Validator.validate),
-            (6, "Response Patterns", Gate6Validator.validate),
-            (7, "Token Efficiency", Gate7Validator.validate),
-            (8, "Cross-Skill Consistency", Gate8Validator.validate),
+        gate_validators = [
+            (1, "YAML Frontmatter", Gate1Validator(self.config)),
+            (2, "Naming Convention", Gate2Validator(self.config)),
+            (3, "Description Quality", Gate3Validator(self.config)),
+            (4, "Risk Level Appropriateness", Gate4Validator(self.config)),
+            (5, "Mandates Clarity", Gate5Validator(self.config)),
+            (6, "Response Patterns", Gate6Validator(self.config)),
+            (7, "Token Efficiency", Gate7Validator(self.config)),
+            (8, "Cross-Skill Consistency", Gate8Validator(self.config)),
         ]
 
         print(f"\nCOMPREHENSIVE SKILL VALIDATION")
@@ -349,8 +411,8 @@ class ComprehensiveValidator:
         print(f"\nSkill: {self.skill_path.parent.name}")
         print("-" * 70)
 
-        for gate_num, gate_name, validator_func in gates:
-            passed, message = validator_func(self.skill_data, self.skill_path)
+        for gate_num, gate_name, validator in gate_validators:
+            passed, message = validator.validate(self.skill_data, self.skill_path)
 
             status = "[PASS]" if passed else "[FAIL]"
             print(f"Gate {gate_num}: {gate_name:.<35} {status}")

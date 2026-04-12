@@ -1,0 +1,177 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://agents.local/schemas/plugin-schema.json",
+  "title": "Hooks Plugin Configuration Schema",
+  "description": "JSON Schema for validating hooks-plugins.yaml",
+  "type": "object",
+
+  "definitions": {
+    "plugin": {
+      "type": "object",
+      "required": ["id", "enabled", "type", "module", "class", "version", "description"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "Unique plugin identifier"
+        },
+        "enabled": { "type": "boolean" },
+        "type": {
+          "type": "string",
+          "enum": ["built-in", "user-created", "third-party"],
+          "description": "Plugin source type"
+        },
+        "module": {
+          "type": "string",
+          "description": "Python module path (e.g., 'hooks.plugins.my_plugin')"
+        },
+        "class": {
+          "type": "string",
+          "description": "Plugin class name"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+",
+          "description": "Semantic version"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 200
+        },
+        "author": { "type": "string" },
+        "repository": { "type": "string", "format": "uri" },
+        "documentation": { "type": "string", "format": "uri" },
+        "hooks": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Hook points this plugin attaches to"
+        },
+        "pattern": {
+          "type": "string",
+          "description": "Regex pattern for selective activation"
+        },
+        "config": {
+          "type": "object",
+          "description": "Plugin-specific configuration"
+        },
+        "consensus_weight": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 2.0,
+          "default": 1.0,
+          "description": "Weight in consensus voting (0 = informational only)"
+        },
+        "active_in_phases": {
+          "type": "array",
+          "items": { "type": "integer", "minimum": 1, "maximum": 7 },
+          "description": "Which phases this plugin is active in"
+        },
+        "experimental": {
+          "type": "boolean",
+          "default": false,
+          "description": "Whether this is experimental/unstable"
+        },
+        "notes": { "type": "string" }
+      }
+    }
+  },
+
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["version", "description"],
+      "properties": {
+        "version": { "type": "string", "pattern": "^\\d+\\.\\d+" },
+        "description": { "type": "string" },
+        "last_updated": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}" },
+        "plugin_api_version": { "type": "string", "pattern": "^\\d+\\.\\d+" }
+      }
+    },
+
+    "plugins": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/definitions/plugin" },
+      "description": "Built-in plugins"
+    },
+
+    "optional_plugins": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/definitions/plugin" },
+      "description": "Optional/third-party plugins"
+    },
+
+    "execution": {
+      "type": "object",
+      "properties": {
+        "consensus": {
+          "type": "object",
+          "properties": {
+            "strategy": { "type": "string", "enum": ["majority_vote", "all_must_pass", "any_can_pass"] },
+            "description": { "type": "string" },
+            "minimum_consensus": { "type": "integer", "minimum": 1 },
+            "voting_rules": { "type": "array", "items": { "type": "string" } },
+            "weighted_voting": { "type": "boolean" }
+          }
+        },
+        "order": { "type": "string", "enum": ["serial", "parallel"] },
+        "timeout_per_plugin": { "type": "integer", "minimum": 1 },
+        "stop_on_first_fail": { "type": "boolean" },
+        "isolation": { "type": "string", "enum": ["subprocess", "thread", "inline"] },
+        "error_handling": { "type": "string", "enum": ["continue_on_error", "fail_fast"] }
+      }
+    },
+
+    "installation": {
+      "type": "object",
+      "properties": {
+        "search_paths": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "discovery": {
+          "type": "object",
+          "properties": {
+            "auto_discover": { "type": "boolean" },
+            "pattern": { "type": "string" }
+          }
+        },
+        "requirements": {
+          "type": "object",
+          "properties": {
+            "python_min_version": { "type": "string", "pattern": "^\\d+\\.\\d+" },
+            "required_base_class": { "type": "string" },
+            "required_methods": { "type": "array", "items": { "type": "string" } }
+          }
+        }
+      }
+    },
+
+    "development": {
+      "type": "object",
+      "properties": {
+        "template_available": { "type": "boolean" },
+        "template_path": { "type": "string" },
+        "documentation": { "type": "string" },
+        "examples": { "type": "array", "items": { "type": "string" } },
+        "api_version": { "type": "string", "pattern": "^\\d+\\.\\d+" },
+        "breaking_changes": { "type": "array", "items": { "type": "object" } }
+      }
+    },
+
+    "statistics": {
+      "type": "object",
+      "properties": {
+        "total_plugins": { "type": "integer" },
+        "built_in_plugins": { "type": "integer" },
+        "optional_plugins": { "type": "integer" },
+        "enabled_plugins": { "type": "integer" },
+        "disabled_plugins": { "type": "integer" },
+        "third_party_plugins": { "type": "integer" }
+      }
+    }
+  },
+
+  "required": ["metadata", "plugins"],
+  "additionalProperties": true
+}

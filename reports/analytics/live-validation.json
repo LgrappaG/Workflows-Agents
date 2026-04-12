@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-03-29T21:39:09.056Z",
-  "trigger": "change:skills/vfx-visual-effects-basics/SKILL.md",
+  "timestamp": "2026-03-29T22:06:26.618Z",
+  "trigger": "change:skills/ml-model-serving-unity/SKILL.md",
   "runs": [
     {
       "name": "skills-fast",
-      "exit_code": 1,
-      "duration_ms": 334,
-      "stdout_tail": "9. C:\\Users\\idris\\Desktop\\Agent Project\\.agents\\skills\\cinemachine-aim-assist\\SKILL.md: Invalid skill name format: 'cinemachine-aim-assist'\r\n10. C:\\Users\\idris\\Desktop\\Agent Project\\.agents\\skills\\cinemachine-blending\\SKILL.md: Invalid skill name format: 'cinemachine-blending'\r\n... and 177 more errors\r\n\r\nWarnings (64 total):\r\n----------------------------------------------------------------------\r\n1. C:\\Users\\idris\\Desktop\\Agent Project\\.agents\\skills\\advanced-il-emit\\SKILL.md: Description too short (41 chars, min 50)\r\n2. C:\\Users\\idris\\Desktop\\Agent Project\\.agents\\skills\\ai-crowd-simulation\\SKILL.md: Description too short (49 chars, min 50)\r\n3. C:\\Users\\idris\\Desktop\\Agent Project\\.agents\\skills\\analytics-user-segmentation\\SKILL.md: Description too short (41 chars, min 50)\r\n4. C:\\Users\\idris\\Desktop\\Agent Project\\.agents\\skills\\animation-memory-optimization\\SKILL.md: Description too short (46 chars, min 50)\r\n5. C:\\Users\\idris\\Desktop\\Agent Project\\.agents\\skills\\animation-streaming\\SKILL.md: Description too short (49 chars, min 50)\r\n6. C:\\Users\\idris\\Desktop\\Agent Project\\.agents\\skills\\asset-pipeline-conversion\\SKILL.md: Description too short (47 chars, min 50)\r\n7. C:\\Users\\idris\\Desktop\\Agent Project\\.agents\\skills\\audio-effects-pitch-shift\\SKILL.md: Description too short (49 chars, min 50)\r\n8. C:\\Users\\idris\\Desktop\\Agent Project\\.agents\\skills\\audio-effects-time-stretch\\SKILL.md: Description too short (44 chars, min 50)\r\n9. C:\\Users\\idris\\Desktop\\Agent Project\\.agents\\skills\\audio-performance-profiling\\SKILL.md: Description too short (45 chars, min 50)\r\n10. C:\\Users\\idris\\Desktop\\Agent Project\\.agents\\skills\\behavior-goal-planning\\SKILL.md: Description too short (45 chars, min 50)\r\n... and 54 more warnings\r\n\r\nFAILURE: 190 skills failed validation\r\n",
+      "exit_code": 0,
+      "duration_ms": 339,
+      "stdout_tail": "Passed: 593\r\nFailed: 0\r\nPass Rate: 100.0%\r\n\r\nWarnings (93 total):\r\n----------------------------------------------------------------------\r\n1. .agents/skills/advanced-il-emit/SKILL.md: Description too short (41 chars, min 50)\r\n2. .agents/skills/ai-crowd-simulation/SKILL.md: Description too short (49 chars, min 50)\r\n3. .agents/skills/analytics-user-segmentation/SKILL.md: Description too short (41 chars, min 50)\r\n4. .agents/skills/animation-memory-optimization/SKILL.md: Description too short (46 chars, min 50)\r\n5. .agents/skills/animation-streaming/SKILL.md: Description too short (49 chars, min 50)\r\n6. .agents/skills/asset-pipeline-conversion/SKILL.md: Description too short (47 chars, min 50)\r\n7. .agents/skills/audio-effects-pitch-shift/SKILL.md: Description too short (49 chars, min 50)\r\n8. .agents/skills/audio-effects-time-stretch/SKILL.md: Description too short (44 chars, min 50)\r\n9. .agents/skills/audio-performance-profiling/SKILL.md: Description too short (45 chars, min 50)\r\n10. .agents/skills/behavior-goal-planning/SKILL.md: Description too short (45 chars, min 50)\r\n... and 83 more warnings\r\n\r\nSUCCESS: All skills passed pre-commit validation!\r\n",
       "stderr_tail": ""
     },
     {
       "name": "workflows",
       "exit_code": 0,
-      "duration_ms": 93,
+      "duration_ms": 96,
       "stdout_tail": "======================================================================\r\nPRE-COMMIT WORKFLOWS VALIDATOR\r\n======================================================================\r\n\r\nNo workflow files found to validate.\r\n\r\n",
       "stderr_tail": ""
     }

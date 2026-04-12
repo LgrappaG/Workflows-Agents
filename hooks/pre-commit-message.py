@@ -2,34 +2,83 @@
 """
 Pre-Commit Message Validator for .agents Framework
 Validates commit messages follow conventional commits format
+
+Uses DynamicHooksEngine for configuration.
 """
 
 import sys
 import re
 from pathlib import Path
 
-# Valid commit types
-VALID_TYPES = ['feat', 'fix', 'docs', 'refactor', 'perf', 'test', 'chore']
+# Add hooks engine to path
+hooks_path = Path(__file__).parent
+sys.path.insert(0, str(hooks_path))
 
-# Scopes related to .agents
-VALID_SCOPES = [
-    'Phase 1', 'Phase 2', 'Phase 3', 'Phase 4',
-    'Machine Learning', 'Multi-Engine', 'Custom Tools',
-    'Skills', 'Validation', 'Documentation', 'Hooks',
-    'CLI', 'Framework', 'Agent Hierarchy',
-    'Materials System', 'UI Toolkit', 'Terrain System',
-    'Animation System', 'Graphics & VFX', 'Debugging & Tools',
-    'Advanced Systems', 'ML Integration', 'Tools & Extensions'
-]
+try:
+    from engine.dynamic_hooks_engine import DynamicHooksEngine
+    USE_DYNAMIC_ENGINE = True
+except ImportError:
+    USE_DYNAMIC_ENGINE = False
+
+# Fallback configuration (module level for consistency)
+FALLBACK_CONFIG = {
+    'commit_message': {
+        'valid_types': ['feat', 'fix', 'docs', 'refactor', 'perf', 'test', 'chore'],
+        'valid_scopes': [
+            'Phase 1', 'Phase 2', 'Phase 3', 'Phase 4',
+            'Machine Learning', 'Multi-Engine', 'Custom Tools',
+            'Skills', 'Validation', 'Documentation', 'Hooks',
+            'CLI', 'Framework', 'Agent Hierarchy',
+            'Materials System', 'UI Toolkit', 'Terrain System',
+            'Animation System', 'Graphics & VFX', 'Debugging & Tools',
+            'Advanced Systems', 'ML Integration', 'Tools & Extensions'
+        ],
+        'description_min': 5,
+        'description_max': 70,
+        'require_scope': False
+    }
+}
 
 
 class CommitMessageValidator:
     """Validates commit message format."""
 
-    def __init__(self, message_file: str):
+    def __init__(self, message_file: str, use_dynamic=USE_DYNAMIC_ENGINE):
         self.message_file = Path(message_file)
         self.message = ""
         self.errors = []
+        self.use_dynamic = use_dynamic
+
+        # Initialize dynamic engine if available
+        self.engine = None
+        self.config = None
+        if self.use_dynamic:
+            try:
+                self.engine = DynamicHooksEngine(skip_plugin_loading=True)
+                self.config = self.engine.get_effective_config()
+            except Exception as e:
+                print(f"[WARNING] Could not load dynamic engine: {e}. Using hardcoded defaults.")
+                self.use_dynamic = False
+
+        # Fallback to hardcoded values
+        if not self.use_dynamic:
+            self.config = FALLBACK_CONFIG
+
+    def get_valid_types(self):
+        """Get valid commit types from config."""
+        return self.config.get('commit_message', {}).get('valid_types', [])
+
+    def get_valid_scopes(self):
+        """Get valid scopes from config."""
+        return self.config.get('commit_message', {}).get('valid_scopes', [])
+
+    def get_description_min(self):
+        """Get min description length from config."""
+        return self.config.get('commit_message', {}).get('description_min', 5)
+
+    def get_description_max(self):
+        """Get max description length from config."""
+        return self.config.get('commit_message', {}).get('description_max', 70)
 
     def load_message(self) -> bool:
         """Load commit message from file."""
@@ -50,32 +99,38 @@ class CommitMessageValidator:
         # Get first line (subject)
         subject = self.message.split('\n')[0]
 
+        valid_types = self.get_valid_types()
+        valid_scopes = self.get_valid_scopes()
+        desc_min = self.get_description_min()
+        desc_max = self.get_description_max()
+
         # Validate format: Type: Description (SCOPE)
-        pattern = r'^(feat|fix|docs|refactor|perf|test|chore):\s+(.+)\s+\((.+)\)$'
+        types_pattern = '|'.join(re.escape(t) for t in valid_types)
+        pattern = rf'^({types_pattern}):\s+(.+)\s+\((.+)\)$'
         match = re.match(pattern, subject)
 
         if not match:
             self.errors.append(
                 f"Invalid format: '{subject}'\n"
                 f"Expected: 'Type: Description (SCOPE)'\n"
-                f"Valid types: {', '.join(VALID_TYPES)}"
+                f"Valid types: {', '.join(valid_types)}"
             )
             return False
 
         commit_type, description, scope = match.groups()
 
-        # Validate type
-        if commit_type not in VALID_TYPES:
-            self.errors.append(f"Invalid type: '{commit_type}'. Valid types: {', '.join(VALID_TYPES)}")
+        # Validate type (redundant with regex, but kept for clarity)
+        if commit_type not in valid_types:
+            self.errors.append(f"Invalid type: '{commit_type}'. Valid types: {', '.join(valid_types)}")
             return False
 
-        # Validate description
-        if len(description) < 5:
-            self.errors.append(f"Description too short: '{description}' (minimum 5 characters)")
+        # Validate description length
+        if len(description) < desc_min:
+            self.errors.append(f"Description too short: '{description}' (minimum {desc_min} characters)")
             return False
 
-        if len(description) > 70:
-            self.errors.append(f"Description too long: {len(description)} chars (maximum 70)")
+        if len(description) > desc_max:
+            self.errors.append(f"Description too long: {len(description)} chars (maximum {desc_max})")
             return False
 
         # Description should start with lowercase (unless special term)
@@ -84,9 +139,10 @@ class CommitMessageValidator:
             return False
 
         # Validate scope (warning level)
-        if scope not in VALID_SCOPES:
+        if scope not in valid_scopes:
             print(f"WARNING: Non-standard scope '{scope}' (consider using standard scopes)")
-            print(f"Standard scopes: {', '.join(VALID_SCOPES[:5])} ...")
+            if valid_scopes:
+                print(f"Standard scopes: {', '.join(valid_scopes[:5])} ...")
 
         # Validate scope format
         if '(' in scope or ')' in scope or ',' in scope:
@@ -97,13 +153,16 @@ class CommitMessageValidator:
 
     def print_result(self) -> int:
         """Print validation result."""
+        valid_types = self.get_valid_types()
+        valid_scopes = self.get_valid_scopes()
+
         if self.errors:
             print("=" * 70)
             print("COMMIT MESSAGE VALIDATION FAILED")
             print("=" * 70)
             print()
             for error in self.errors:
-                print(f"✗ {error}\n")
+                print(f"[FAIL] {error}\n")
 
             print("=" * 70)
             print("REQUIRED FORMAT")
@@ -111,7 +170,7 @@ class CommitMessageValidator:
             print("Type: Description (SCOPE)")
             print()
             print("Valid Types:")
-            for commit_type in VALID_TYPES:
+            for commit_type in valid_types:
                 print(f"  • {commit_type}")
             print()
             print("Examples:")
@@ -122,7 +181,20 @@ class CommitMessageValidator:
             print()
             return 1
         else:
-            print("✓ Commit message validation passed!")
+            print("[OK] Commit message validation passed!")
+            # Track successful validation if using dynamic engine
+            if self.engine:
+                try:
+                    result = {
+                        'pass': True,
+                        'context': self.engine.current_context,
+                        'mode': self.engine.current_mode,
+                        'gate': 'commit_message',
+                        'validation_type': 'commit_message_format'
+                    }
+                    self.engine.learning_engine.track_validation(str(self.message_file), result)
+                except Exception:
+                    pass  # Silently continue if learning tracking fails
             return 0
 
 
@@ -135,7 +207,7 @@ def main() -> int:
     validator = CommitMessageValidator(sys.argv[1])
 
     if not validator.load_message():
-        print("\n".join(f"✗ {e}" for e in validator.errors))
+        print("\n".join(f"[FAIL] {e}" for e in validator.errors))
         return 1
 
     if not validator.validate():

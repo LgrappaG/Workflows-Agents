@@ -1,0 +1,659 @@
+# Global Hooks Configuration - Dynamic Validation Rules
+# Version: 1.0
+# Last Updated: 2026-04-12
+# This file defines all validation thresholds for the 8-gate system
+
+metadata:
+  version: "1.0"
+  framework: ".agents"
+  description: "Global default validation thresholds for all hooks"
+  last_updated: "2026-04-12"
+
+# ============================================================================
+# GATE CONFIGURATIONS - The 8 Validation Gates
+# ============================================================================
+
+gates:
+  # GATE 1 & 2: YAML Frontmatter and Naming Convention
+  yaml_frontmatter:
+    required_fields:
+      - name
+      - description
+      - risk
+      - source
+      - date_added
+      - usage
+      - avoid
+      - mandates
+      - response
+    field_requirements:
+      source:
+        allowed_values: ["workspace"]
+      risk:
+        allowed_values: ["low", "medium", "high"]
+      date_added:
+        format: "YYYY-MM-DD"
+
+  naming_convention:
+    pattern: "{domain}-{specialty}"
+    specialty_min_length: 2
+    approved_domains:
+      - animation
+      - audio
+      - ai
+      - api
+      - architecture
+      - asset
+      - automated
+      - behavior
+      - blueprint
+      - build
+      - ci
+      - ci-cd
+      - clustering
+      - collision
+      - component
+      - compute
+      - computer
+      - computer-vision
+      - console
+      - constraint
+      - cross-engine
+      - cross-validation
+      - custom
+      - data
+      - debug
+      - decision
+      - deployment
+      - dialogue
+      - distribution
+      - dynamic
+      - edge
+      - ensemble
+      - engine
+      - feature
+      - federated
+      - fine-tuning
+      - garbage-collection
+      - gesture
+      - godot
+      - graphics
+      - gpu
+      - hierarchy
+      - hyperparameter
+      - il
+      - inference
+      - input
+      - inspector
+      - interpolation
+      - ik
+      - joint
+      - language
+      - layer
+      - level
+      - lighting
+      - localization
+      - math
+      - memory
+      - mesh
+      - ml
+      - mobile
+      - model
+      - module
+      - motion
+      - motor
+      - movement
+      - multiplayer
+      - navigation
+      - neural
+      - neural-network
+      - nlp
+      - node
+      - networking
+      - normalization
+      - object
+      - optimization
+      - particle
+      - performance
+      - physics
+      - pipeline
+      - plugin
+      - pooling
+      - prediction
+      - procedural
+      - profiler
+      - profiling
+      - projection
+      - property
+      - rag
+      - ray
+      - reflection
+      - reinforcement
+      - rendering
+      - resource
+      - response
+      - rigging
+      - runtime
+      - scripting
+      - security
+      - sensor
+      - serialization
+      - shader
+      - socket
+      - sound
+      - spatial
+      - specialized
+      - state
+      - streaming
+      - string
+      - structure
+      - synchronization
+      - system
+      - task
+      - telemetry
+      - temporal
+      - terrain
+      - testing
+      - texture
+      - thread
+      - tile
+      - time
+      - timeline
+      - tool
+      - trace
+      - training
+      - transfer
+      - transform
+      - transition
+      - ui
+      - unreal
+      - validation
+      - vfx
+      - vr
+      - world
+      - xr
+    domain_aliases:
+      machine-learning: ml
+      neural-network: nn
+      cross-validation-testing: cross-validation
+    redundant_patterns:
+      - "animation-animator"
+      - "audio-audio"
+      - "api-api"
+
+  # GATE 3: Description Quality
+  description:
+    min_length: 50
+    max_length: 100
+    action_verbs:
+      - apply
+      - architect
+      - augment
+      - build
+      - calculate
+      - calibrate
+      - capture
+      - centralize
+      - configure
+      - connect
+      - consolidate
+      - construct
+      - control
+      - coordinate
+      - create
+      - debug
+      - define
+      - deploy
+      - design
+      - develop
+      - diagnose
+      - differentiate
+      - discover
+      - distribute
+      - document
+      - enable
+      - enforce
+      - enhance
+      - establish
+      - evaluate
+      - execute
+      - explore
+      - extend
+      - extract
+      - facilitate
+      - generate
+      - govern
+      - guide
+      - handle
+      - harmonize
+      - identify
+      - illustrate
+      - implement
+      - improve
+      - integrate
+      - interpret
+      - investigate
+      - leverage
+      - maintain
+      - manage
+      - map
+      - measure
+      - migrate
+      - minimize
+      - model
+      - monitor
+      - navigate
+      - negotiate
+      - network
+      - optimize
+      - organize
+      - parse
+      - perform
+      - plan
+      - prepare
+      - process
+      - produce
+      - profile
+      - program
+      - project
+      - provide
+      - publish
+      - qualify
+      - quantify
+      - query
+      - recognize
+      - reconcile
+      - record
+      - recover
+      - refactor
+      - reflect
+      - reform
+      - refine
+      - reinforce
+      - relate
+      - release
+      - repair
+      - replace
+      - replicate
+      - report
+      - represent
+      - require
+      - reset
+      - resolve
+      - resource
+      - restore
+      - review
+      - revise
+      - sample
+      - schedule
+      - score
+      - search
+      - segment
+      - select
+      - set
+      - setup
+      - simplify
+      - simulate
+      - solve
+      - source
+      - specify
+      - standardize
+      - store
+      - structure
+      - study
+      - submit
+      - support
+      - synchronize
+      - synthesize
+      - test
+      - track
+      - train
+      - transform
+      - translate
+      - transmit
+      - trigger
+      - understand
+      - unify
+      - update
+      - upload
+      - validate
+      - verify
+    filler_words:
+      - "the"
+      - "this"
+      - "that"
+      - "a"
+      - "an"
+      - "is"
+      - "are"
+      - "be"
+      - "been"
+      - "being"
+    max_and_conjunctions: 2
+
+  # GATE 4: Risk Level Appropriateness
+  risk_level:
+    high_complexity_keywords:
+      - advanced
+      - artificial-intelligence
+      - async
+      - bindings
+      - bit-manipulation
+      - branching
+      - caching
+      - callback
+      - clustering
+      - complex
+      - convolutional
+      - coroutine
+      - cryptography
+      - cuda
+      - custom-handler
+      - dataflow
+      - deep-learning
+      - dependency-injection
+      - design-patterns
+      - distributed
+      - dynamic-binding
+      - ensemble
+      - federated
+      - graph-neural
+      - gpu-acceleration
+      - hierarchy
+      - inference
+      - integration
+      - introspection
+      - learning
+      - machine-learning
+      - memory-management
+      - ml
+      - multi-threading
+      - multiplayer
+      - network-replication
+      - neural
+      - networking
+      - nlp
+      - optimization
+      - parallel
+      - parsing
+      - performance-critical
+      - prediction
+      - queue-management
+      - rag
+      - ray-tracing
+      - reasoning
+      - reinforcement
+      - serialization
+      - stateful
+      - synchronization
+      - tensor
+      - testing-framework
+      - transformation
+      - validation-framework
+    medium_complexity_keywords:
+      - configuration
+      - connector
+      - controller
+      - data-processing
+      - debug
+      - decision-making
+      - design
+      - feature-extraction
+      - filter
+      - framework
+      - handler
+      - helper
+      - implementation
+      - integration
+      - interaction
+      - interface
+      - management
+      - middleware
+      - module
+      - operator
+      - processor
+      - profiling
+      - setup
+      - specialized
+      - system
+      - utility
+      - workflow
+
+  # GATE 5: Mandates Clarity
+  mandates:
+    minimum_count: 3
+    vague_words:
+      - appropriate
+      - bad
+      - best
+      - correct
+      - good
+      - great
+      - help
+      - important
+      - nice
+      - ok
+      - okay
+      - perfect
+      - proper
+      - properly
+      - right
+      - well
+      - wrong
+    action_verbs:
+      - benchmark
+      - build
+      - check
+      - configure
+      - ensure
+      - evaluate
+      - implement
+      - integrate
+      - maintain
+      - measure
+      - monitor
+      - optimize
+      - profile
+      - review
+      - test
+      - track
+      - validate
+      - verify
+
+  # GATE 6: Response Patterns
+  response:
+    min_steps: 3
+    max_steps: 4
+    min_step_length: 3
+    disallowed_patterns:
+      - " and "  # Multi-action steps not allowed
+
+  # GATE 7: Token Efficiency
+  file_size:
+    min_bytes: 600
+    max_bytes: 1200
+    phase_5_enriched_max: 1500
+    phase_6_experimental_max: 2000
+    token_estimate_divisor: 4  # ~1 token per 4 characters
+
+  # Workflow-specific Gates
+  workflow:
+    min_steps: 4
+    max_steps: 7
+    required_fields:
+      - version
+      - category
+      - agent
+      - difficulty
+      - estimated_time
+      - skills
+
+# ============================================================================
+# VALIDATION MODES - Different Strictness Levels
+# ============================================================================
+
+validation_modes:
+  # STRICT: Full compliance with all gates
+  strict:
+    name: "Strict Validation"
+    description: "Production-ready, no exceptions"
+    multiplier: 1.0
+    fail_on_warnings: true
+    enabled_gates: [1, 2, 3, 4, 5, 6, 7, 8]
+    can_override: false
+
+  # LENIENT: Allow some tolerance for enriched content
+  lenient:
+    name: "Lenient Validation"
+    description: "Allow enriched content and minor overages"
+    multiplier: 1.2
+    fail_on_warnings: false
+    enabled_gates: [1, 2, 3, 4, 5, 6, 7, 8]
+    threshold_adjustments:
+      file_size:
+        max_bytes_multiplier: 1.25  # 1200 * 1.25 = 1500
+      description:
+        min_length_multiplier: 0.9  # 50 * 0.9 = 45
+
+  # EXPERIMENTAL: Very relaxed for bootstrap phases
+  experimental:
+    name: "Experimental Validation"
+    description: "Relaxed for new features and bootstrapping"
+    multiplier: 1.5
+    fail_on_warnings: false
+    enabled_gates: [1, 2, 3, 4, 5]  # Skip 6-8 (response, efficiency, consistency)
+    threshold_adjustments:
+      file_size:
+        max_bytes: 2000
+      description:
+        min_length: 30
+      mandates:
+        minimum_count: 2
+
+# ============================================================================
+# COMMIT MESSAGE CONFIGURATION
+# ============================================================================
+
+commit_message:
+  format: "{type}({scope}): {subject}"
+  valid_types:
+    - feat
+    - fix
+    - docs
+    - refactor
+    - perf
+    - test
+    - chore
+    - style
+  valid_scopes:
+    - animation
+    - api
+    - architecture
+    - audio
+    - behavior
+    - blueprint
+    - build
+    - ci-cd
+    - core
+    - custom-tool
+    - data-processing
+    - debug
+    - deployment
+    - documentation
+    - feature
+    - framework
+    - game-dev
+    - graphics
+    - hooks
+    - infrastructure
+    - localization
+    - machine-learning
+    - material
+    - ml-integration
+    - multiplayer
+    - networking
+    - optimization
+    - performance
+    - phase-1
+    - phase-2
+    - phase-3
+    - phase-4
+    - phase-5
+    - phase-6
+    - physics
+    - plugin
+    - profiling
+    - security
+    - serialization
+    - skill
+    - system
+    - terrain
+    - testing
+    - texture
+    - tool
+    - ui
+    - validation
+    - vfx
+    - workflow
+    - workflow-builder
+    - xr
+  subject:
+    min_length: 5
+    max_length: 70
+    must_start_with_lowercase: true
+    allowed_uppercase_acronyms:
+      - AI
+      - API
+      - CI
+      - CD
+      - GPU
+      - HUD
+      - IL
+      - IK
+      - ML
+      - MCP
+      - NPC
+      - RL
+      - UI
+      - VR
+      - XR
+
+# ============================================================================
+# PERFORMANCE SETTINGS
+# ============================================================================
+
+performance:
+  max_validation_time_seconds: 30
+  parallel_validation_enabled: true
+  max_parallel_gates: 4
+  cache_validation_results: true
+  cache_ttl_seconds: 3600
+
+# ============================================================================
+# LOGGING & REPORTING
+# ============================================================================
+
+logging:
+  level: WARNING  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: json    # json or text
+  output_file: ".agents/hooks/metrics/validation.log"
+  max_log_size_mb: 100
+  rotation_count: 5
+
+reporting:
+  generate_json_report: true
+  generate_html_report: false
+  report_output_dir: ".agents/hooks/metrics/reports"
+  include_metrics: true
+  include_suggestions: true
+
+# ============================================================================
+# EXPERIMENTAL FEATURES
+# ============================================================================
+
+experimental:
+  enabled: false
+  features:
+    - ai_rule_learning
+    - plugin_auto_generation
+    - rule_optimization

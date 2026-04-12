@@ -2,6 +2,8 @@
 """
 Pre-Commit Workflows Validator for .agents Framework
 Validates workflow definitions and skills integration
+
+Uses DynamicHooksEngine for configuration.
 """
 
 import os
@@ -16,16 +18,56 @@ BASE_DIR = Path(__file__).parent.parent  # .agents directory
 SKILLS_DIR = BASE_DIR / "skills"
 WORKFLOWS_DIR = BASE_DIR / "workflows"
 
+# Add hooks engine to path
+hooks_path = Path(__file__).parent
+sys.path.insert(0, str(hooks_path))
+
+try:
+    from engine.dynamic_hooks_engine import DynamicHooksEngine
+    USE_DYNAMIC_ENGINE = True
+except ImportError:
+    USE_DYNAMIC_ENGINE = False
+
+# Fallback configuration
+FALLBACK_CONFIG = {
+    'gates': {
+        'workflow': {
+            'min_steps': 4,
+            'max_steps': 7
+        }
+    }
+}
+
 
 class WorkflowValidator:
     """Validates workflow definitions."""
 
-    def __init__(self):
+    def __init__(self, use_dynamic=USE_DYNAMIC_ENGINE):
         self.errors = []
         self.warnings = []
         self.workflow_count = 0
         self.passed = 0
         self.failed = 0
+        self.use_dynamic = use_dynamic
+
+        # Initialize dynamic engine if available
+        self.engine = None
+        self.config = None
+        if self.use_dynamic:
+            try:
+                self.engine = DynamicHooksEngine(skip_plugin_loading=True)
+                self.config = self.engine.get_effective_config()
+            except Exception as e:
+                print(f"[WARNING] Could not load dynamic engine: {e}. Using hardcoded defaults.")
+                self.use_dynamic = False
+
+        # Set default config values
+        if not self.use_dynamic or not self.config:
+            self.config = FALLBACK_CONFIG
+
+    def get_workflow_config(self):
+        """Get workflow validation config from config."""
+        return self.config.get('gates', {}).get('workflow', FALLBACK_CONFIG['gates']['workflow'])
 
     def validate_file(self, workflow_path: Path) -> bool:
         """Validate a single workflow file."""
@@ -57,11 +99,16 @@ class WorkflowValidator:
                 self.errors.append(f"{workflow_path}: 'steps' must be a list")
                 return False
 
+            # Get dynamic config values
+            workflow_config = self.get_workflow_config()
+            min_steps = workflow_config.get('min_steps', 4)
+            max_steps = workflow_config.get('max_steps', 7)
+
             # Validate step count
-            if len(steps) < 4:
-                self.warnings.append(f"{workflow_path}: Workflow has too few steps ({len(steps)}, min 4)")
-            elif len(steps) > 7:
-                self.warnings.append(f"{workflow_path}: Workflow has too many steps ({len(steps)}, max 7)")
+            if len(steps) < min_steps:
+                self.warnings.append(f"{workflow_path}: Workflow has too few steps ({len(steps)}, min {min_steps})")
+            elif len(steps) > max_steps:
+                self.warnings.append(f"{workflow_path}: Workflow has too many steps ({len(steps)}, max {max_steps})")
 
             # Validate each step
             for i, step in enumerate(steps):
@@ -164,9 +211,9 @@ class WorkflowValidator:
         # Validate each workflow
         for workflow_file in sorted(workflow_files):
             if self.validate_file(workflow_file):
-                print(f"  [✓] {workflow_file.name}")
+                print(f"  [OK] {workflow_file.name}")
             else:
-                print(f"  [✗] {workflow_file.name}")
+                print(f"  [FAIL] {workflow_file.name}")
                 self.failed += 1
 
         # Print summary
