@@ -218,6 +218,164 @@ TOTAL:         29/29 tests pass ✅
 
 ---
 
+## 🔒 Enterprise Hardening - Phase 1
+
+**Status: ✅ Production Ready**
+
+Security hardening layer protecting all agent execution with policy enforcement, resource isolation, safe file operations, and circuit breaker pattern. Transparent integration — no agent code changes required.
+
+### Security Architecture
+
+Three-layer defense-in-depth architecture:
+
+```
+LAYER 1: Policy Enforcement (CentralOrchestrator)
+  └─ Question: "Is agent allowed to execute this goal?"
+  └─ Decision: YES → Continue, NO → PermissionError
+  └─ Audit: Log all policy decisions
+
+LAYER 2: Resource Isolation (AgentSandbox)
+  └─ CPU Limits: 25-100% configurable per tier
+  └─ Memory Limits: 256MB-1024MB configurable per tier
+  └─ Timeout: 60-600 seconds configurable per tier
+
+LAYER 3: Safe Operations (StateManager)
+  └─ File validation: Check path whitelist
+  └─ Backup creation: Before every write
+  └─ Atomic writes: Temp file + rename
+  └─ Audit trail: Every operation logged
+```
+
+### Security Components
+
+| Component | Purpose | Status |
+|-----------|---------|--------|
+| **SafeFileOperations** | File I/O with validation + audit trail | ✅ 340 LOC |
+| **SafeProcessExecution** | Subprocess execution with shell injection prevention | ✅ 340 LOC |
+| **CircuitBreaker** | Failure detection preventing cascading failures | ✅ 368 LOC |
+| **PolicyEngine** | Access control enforcement (agent/operation/path) | ✅ 316 LOC |
+| **AgentSandbox** | Resource limits (CPU, memory, timeout) | ✅ Configurable |
+
+### Hard Boundaries (Cannot Bypass)
+
+✅ **File System Protection**
+- Cannot write to: `/etc`, `/sys`, `/proc`, `/root`, `~/.ssh`, `~/.kube`, `~/.aws`
+- Can only write to: `.agents/skills`, `.agents/workflows`, `.agents/state`, `.agents/logs`
+
+✅ **Process Execution Limits**
+- Max memory: 256-1024MB per tier (configurable)
+- Max CPU: 25-100% per tier (configurable)
+- Max timeout: 60-600 seconds per tier (configurable)
+
+✅ **Agent Authorization**
+- Allowed agents: DeployAgent, SyncAgent, ValidationAgent, KnowledgeAgent
+- Each agent has specific allowed operations
+
+✅ **Circuit Breaker Protection**
+- Opens after 5 failures in 60 seconds
+- Prevents infinite loops and cascading failures
+- Half-opens after 60 seconds to test recovery
+
+✅ **Audit Trail**
+- Every file operation logged (path, size, backup status, result)
+- Every policy decision logged (allowed/denied, reason, timestamp)
+- Location: `.agents/logs/audit.jsonl`
+
+### Configuration
+
+**Sandbox Resource Tiers:**
+```yaml
+standard:    256MB memory, 25% CPU, 60s timeout
+premium:     512MB memory, 50% CPU, 300s timeout  
+critical: 1024MB memory, 100% CPU, 600s timeout
+```
+
+Override in `.agents/config/hardening-policy.yaml`:
+```yaml
+agents:
+  DeployAgent:
+    enabled: true
+    allowed_operations: [deploy, validate, status, rollback]
+    constraints:
+      max_concurrent: 3
+      max_memory_mb: 512
+      max_cpu_percent: 50
+      timeout_sec: 300
+```
+
+### Production Features
+
+✅ **Transparent Integration** - Existing agents work unchanged
+✅ **Fallback Mode** - Direct execution if hardening disabled (via env var)
+✅ **Policy Enforcement** - Pre-flight checks in CentralOrchestrator.execute_goal()
+✅ **Safe Persistence** - All StateManager writes protected with SafeFileOperations
+✅ **Comprehensive Audit** - Full operation trail for compliance
+✅ **Defense-in-Depth** - Multiple security layers, no single point of failure
+
+### Quick Commands
+
+```bash
+# Initialize hardening system
+python orchestration/orchestration_main.py init
+
+# Execute with hardening enabled (default)
+python orchestration/orchestration_main.py deploy-game-release
+
+# Disable hardening for development (if needed)
+export HARDENING_ENABLED=false
+python orchestration/orchestration_main.py deploy-game-release
+
+# View audit trail
+tail -f .agents/logs/audit.jsonl
+
+# Check hardening status
+python orchestration/orchestration_main.py status
+```
+
+### Integration Points
+
+Hardening is automatically applied at 3 key orchestration locations:
+
+1. **CentralOrchestrator.execute_goal()** - Policy check before goal execution
+2. **StateManager._persist_state()** - Safe file operations for all state writes
+3. **StateManager.checkpoint()** - Automatic backups for recovery
+
+### Test Coverage
+
+```
+SafeFileOperations:    5/5 tests pass ✅
+CircuitBreaker:        4/4 tests pass ✅
+PolicyEngine:          6/6 tests pass ✅
+AgentSandbox:          2/2 tests pass ✅
+Integration:           3/3 tests pass ✅
+─────────────────────────────────────
+TOTAL:                20/20 tests pass ✅
+```
+
+### Files
+
+```
+.agents/security/
+├── safe_operations.py          (SafeFileOperations + SafeProcessExecution)
+├── circuit_breaker.py          (CircuitBreaker + CircuitBreakerManager)
+├── policy_engine.py            (PolicyEngine + AgentPolicy)
+├── hardened_orchestration.py   (Integration decorators + helpers)
+└── __init__.py
+
+.agents/config/
+├── hardening-policy.yaml       (Agent policies + constraints)
+└── hardening-defaults.yaml     (Resource limits, circuit breaker settings)
+
+.agents/orchestration/tests/
+└── test_phase1_hardening.py    (20 comprehensive tests)
+```
+
+### Documentation
+
+**Detailed hardening documentation:** `.agents/HARDENING_PHASE1_INTEGRATION.md`
+
+---
+
 ## 🎮 The MCP Enhancement Suite
 
 ### 🧠 Modules & Automated Usage

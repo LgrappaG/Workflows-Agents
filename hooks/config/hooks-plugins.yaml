@@ -194,9 +194,9 @@ execution:
     description: "Multiple plugins vote PASS/FAIL/WARN on validation"
     minimum_consensus: 2  # At least 2 plugins must agree
     voting_rules:
-      - if_vote_count < 2: use_framework_default
-      - if_consensus >= 66%: accept_result
-      - if_consensus < 66%: use_framework_default_with_warning
+      - "if_vote_count < 2: use_framework_default"
+      - "if_consensus >= 66%: accept_result"
+      - "if_consensus < 66%: use_framework_default_with_warning"
     weighted_voting: true  # Use consensus_weight from plugin config
 
   # Execution Order

@@ -2,378 +2,276 @@
 Phase 3 Integration Tests
 ==========================
 
-Tests for:
-- Error Detection Engine (pattern recognition, anomaly detection)
-- Self-Correction Engine (learning from recovery)
-- Recovery Manager (circuit breakers, retry strategies, rollbacks)
-- Intelligence Router (multi-agent consensus voting)
+Tests for System Intelligence Layer (Phase 3)
+- Distributed Tracing
+- ML Performance Prediction
+- Remediation Optimizer
+- Dependency Graph Analyzer
+- Compliance Reporter
 """
 
 import sys
+import logging
 from pathlib import Path
+from datetime import datetime, timedelta
+import json
+
+# Setup logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s [%(levelname)s] %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 # Add .agents to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from orchestration.intelligence import (
-    ErrorDetectionEngine,
-    SelfCorrectionEngine,
-    RecoveryManager,
-    IntelligenceRouter,
-    VotingStrategy,
-    Vote,
-    ExponentialBackoffStrategy
-)
 
+class Phase3IntegrationTests:
+    """Integration tests for Phase 3 System Intelligence"""
 
-def test_error_detection_basic():
-    """Test basic error detection"""
-    print("\n[TEST] Error Detection - Basic Pattern Detection")
+    def __init__(self):
+        self.test_results = []
+        self.tests_passed = 0
+        self.tests_failed = 0
 
-    engine = ErrorDetectionEngine()
+    def run_test(self, name, description, test_func):
+        """Run a single test and track results"""
+        logger.info(f"\n{'='*70}")
+        logger.info(f"TEST: {name}")
+        logger.info(f"{'='*70}")
+        logger.info(f"Description: {description}")
 
-    # Simulate errors
-    for i in range(5):
-        analysis = engine.analyze_error(
-            error_type="gate_failure",
-            agent_name="validation",
-            context={"phase": "phase_4"}
-        )
+        try:
+            test_func()
+            self.tests_passed += 1
+            self.test_results.append({"name": name, "status": "PASS", "timestamp": datetime.now().isoformat()})
+            logger.info("[OK]")
+        except AssertionError as e:
+            self.tests_failed += 1
+            self.test_results.append({"name": name, "status": "FAIL", "error": str(e), "timestamp": datetime.now().isoformat()})
+            logger.error(f"[FAILED]: {e}")
+        except Exception as e:
+            self.tests_failed += 1
+            self.test_results.append({"name": name, "status": "ERROR", "error": str(e), "timestamp": datetime.now().isoformat()})
+            logger.error(f"[ERROR]: {e}")
 
-    patterns = engine.get_top_errors(limit=1)
-    assert len(patterns) == 1, "Should have 1 pattern"
-    assert patterns[0]["error_type"] == "gate_failure", "Should detect gate_failure"
-    assert patterns[0]["frequency"] == 5, "Should have frequency of 5"
+    def test_1_distributed_tracing_end_to_end(self):
+        """Scenario: End-to-end request tracing through 5-agent chain"""
+        from orchestration.tracing.distributed_tracer import DistributedTracer, SpanKind
 
-    print(f"  [OK] Detected pattern: {patterns[0]['error_type']} (frequency: {patterns[0]['frequency']})")
+        tracer = DistributedTracer()
+        trace = tracer.start_trace("user-request-001")
+        assert trace is not None, "Trace creation failed"
+        assert trace.trace_id is not None, "Trace ID not generated"
 
-    return True
+        trace.start_span("orchestrator-request", SpanKind.INTERNAL)
+        trace.current_span.set_attribute("agent", "Orchestrator-1")
+        trace.start_span("agent-1-processing", SpanKind.INTERNAL, parent=trace.current_span)
+        trace.current_span.set_attribute("agent", "Agent-1")
+        trace.end_span()
+        trace.end_span()
 
+        assert len(trace.spans) >= 2, f"Expected 2+ spans, got {len(trace.spans)}"
+        tracer.end_trace("user-request-001")
+        traces = tracer.get_traces_by_operation("orchestrator-request")
+        assert len(traces) > 0, "Trace not stored"
+        logger.info(f"Created trace with {len(trace.spans)} spans")
 
-def test_error_detection_chain():
-    """Test error chain detection"""
-    print("\n[TEST] Error Detection - Error Chain Detection")
+    def test_2_ml_performance_prediction_accuracy(self):
+        """Scenario: Predict performance degradation 5min ahead"""
+        from orchestration.ml.performance_predictor import PerformancePredictor, PerformanceMetrics
 
-    engine = ErrorDetectionEngine()
+        predictor = PerformancePredictor()
+        base_time = datetime.now()
+        for i in range(30):
+            metric = PerformanceMetrics(
+                timestamp=base_time - timedelta(minutes=30-i),
+                cpu_percent=20 + i * 2.5,
+                memory_mb=150 + i * 2.5,
+                latency_ms=100 + i * 30,
+                error_rate=0.0 + i * 0.001,
+                throughput=1000
+            )
+            predictor.record_metric("Agent-Test", metric)
 
-    # Simulate cascading errors
-    errors = [
-        ("build_failure", "deploy"),
-        ("deployment_timeout", "deploy"),
-        ("verification_failed", "deploy")
-    ]
+        trained = predictor.train_models("Agent-Test")
+        assert trained, "Model training failed"
 
-    for error_type, agent in errors:
-        engine.analyze_error(error_type, agent, {"phase": "phase_4"})
+        predictions = predictor.predict_bottleneck("Agent-Test", minutes_ahead=5)
+        assert len(predictions) > 0, "No predictions generated"
 
-    chains = engine.detect_error_chains()
-    assert len(chains) > 0, "Should detect error chain"
-    assert len(chains[0]["error_sequence"]) >= 2, "Chain should have multiple errors"
+        cpu_pred = [p for p in predictions if p.metric == "cpu"][0]
+        assert cpu_pred.severity in ["WARNING", "CRITICAL"], "Severity not escalated"
+        logger.info(f"Predicted {len(predictions)} metrics, highest severity: {cpu_pred.severity}")
 
-    print(f"  [OK] Detected error chain with {len(chains[0]['error_sequence'])} errors")
+    def test_3_remediation_learning_effectiveness(self):
+        """Scenario: Test if optimal remediation strategy improves success rate"""
+        from orchestration.learning.remediation_optimizer import RemediationOptimizer
 
-    return True
-
-
-def test_error_detection_high_risk():
-    """Test high-risk operation detection"""
-    print("\n[TEST] Error Detection - High-Risk Operations")
-
-    engine = ErrorDetectionEngine()
-
-    # Simulate high error rate for deploy agent in phase_5
-    for i in range(10):
-        engine.analyze_error(
-            error_type="build_failure",
-            agent_name="deploy",
-            context={"phase": "phase_5_enrichment"}
-        )
-
-    high_risk = engine.get_high_risk_operations()
-    assert len(high_risk) > 0, "Should identify high-risk operations"
-
-    print(f"  [OK] Identified {len(high_risk)} high-risk operation(s)")
-
-    return True
-
-
-def test_self_correction_learning():
-    """Test self-correction engine learning"""
-    print("\n[TEST] Self-Correction Engine - Strategy Learning")
-
-    engine = SelfCorrectionEngine()
-
-    # Record successful recoveries
-    for i in range(8):
-        engine.record_recovery_attempt(
-            error_type="build_failure",
-            strategy="retry_with_verbose",
-            success=True,
-            recovery_time_ms=1000 + (i * 100),
-            context={"phase": "phase_4"}
-        )
-
-    # Record some failures
-    for i in range(2):
-        engine.record_recovery_attempt(
-            error_type="build_failure",
-            strategy="retry_with_verbose",
-            success=False,
-            recovery_time_ms=5000,
-            context={"phase": "phase_4"}
-        )
-
-    recommendation = engine.get_recommended_strategy("build_failure")
-    assert recommendation is not None, "Should have recommendation"
-    assert float(recommendation["confidence"]) > 0.7, "Should have high confidence"
-
-    print(f"  [OK] Learned strategy: {recommendation['recommended_strategy']} (confidence: {recommendation['confidence']})")
-
-    return True
-
-
-def test_self_correction_adaptation():
-    """Test adaptation plan generation"""
-    print("\n[TEST] Self-Correction Engine - Adaptation Planning")
-
-    engine = SelfCorrectionEngine()
-
-    # Record phase-specific recoveries
-    for phase in ["phase_4", "phase_5_enrichment"]:
-        for i in range(15):
-            engine.record_recovery_attempt(
-                error_type="gate_failure",
-                strategy="analyze_and_suggest",
-                success=(i % 3 != 0),  # 66% success rate
-                recovery_time_ms=2000 + (i * 50),
-                context={"phase": phase}
+        optimizer = RemediationOptimizer()
+        for i in range(20):
+            success = i >= 10
+            optimizer.record_outcome(
+                f"INC-{i:05d}",
+                "transient",
+                "retry",
+                success,
+                recovery_time_seconds=2.5 if success else 5.0
             )
 
-    adaptation_plan = engine.generate_adaptation_plan()
-    assert "threshold_adjustments" in adaptation_plan, "Should include threshold adjustments"
+        stats = optimizer.get_strategy_stats("transient")
+        assert stats["attempts"] == 20, "Event tracking failed"
+        assert stats["success_rate"] == 0.5, "Success rate calculation wrong"
 
-    print(f"  [OK] Generated adaptation plan with {len(adaptation_plan['threshold_adjustments'])} phase contexts")
+        rec = optimizer.recommend_strategy("transient")
+        assert rec == "retry", "Strategy recommendation incorrect"
+        logger.info(f"Remediation optimizer tracking: {stats['success_rate']:.0%} success rate")
 
-    return True
+    def test_4_dependency_cascade_analysis(self):
+        """Scenario: Identify failure cascade if critical agent fails"""
+        from orchestration.learning.dependency_analyzer import DependencyGraph
 
+        graph = DependencyGraph()
+        graph.add_agent("Orchestrator", "Master", "CRITICAL", "STANDARD", "compute")
+        graph.add_agent("Worker-1", "Worker 1", "MEDIUM", "STANDARD", "compute")
+        graph.add_agent("Storage", "Storage", "HIGH", "PREMIUM", "storage")
 
-def test_recovery_manager_circuit_breaker():
-    """Test circuit breaker pattern"""
-    print("\n[TEST] Recovery Manager - Circuit Breaker")
+        graph.add_dependency("Worker-1", "Orchestrator", "depends_on", "MEDIUM")
+        graph.add_dependency("Storage", "Orchestrator", "depends_on", "HIGH")
 
-    manager = RecoveryManager()
+        impact = graph.get_agent_impact("Orchestrator")
+        assert impact["impact_level"] in ["HIGH", "CRITICAL"], "Impact not detected"
 
-    # Get circuit breaker
-    cb = manager.get_circuit_breaker("deploy_operation")
-    assert cb.state.value == "closed", "Initial state should be closed"
+        cascade = graph.simulate_failure_cascade("Orchestrator")
+        assert cascade.total_impact in ["HIGH", "CRITICAL"], "Cascade severity wrong"
+        logger.info(f"Cascade analysis: {cascade.affected_agents} agents affected, {cascade.total_impact} impact")
 
-    # Simulate failures
-    for i in range(5):
-        cb.record_failure()
+    def test_5_compliance_audit_trail_integrity(self):
+        """Scenario: Record 50 events and verify audit trail integrity"""
+        from orchestration.learning.compliance_reporter import ComplianceReporter
 
-    assert cb.state.value == "open", "State should become open after failures"
+        reporter = ComplianceReporter()
+        for i in range(50):
+            event_type = "data_access" if i % 3 == 0 else "decision"
+            reporter.record_event(
+                event_type=event_type,
+                agent_id=f"Agent-{i % 5}",
+                action=f"Operation {i}",
+                entity_id=f"entity-{i // 10}",
+                status="SUCCESS" if i % 5 != 0 else "FAILURE"
+            )
 
-    # Try operation - should be blocked
-    can_attempt = cb.can_attempt_operation()
-    assert not can_attempt, "Should not allow operation when open"
+        assert len(reporter.events) == 50, "Event recording failed"
 
-    print(f"  [OK] Circuit breaker transitioned from closed to {cb.state.value}")
+        access_events = reporter.get_audit_trail(event_type="data_access")
+        expected_access = sum(1 for i in range(50) if i % 3 == 0)
+        assert len(access_events) == expected_access, "Event filtering failed"
 
-    return True
+        for event in reporter.events:
+            assert event.hash_signature is not None, "Hash signature missing"
+            assert len(event.hash_signature) == 64, "Hash signature invalid"
 
+        logger.info(f"Audit trail: {len(reporter.events)} events, all hashes valid")
 
-def test_recovery_manager_exponential_backoff():
-    """Test exponential backoff strategy"""
-    print("\n[TEST] Recovery Manager - Exponential Backoff")
+    def test_6_phase3_component_integration(self):
+        """Scenario: All 5 Phase 3 components working together"""
+        from orchestration.tracing.distributed_tracer import DistributedTracer, SpanKind
+        from orchestration.ml.performance_predictor import PerformancePredictor, PerformanceMetrics
+        from orchestration.learning.remediation_optimizer import RemediationOptimizer
+        from orchestration.learning.dependency_analyzer import DependencyGraph
+        from orchestration.learning.compliance_reporter import ComplianceReporter
 
-    strategy = ExponentialBackoffStrategy(max_attempts=3, base_delay=1.0, max_delay=60.0)
+        tracer = DistributedTracer()
+        predictor = PerformancePredictor()
+        optimizer = RemediationOptimizer()
+        graph = DependencyGraph()
+        reporter = ComplianceReporter()
 
-    wait_times = []
-    for attempt in range(3):
-        strategy.mark_attempt()
-        wait_time = strategy.get_wait_time()
-        wait_times.append(wait_time)
+        trace = tracer.start_trace("sys-degradation-001")
+        trace.start_span("agent-1-operation", SpanKind.INTERNAL)
 
-    # Verify exponential growth
-    assert wait_times[0] < wait_times[1], "Wait time should increase"
-    assert wait_times[1] < wait_times[2], "Wait time should continue to increase"
+        for i in range(15):
+            metric = PerformanceMetrics(
+                timestamp=datetime.now() - timedelta(minutes=15-i),
+                cpu_percent=30 + i * 3,
+                memory_mb=180 + i * 2,
+                latency_ms=150 + i * 20,
+                error_rate=0.0,
+                throughput=1000
+            )
+            predictor.record_metric("Agent-1", metric)
 
-    print(f"  [OK] Exponential backoff: {[f'{w:.2f}s' for w in wait_times]}")
+        predictor.train_models("Agent-1")
+        predictions = predictor.predict_bottleneck("Agent-1")
+        if predictions:
+            optimizer.record_outcome("INC-001", "resource", "resource", True, recovery_time_seconds=15.0)
 
-    return True
+        graph.add_agent("Agent-1", "Test Agent", "MEDIUM", "STANDARD", "compute")
+        graph.add_agent("Storage-1", "Storage", "HIGH", "PREMIUM", "storage")
+        graph.add_dependency("Agent-1", "Storage-1", "depends_on")
 
-
-def test_recovery_manager_rollback():
-    """Test rollback sequence"""
-    print("\n[TEST] Recovery Manager - Rollback Sequence")
-
-    manager = RecoveryManager()
-    sequence = manager.create_rollback_sequence("deploy_1")
-
-    # Track execution
-    execution_log = []
-
-    def op1():
-        execution_log.append("op1")
-
-    def rollback1():
-        execution_log.append("rollback1")
-
-    def op2():
-        execution_log.append("op2")
-
-    def rollback2():
-        execution_log.append("rollback2")
-
-    sequence.add_step("step1", op1, rollback1)
-    sequence.add_step("step2", op2, rollback2)
-
-    result = sequence.execute()
-    assert result["status"] == "completed", "Sequence should complete successfully"
-    assert execution_log == ["op1", "op2"], "Both operations should execute"
-
-    print(f"  [OK] Rollback sequence executed: {execution_log}")
-
-    return True
-
-
-def test_intelligence_router_consensus():
-    """Test multi-agent consensus voting"""
-    print("\n[TEST] Intelligence Router - Consensus Voting")
-
-    router = IntelligenceRouter(agents=["deploy", "sync", "validation", "knowledge"])
-
-    # Agents make recommendations
-    recommendations = {
-        "deploy": {"decision": "approve", "confidence": 0.9, "rationale": "Build successful"},
-        "sync": {"decision": "approve", "confidence": 0.85, "rationale": "Git clean"},
-        "validation": {"decision": "reject", "confidence": 0.7, "rationale": "Gate 7 failed"},
-        "knowledge": {"decision": "approve", "confidence": 0.75, "rationale": "No anomalies"}
-    }
-
-    # Route through consensus
-    result = router.route_decision(
-        decision_context={"goal": "deploy-game-release", "phase": "phase_4"},
-        agent_recommendations=recommendations,
-        voting_strategy=VotingStrategy.MAJORITY
-    )
-
-    assert "final_decision" in result, "Should have final decision"
-    assert result["final_decision"] in ["approved", "rejected"], "Decision should be clear"
-
-    print(f"  [OK] Multi-agent consensus: {result['final_decision']}")
-
-    return True
-
-
-def test_intelligence_router_audit_trail():
-    """Test decision audit trail"""
-    print("\n[TEST] Intelligence Router - Audit Trail")
-
-    router = IntelligenceRouter(agents=["deploy", "sync"])
-
-    # Make multiple decisions
-    for i in range(3):
-        router.route_decision(
-            decision_context={"goal": f"goal_{i}", "phase": "phase_4"},
-            agent_recommendations={
-                "deploy": {"decision": "approve", "confidence": 0.8, "rationale": "OK"},
-                "sync": {"decision": "approve", "confidence": 0.8, "rationale": "OK"}
-            }
+        reporter.create_processing_record(
+            "proc-incident-001",
+            "Performance degradation response",
+            "legitimate_interest",
+            "performance_metrics",
+            retention_days=365,
+            processors=["Agent-1", "Monitor-1"]
         )
 
-    stats = router.get_routing_statistics()
-    assert stats["total_decisions"] == 3, "Should have 3 decisions"
-    assert stats["audit_trail_entries"] == 3, "Audit trail should have 3 entries"
+        reporter.record_event(
+            event_type="anomaly",
+            agent_id="Agent-1",
+            action="Performance degradation detected",
+            entity_id="INC-001",
+            reason="Performance monitoring"
+        )
 
-    print(f"  [OK] Audit trail: {stats['total_decisions']} decisions recorded")
+        trace.end_span()
+        tracer.end_trace("sys-degradation-001")
 
-    return True
+        assert len(tracer.get_traces_by_operation("agent-1-operation")) > 0, "Tracing failed"
+        assert predictor.models.get("Agent-1") is not None, "ML training failed"
+        assert len(optimizer.outcomes) > 0, "Remediation recording failed"
+        assert len(graph.nodes) > 0, "Dependency tracking failed"
+        assert len(reporter.events) > 0, "Compliance recording failed"
 
+        logger.info("Full Phase 3 integration successful")
 
-def test_phase3_integration_pipeline():
-    """Test full Phase 3 integration pipeline"""
-    print("\n[TEST] Phase 3 - Full Integration Pipeline")
+    def run_all_tests(self):
+        """Execute all Phase 3 integration tests"""
+        logger.info("\n" + "="*70)
+        logger.info("PHASE 3 INTEGRATION TEST SUITE")
+        logger.info("="*70)
 
-    # Initialize all components
-    error_detector = ErrorDetectionEngine()
-    self_corrector = SelfCorrectionEngine()
-    recovery_manager = RecoveryManager()
-    intelligence_router = IntelligenceRouter()
+        self.run_test("Distributed Tracing (End-to-End)", "Verify trace creation, span linking", self.test_1_distributed_tracing_end_to_end)
+        self.run_test("ML Performance Prediction", "Test ARIMA forecasting and anomaly prediction", self.test_2_ml_performance_prediction_accuracy)
+        self.run_test("Remediation Learning", "Verify strategy recommendation and success tracking", self.test_3_remediation_learning_effectiveness)
+        self.run_test("Dependency Cascade Analysis", "Simulate failure propagation and impact", self.test_4_dependency_cascade_analysis)
+        self.run_test("Compliance Audit Trail", "Verify event immutability and audit trail integrity", self.test_5_compliance_audit_trail_integrity)
+        self.run_test("Full Phase 3 Integration", "All 5 components working together", self.test_6_phase3_component_integration)
 
-    # Simulate error detection
-    error_detector.analyze_error("build_failure", "deploy", {"phase": "phase_4"})
+        logger.info("\n" + "="*70)
+        logger.info("PHASE 3 INTEGRATION TEST SUMMARY")
+        logger.info("="*70)
+        logger.info(f"Tests Passed: {self.tests_passed}/6")
+        logger.info(f"Tests Failed: {self.tests_failed}/6")
+        logger.info("="*70)
 
-    # Record recovery attempt
-    self_corrector.record_recovery_attempt(
-        error_type="build_failure",
-        strategy="retry_with_verbose",
-        success=True,
-        recovery_time_ms=2000,
-        context={"phase": "phase_4"}
-    )
+        if self.tests_failed == 0:
+            logger.info("[OK] ALL TESTS PASSED - Phase 3 Ready for Production")
+        else:
+            logger.error("[FAILED] SOME TESTS FAILED")
 
-    # Get recovery recommendation
-    recovery_rec = self_corrector.get_recommended_strategy("build_failure")
-
-    # Route through intelligence router
-    routing_result = intelligence_router.route_decision(
-        decision_context={"goal": "recover_from_build_failure"},
-        agent_recommendations={
-            "deploy": {"decision": "approve", "confidence": 0.9, "rationale": "Use retry strategy"},
-            "knowledge": {"decision": "approve", "confidence": 0.8, "rationale": "Recovery feasible"}
-        }
-    )
-
-    assert recovery_rec is not None, "Should have recovery recommendation"
-    assert routing_result["final_decision"] in ["approved", "rejected"], "Should have routing decision"
-
-    print(f"  [OK] Full pipeline: Error detected -> Recovery recommended -> Decision routed")
-
-    return True
+        return self.tests_failed == 0
 
 
-def run_all_tests():
-    """Run all Phase 3 tests"""
-    print("\n" + "="*60)
-    print("PHASE 3: INTELLIGENCE & SELF-CORRECTION TESTS")
-    print("="*60)
-
-    tests = [
-        test_error_detection_basic,
-        test_error_detection_chain,
-        test_error_detection_high_risk,
-        test_self_correction_learning,
-        test_self_correction_adaptation,
-        test_recovery_manager_circuit_breaker,
-        test_recovery_manager_exponential_backoff,
-        test_recovery_manager_rollback,
-        test_intelligence_router_consensus,
-        test_intelligence_router_audit_trail,
-        test_phase3_integration_pipeline
-    ]
-
-    passed = 0
-    failed = 0
-
-    for test in tests:
-        try:
-            if test():
-                passed += 1
-        except AssertionError as e:
-            print(f"  [FAILED] {e}")
-            failed += 1
-        except Exception as e:
-            print(f"  [ERROR] {e}")
-            failed += 1
-
-    print("\n" + "="*60)
-    print(f"RESULTS: {passed} passed, {failed} failed")
-    print("="*60)
-
-    return failed == 0
+def main():
+    tester = Phase3IntegrationTests()
+    success = tester.run_all_tests()
+    return 0 if success else 1
 
 
 if __name__ == "__main__":
-    success = run_all_tests()
-    sys.exit(0 if success else 1)
+    sys.exit(main())

@@ -1,0 +1,296 @@
+# Hardening System Defaults
+# ==========================
+# Default values for security components when not specified in policy.
+# Used by SafeOperations, CircuitBreaker, PolicyEngine, AgentSandbox.
+#
+# Load Order:
+# 1. hardening-defaults.yaml (this file - base defaults)
+# 2. hardening-policy.yaml (environment/agent specific overrides)
+# 3. Environment variables (runtime overrides)
+
+metadata:
+  version: "1.0"
+  description: "Default security configuration for .agents hardening system"
+  last_updated: "2026-04-12"
+  profile: "production"  # development, staging, production
+
+# ============================================================================
+# SANDBOX RESOURCE LIMITS
+# ============================================================================
+
+sandbox:
+  # Standard tier (default)
+  standard:
+    memory_mb: 256
+    cpu_percent: 25
+    timeout_sec: 60
+
+  # Premium tier (for intensive operations)
+  premium:
+    memory_mb: 512
+    cpu_percent: 50
+    timeout_sec: 300
+
+  # Critical tier (for knowledge/analysis)
+  critical:
+    memory_mb: 1024
+    cpu_percent: 100
+    timeout_sec: 600
+
+  # Global sandbox settings
+  monitor_interval_sec: 0.5
+  consecutive_violation_limit: 3  # Kill after 3 consecutive violations
+  graceful_shutdown_timeout_sec: 5
+
+# ============================================================================
+# CIRCUIT BREAKER SETTINGS
+# ============================================================================
+
+circuit_breaker:
+  # Failure thresholds
+  failure_threshold: 5  # Failures within sample window
+  sample_window_sec: 60  # Time window for counting failures
+
+  # Recovery behavior
+  recovery_timeout_sec: 60  # Time before half-open
+  half_open_max_calls: 3  # Max calls allowed when half-open
+  reset_successful_calls: 5  # Calls needed in half-open for recovery
+
+  # Logging
+  log_state_changes: true
+  log_metrics_interval_sec: 300
+
+# ============================================================================
+# SAFE FILE OPERATIONS
+# ============================================================================
+
+safe_operations:
+  # Audit logging
+  audit_log_path: ".agents/logs/audit.jsonl"
+  audit_log_rotation_days: 30
+
+  # Backup settings
+  backup_dir: ".agents/backups"
+  create_backup: true
+  backup_rotation_days: 7
+
+  # File size limits
+  max_file_size_mb: 100
+  atomic_writes: true  # Use temporary file + rename
+
+  # Hard boundaries (always denied)
+  protected_paths:
+    - "/etc"
+    - "/sys"
+    - "/proc"
+    - "/root"
+    - "~/.ssh"
+    - "~/.kube"
+    - "~/.aws"
+    - "~/.azure"
+
+  # Allowed paths (for .agents)
+  allowed_paths:
+    - ".agents/skills"
+    - ".agents/workflows"
+    - ".agents/state"
+    - ".agents/logs"
+    - ".agents/backups"
+
+# ============================================================================
+# SAFE PROCESS EXECUTION
+# ============================================================================
+
+safe_process:
+  # Approved executables (whitelist)
+  approved_executables:
+    - python
+    - python3
+    - python3.8
+    - python3.9
+    - python3.10
+    - python3.11
+    - git
+    - npm
+    - npm3
+    - npx
+    - pip
+    - pip3
+    - node
+    - nodejs
+    - bash
+    - sh
+    - dotnet
+
+  # Shell metacharacters (always denied in arguments)
+  shell_metacharacters:
+    - '|'
+    - '&'
+    - ';'
+    - '`'
+    - '$'
+    - '('
+    - ')'
+    - '<'
+    - '>'
+    - '\n'
+    - '\r'
+
+  # Execution settings
+  timeout_sec: 60
+  use_shell: false  # Never use shell for safety
+  capture_output: true
+
+# ============================================================================
+# POLICY ENGINE ENFORCEMENT
+# ============================================================================
+
+policy_engine:
+  # Hard boundaries
+  enforce_agent_whitelist: true
+  enforce_operation_whitelist: true
+  enforce_path_whitelist: true
+  enforce_resource_quotas: true
+
+  # Default access levels
+  default_path_access: "deny"  # deny, warn, or allow
+  unknown_operation_action: "deny"
+  unknown_agent_action: "deny"
+
+  # Quota enforcement
+  default_max_concurrent: 5
+  default_max_memory_mb: 512
+  default_max_cpu_percent: 50
+  default_timeout_sec: 300
+
+# ============================================================================
+# ANOMALY DETECTION
+# ============================================================================
+
+anomaly_detection:
+  enabled: true
+
+  # Thresholds
+  memory_spike_threshold_percent: 80
+  cpu_spike_threshold_percent: 90
+  failure_rate_threshold: 0.3
+  anomaly_score_threshold: 0.7
+
+  # Monitoring
+  check_interval_sec: 5
+  warmup_period_executions: 100  # Warm-up before alerting
+
+  # Actions
+  alert_on_anomaly: true
+  escalate_to_self_healing: true
+  max_anomaly_level: "critical"  # info, warning, critical
+
+# ============================================================================
+# DISTRIBUTED TRACING
+# ============================================================================
+
+tracing:
+  enabled: true
+
+  # Trace collection
+  trace_all_operations: true
+  sample_rate: 1.0  # 1.0 = 100% sampling
+  trace_storage: ".agents/logs/traces.jsonl"
+
+  # Jaeger export (Phase 3)
+  export_to_jaeger: false
+  jaeger_endpoint: "http://localhost:6831"
+  jaeger_service_name: "agents-orchestration"
+
+  # Span configuration
+  root_span_name: "goal_execution"
+  max_span_duration_sec: 3600
+  record_attributes:
+    - agent_name
+    - operation
+    - status
+    - resource_usage
+    - policy_violations
+
+# ============================================================================
+# COMPLIANCE & AUDITING
+# ============================================================================
+
+compliance:
+  # Audit trail
+  audit_log_path: ".agents/logs/audit.jsonl"
+  audit_retention_days: 90
+
+  # Report generation
+  generate_reports: true
+  report_schedule: "daily"
+  report_formats:
+    - json
+    - html
+  report_output: ".agents/reports"
+
+  # Compliance rules
+  enforce_immutability: true
+  require_human_approval_for: []  # List of high-risk operations
+  log_all_operations: true
+
+  # Alerting
+  alert_on_policy_violation: true
+  alert_email: "security@example.com"
+  alert_slack_webhook: ""
+
+# ============================================================================
+# MONITORING & METRICS
+# ============================================================================
+
+monitoring:
+  # Metrics collection
+  collect_metrics: true
+  metrics_path: ".agents/logs/metrics.json"
+  metrics_interval_sec: 60
+
+  # Metric types
+  track_security_metrics: true
+  track_resource_metrics: true
+  track_performance_metrics: true
+
+  # Prometheus export (Phase 3)
+  export_prometheus: true
+  prometheus_port: 9090
+  prometheus_path: "/metrics"
+
+# ============================================================================
+# SELF-HEALING & AUTO-REMEDIATION
+# ============================================================================
+
+auto_remediation:
+  # Enable/disable
+  enabled: true
+  enabled_in_production: true
+  require_approval_for: ["agent_disable", "resource_migration"]
+
+  # Actions
+  default_action: "escalate"  # retry, escalate, disable
+  max_remediation_attempts: 3
+  escalation_timeout_sec: 300
+
+  # Severity levels
+  alert_on_severity: "warning"  # all, warning, critical
+  auto_fix_on_severity: "critical"
+
+# ============================================================================
+# ENVIRONMENT VARIABLES (RUNTIME OVERRIDES)
+# ============================================================================
+
+# These can be overridden with environment variables:
+#
+# Development mode (lenient):
+#   export HARDENING_LEVEL=lenient
+#   export CIRCUIT_BREAKER_ENABLED=false
+#   export AUTO_REMEDIATION=false
+#
+# Production mode (strict):
+#   export HARDENING_LEVEL=strict
+#   export CIRCUIT_BREAKER_ENABLED=true
+#   export AUTO_REMEDIATION=true
+#   export AUDIT_LOGGING_LEVEL=all

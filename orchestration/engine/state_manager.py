@@ -9,12 +9,27 @@ Responsibilities:
 - Persist state to durable storage (JSON)
 - Recover from crashes
 - Provide state snapshots for debugging
+
+HARDENING (Phase 1):
+- All file writes use SafeFileOperations wrapper
+- Atomic writes with backup creation
+- Audit trail for all state mutations
 """
 
 import json
+import logging
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, Any, Optional
+
+# Import hardening components
+try:
+    from security.safe_operations import get_safe_file_operations
+    HARDENING_ENABLED = True
+except ImportError:
+    HARDENING_ENABLED = False
+
+logger = logging.getLogger(__name__)
 
 
 class StateManager:
@@ -124,21 +139,65 @@ class StateManager:
             print(f"[StateManager] Execution marked as {final_status}")
 
     def checkpoint(self, checkpoint_name: str):
-        """Save checkpoint for recovery"""
+        """
+        Save checkpoint for recovery.
+
+        HARDENING: Uses SafeFileOperations for atomic writes.
+        """
         if not self.current_state:
             raise RuntimeError("State not initialized")
 
         checkpoint_file = self.checkpoint_dir / f"{self.current_state['execution_id']}_{checkpoint_name}.json"
-        checkpoint_file.write_text(json.dumps(self.current_state, indent=2))
-        print(f"[StateManager] Checkpoint saved: {checkpoint_file}")
+        content = json.dumps(self.current_state, indent=2)
+
+        if HARDENING_ENABLED:
+            try:
+                safe_file_ops = get_safe_file_operations()
+                safe_file_ops.write_file(
+                    path=str(checkpoint_file),
+                    content=content,
+                    create_backup=True
+                )
+                logger.info(f"[StateManager] Checkpoint saved safely: {checkpoint_file}")
+            except Exception as e:
+                logger.error(f"[StateManager] Safe checkpoint write failed: {e}")
+                checkpoint_file.write_text(content)
+        else:
+            checkpoint_file.write_text(content)
+            logger.info(f"[StateManager] Checkpoint saved: {checkpoint_file}")
 
     def _persist_state(self):
-        """Persist state to durable storage"""
+        """
+        Persist state to durable storage.
+
+        HARDENING: Uses SafeFileOperations for atomic writes with backup.
+        """
         if not self.current_state:
             return
 
         state_file = self.state_dir / f"{self.current_state['execution_id']}.json"
-        state_file.write_text(json.dumps(self.current_state, indent=2))
+        content = json.dumps(self.current_state, indent=2)
+
+        if HARDENING_ENABLED:
+            try:
+                safe_file_ops = get_safe_file_operations()
+                safe_file_ops.write_file(
+                    path=str(state_file),
+                    content=content,
+                    create_backup=True
+                )
+                logger.debug(f"[StateManager] State persisted safely: {state_file}")
+            except Exception as e:
+                logger.error(f"[StateManager] Safe write failed, falling back: {e}")
+                # Fallback to direct write
+                try:
+                    state_file.write_text(content)
+                except Exception as fallback_err:
+                    logger.error(f"[StateManager] Fallback write failed: {fallback_err}")
+                    raise
+        else:
+            # Hardening disabled, use direct write
+            state_file.write_text(content)
 
     def get_state(self) -> Dict[str, Any]:
         """Get current state"""

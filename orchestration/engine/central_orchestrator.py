@@ -17,10 +17,24 @@ This is the heart of the orchestration system. It:
 
 import json
 import uuid
+import logging
 from datetime import datetime
 from typing import Dict, List, Any, Optional
 from enum import Enum
 from pathlib import Path
+
+# Import hardening components
+try:
+    from security.hardened_orchestration import (
+        require_policy_check,
+        require_circuit_breaker,
+        HardenedExecutionContext,
+    )
+    HARDENING_ENABLED = True
+except ImportError:
+    HARDENING_ENABLED = False
+
+logger = logging.getLogger(__name__)
 
 
 class ExecutionStatus(Enum):
@@ -108,6 +122,8 @@ class CentralOrchestrator:
         Returns:
             Execution result with status, metrics, errors
 
+        HARDENING: Policy check + circuit breaker enabled (Phase 1)
+
         Example:
             result = orchestrator.execute_goal(
                 goal="deploy-game-release",
@@ -115,6 +131,32 @@ class CentralOrchestrator:
                 platform="all"
             )
         """
+        # HARDENING: Check execution policy before proceeding
+        if HARDENING_ENABLED:
+            try:
+                from security.policy_engine import get_policy_engine
+                policy_engine = get_policy_engine()
+
+                # Pre-flight policy check
+                goal_data = {
+                    "goal": goal,
+                    "agent": "orchestrator",
+                    "operation": "execute_goal",
+                    "context": context
+                }
+                policy_engine.check_goal_allowed(goal_data)
+                logger.info(f"[Security] Policy check PASSED: {goal}")
+
+            except (PermissionError, ResourceWarning) as e:
+                logger.error(f"[Security] Policy violation: {e}")
+                return {
+                    "execution_id": f"orch_{datetime.now().strftime('%Y%m%d_%H%M%S')}",
+                    "goal": goal,
+                    "status": ExecutionStatus.FAILED.value,
+                    "error": "Policy violation",
+                    "detail": str(e),
+                }
+
         print(f"\n[Orchestrator] Starting execution: {self.execution_id}")
         print(f"[Orchestrator] Goal: {goal}")
         print(f"[Orchestrator] Context: {context or 'default'}")

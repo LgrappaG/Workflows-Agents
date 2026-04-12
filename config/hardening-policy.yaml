@@ -1,0 +1,204 @@
+# Hardening Policy Configuration
+# ==============================
+# Defines security policies for .agents orchestration system.
+# Enforced by PolicyEngine during goal execution.
+#
+# Policy Hierarchy:
+# 1. Agent + Operation allowed? (PolicyEngine.check_agent_allowed)
+# 2. Resource quota available? (PolicyEngine.check_resource_quota)
+# 3. Path accessible? (PolicyEngine.check_path_access)
+# 4. Memory/CPU limits? (PolicyEngine.check_memory_available)
+
+metadata:
+  version: "1.0"
+  description: "Enterprise hardening policies for .agents"
+  last_updated: "2026-04-12"
+  enforcer: "PolicyEngine"
+  model: "Opus 4.6"
+
+# ============================================================================
+# AGENT POLICIES (.agents specific agents)
+# ============================================================================
+
+agents:
+  DeployAgent:
+    enabled: true
+    description: "Deploys skills and workflows to production"
+
+    allowed_operations:
+      - deploy
+      - validate
+      - status
+      - rollback
+
+    constraints:
+      max_concurrent_executions: 3
+      max_memory_mb: 512
+      max_cpu_percent: 50
+      execution_timeout_sec: 300
+
+    filesystem:
+      allowed_paths:
+        - ".agents/skills"
+        - ".agents/workflows"
+        - ".agents/state"
+      denied_paths:
+        - "/etc"
+        - "/sys"
+        - "/root"
+        - "~/.ssh"
+        - "~/.kube"
+
+  SyncAgent:
+    enabled: true
+    description: "Synchronizes state with remote repositories"
+
+    allowed_operations:
+      - sync
+      - pull
+      - push
+      - merge
+
+    constraints:
+      max_concurrent_executions: 2
+      max_memory_mb: 256
+      max_cpu_percent: 30
+      execution_timeout_sec: 600
+
+    filesystem:
+      allowed_paths:
+        - ".agents"
+      denied_paths:
+        - "/etc"
+        - "/sys"
+        - "/root"
+
+  ValidationAgent:
+    enabled: true
+    description: "Validates skills, workflows, and configurations"
+
+    allowed_operations:
+      - validate
+      - test
+      - check
+      - lint
+
+    constraints:
+      max_concurrent_executions: 5
+      max_memory_mb: 512
+      max_cpu_percent: 50
+      execution_timeout_sec: 180
+
+    filesystem:
+      allowed_paths:
+        - ".agents"
+      denied_paths:
+        - "/etc"
+        - "/sys"
+
+  KnowledgeAgent:
+    enabled: true
+    description: "Analyzes and learns from execution history"
+
+    allowed_operations:
+      - query
+      - analyze
+      - learn
+      - predict
+
+    constraints:
+      max_concurrent_executions: 10
+      max_memory_mb: 1024
+      max_cpu_percent: 75
+      execution_timeout_sec: 300
+
+    filesystem:
+      allowed_paths:
+        - ".agents"
+      denied_paths:
+        - "/etc"
+        - "/sys"
+
+# ============================================================================
+# GLOBAL SECURITY DEFAULTS
+# ============================================================================
+
+defaults:
+  # Sandbox defaults
+  sandbox:
+    resource_tier: "STANDARD"  # STANDARD, PREMIUM, or CRITICAL
+    cpu_percent: 50
+    memory_mb: 256
+    timeout_sec: 60
+
+  # Circuit breaker defaults
+  circuit_breaker:
+    failure_threshold: 5
+    recovery_timeout_sec: 60
+    half_open_max_calls: 3
+    sample_window_sec: 60
+
+  # File operation defaults
+  safe_operations:
+    create_backup: true
+    audit_log_path: ".agents/logs/audit.jsonl"
+    max_file_size_mb: 100
+
+  # Process execution defaults
+  safe_process:
+    approved_executables:
+      - python
+      - python3
+      - git
+      - npm
+      - pip
+      - pip3
+      - node
+      - bash
+    timeout_sec: 60
+
+# ============================================================================
+# ENVIRONMENT SPECIFIC POLICIES
+# ============================================================================
+
+environments:
+  development:
+    validation_level: "lenient"
+    audit_logging: "info"
+    circuit_breaker_enabled: false
+    auto_remediation: false
+
+  staging:
+    validation_level: "moderate"
+    audit_logging: "warning"
+    circuit_breaker_enabled: true
+    auto_remediation: false
+
+  production:
+    validation_level: "strict"
+    audit_logging: "all"
+    circuit_breaker_enabled: true
+    auto_remediation: true
+
+# ============================================================================
+# ANOMALY DETECTION THRESHOLDS
+# ============================================================================
+
+anomaly_detection:
+  enabled: true
+  memory_spike_threshold_percent: 80
+  cpu_spike_threshold_percent: 90
+  failure_rate_threshold: 0.3
+  anomaly_score_threshold: 0.7
+  check_interval_sec: 5
+
+# ============================================================================
+# COMPLIANCE & AUDITING
+# ============================================================================
+
+compliance:
+  audit_log_retention_days: 90
+  generate_compliance_reports: true
+  report_schedule: "daily"  # daily, weekly, monthly
+  alert_on_policy_violation: true
+  alert_email: "security@example.com"
