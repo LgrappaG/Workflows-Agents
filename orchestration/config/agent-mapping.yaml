@@ -1,0 +1,86 @@
+# Agent Mapping Configuration
+# Maps goals to agents and specifies execution strategy
+
+metadata:
+  version: "1.0"
+  description: "Goal to Agent Mapping"
+
+# Goal to Agent Mapping
+goal_to_agent_mapping:
+  # Deployment Goals
+  deploy_game_release:
+    primary_agent: "deploy"
+    supporting_agents: ["validation", "sync"]
+    execution_strategy: "sequential"
+    prerequisite_goals:
+      - validate_all_skills
+      - sync_with_remote
+    priority: 1
+    description: "Deploy game release to production"
+
+  deploy_hotfix:
+    primary_agent: "deploy"
+    supporting_agents: ["validation"]
+    execution_strategy: "sequential"
+    prerequisite_goals:
+      - validate_all_skills
+    priority: 1
+    description: "Deploy emergency hotfix"
+
+  # Validation Goals
+  validate_all_skills:
+    primary_agent: "validation"
+    supporting_agents: []
+    execution_strategy: "parallel_by_domain"
+    prerequisite_goals: []
+    priority: 1
+    description: "Validate all skills with 8-gate system"
+
+  gate_approval_decision:
+    primary_agent: "validation"
+    supporting_agents: []
+    execution_strategy: "sequential"
+    prerequisite_goals:
+      - validate_all_skills
+    priority: 2
+    description: "Make gate approval decision"
+
+  # Sync Goals
+  sync_with_remote:
+    primary_agent: "sync"
+    supporting_agents: []
+    execution_strategy: "sequential"
+    prerequisite_goals: []
+    priority: 1
+    description: "Sync with remote repository"
+
+  resolve_git_conflicts:
+    primary_agent: "sync"
+    supporting_agents: []
+    execution_strategy: "sequential"
+    prerequisite_goals: []
+    priority: 1
+    description: "Resolve git merge conflicts"
+
+  # Learning Goals
+  learn_from_metrics:
+    primary_agent: "knowledge"
+    supporting_agents: []
+    execution_strategy: "batch_analysis"
+    prerequisite_goals: []
+    priority: 2
+    description: "Learn from validation metrics"
+
+  suggest_error_fixes:
+    primary_agent: "knowledge"
+    supporting_agents: []
+    execution_strategy: "sequential"
+    prerequisite_goals: []
+    priority: 2
+    description: "Suggest error fixes based on patterns"
+
+# Agent Hierarchy (for escalation - maps to 48-agent hierarchy)
+agent_hierarchy:
+  level_1_specialists: ["deploy", "sync", "validation", "knowledge"]
+  level_2_leaders: ["creative_director"]  # Vision/decisions
+  level_3_production: ["production_lead"]  # Scope conflicts
