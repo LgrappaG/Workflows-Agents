@@ -1,4 +1,4 @@
-# 🚀 Workflows Agents — Unity Multi-Platform Toolkit v10.0.0
+# Workflows Agents — Unity Multi-Platform Toolkit v10
 
 A comprehensive AI automation framework for **Unity game development across all platforms** (VR/XR, Mobile, PC, WebGL, Console), featuring **63 workflows + 585 AI-powered specialist skills** organized in **18 categories**, backed by a **48-agent organizational hierarchy** and **8-gate validation system** for rapid development and production-ready systems.
 
