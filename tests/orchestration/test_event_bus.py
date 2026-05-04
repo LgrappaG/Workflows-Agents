@@ -23,7 +23,7 @@ from orchestration.event_bus import EventBus
 
 
 @pytest.mark.asyncio
-async def test_event_bus_subscription():
+async def test_event_bus_subscribe_and_publish():
     """Test that EventBus correctly subscribes to events"""
     event_bus = EventBus()
     received_events = []
@@ -43,7 +43,7 @@ async def test_event_bus_subscription():
             source_agent="validator",
             correlation_id="test-123",
             skill_id="skill-001",
-            validation_passed=True,
+            status="passed",
         )
         await event_bus.publish(event)
 
@@ -53,7 +53,7 @@ async def test_event_bus_subscription():
         # Verify event was received
         assert len(received_events) == 1
         assert received_events[0].skill_id == "skill-001"
-        assert received_events[0].validation_passed is True
+        assert received_events[0].status == "passed"
     finally:
         # Stop the event bus
         await event_bus.stop()
@@ -85,7 +85,7 @@ async def test_event_bus_multiple_subscribers():
             source_agent="validator",
             correlation_id="test-456",
             skill_id="skill-002",
-            validation_passed=True,
+            status="passed",
         )
         await event_bus.publish(event)
 
@@ -123,7 +123,7 @@ async def test_event_bus_unsubscribe():
             source_agent="validator",
             correlation_id="test-789",
             skill_id="skill-003",
-            validation_passed=True,
+            status="passed",
         )
         await event_bus.publish(event1)
         await asyncio.sleep(0.1)
@@ -136,7 +136,7 @@ async def test_event_bus_unsubscribe():
             source_agent="validator",
             correlation_id="test-790",
             skill_id="skill-004",
-            validation_passed=True,
+            status="passed",
         )
         await event_bus.publish(event2)
         await asyncio.sleep(0.1)

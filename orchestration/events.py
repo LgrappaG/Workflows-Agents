@@ -39,8 +39,8 @@ class SkillValidatedEvent(BaseEvent):
     """Emitted when a skill passes validation gates"""
     event_type: EventType = EventType.SKILL_VALIDATED
     skill_id: str
-    validation_passed: bool
-    gates_passed: List[int] = Field(default_factory=list)
+    status: str  # "passed", "failed", "partial"
+    gates: List[int] = Field(default_factory=list)
     metadata: Dict[str, Any] = Field(default_factory=dict)
 
 
@@ -88,3 +88,18 @@ class AgentFailedEvent(BaseEvent):
     agent_id: str
     error: str
     error_code: Optional[int] = None
+
+
+class WorkflowStartedEvent(BaseEvent):
+    """Emitted when orchestration starts a workflow"""
+    event_type: EventType = EventType.WORKFLOW_STARTED
+    workflow_id: str
+    workflow_name: str
+
+
+class WorkflowCompletedEvent(BaseEvent):
+    """Emitted when orchestration completes a workflow"""
+    event_type: EventType = EventType.WORKFLOW_COMPLETED
+    workflow_id: str
+    result: Dict[str, Any]
+    execution_time_ms: float

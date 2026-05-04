@@ -29,6 +29,8 @@ from orchestration.events import (
     AgentStartedEvent,
     AgentCompletedEvent,
     AgentFailedEvent,
+    WorkflowStartedEvent,
+    WorkflowCompletedEvent,
     EventType,
 )
 
@@ -47,6 +49,8 @@ __all__ = [
     "AgentStartedEvent",
     "AgentCompletedEvent",
     "AgentFailedEvent",
+    "WorkflowStartedEvent",
+    "WorkflowCompletedEvent",
     "EventType",
 ]
 
