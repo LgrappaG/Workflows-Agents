@@ -1,0 +1,54 @@
+# Phase 7A Orchestration Configuration
+# =====================================
+# Runtime settings for the event-driven orchestration system
+
+event_bus:
+  # Backend type: "in_memory" (default) or "redis" (future)
+  backend: in_memory
+  # Maximum queue size (0 = unlimited)
+  max_queue_size: 0
+  # Processor shutdown timeout in seconds
+  shutdown_timeout: 5.0
+
+goap_planner:
+  # Maximum A* iterations to prevent infinite loops
+  max_iterations: 1000
+  # Heuristic function: "manhattan" (default)
+  heuristic: manhattan
+  # Planning timeout in milliseconds
+  planning_timeout_ms: 500
+
+skill_graph:
+  # Enable conflict detection on graph modification
+  detect_conflicts: true
+  # Enable cycle detection on graph modification
+  detect_cycles: true
+  # Cache dependency lookups
+  cache_dependencies: true
+
+agents:
+  # Orchestrator agent settings
+  orchestrator:
+    # Heartbeat interval in seconds
+    heartbeat_interval: 10.0
+    # Maximum concurrent agent executions
+    max_concurrent_agents: 5
+    # Agent execution timeout in seconds
+    agent_timeout: 300.0
+
+logging:
+  # Log level: DEBUG, INFO, WARNING, ERROR
+  level: INFO
+  # Log format
+  format: "%(asctime)s [%(levelname)s] %(name)s: %(message)s"
+  # Enable event logging
+  log_events: true
+  # Enable performance metrics logging
+  log_performance: true
+
+performance:
+  # Target metrics
+  targets:
+    event_throughput_per_sec: 500
+    planning_time_ms: 100
+    orchestration_latency_ms: 200

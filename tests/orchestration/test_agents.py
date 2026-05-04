@@ -37,7 +37,7 @@ async def test_agent_lifecycle():
     Test agent lifecycle: AgentStartedEvent → execute → AgentCompletedEvent
 
     Verifies:
-    1. Agent emits AgentStartedEvent with source_agent=agent_id
+    1. Agent emits AgentStartedEvent with agent_id and agent_type
     2. Agent calls execute() method
     3. Agent emits AgentCompletedEvent with result and execution_time_ms
     """
@@ -70,16 +70,16 @@ async def test_agent_lifecycle():
         started_event = received_events[0]
         assert isinstance(started_event, AgentStartedEvent)
         assert started_event.source_agent == "test-agent-001"
-        assert started_event.agent_name == "test-agent-001"
+        assert started_event.agent_id == "test-agent-001"
+        assert started_event.agent_type == "TestAgent"
 
         # Second event should be AgentCompletedEvent
         completed_event = received_events[1]
         assert isinstance(completed_event, AgentCompletedEvent)
         assert completed_event.source_agent == "test-agent-001"
-        assert completed_event.agent_name == "test-agent-001"
+        assert completed_event.agent_id == "test-agent-001"
         assert completed_event.result is not None
-        assert "execution_time_ms" in completed_event.result
-        assert completed_event.result["execution_time_ms"] >= 0
+        assert completed_event.execution_time_ms >= 0
         assert completed_event.result.get("status") == "success"
 
     finally:
@@ -126,14 +126,16 @@ async def test_agent_error_handling():
         started_event = received_events[0]
         assert isinstance(started_event, AgentStartedEvent)
         assert started_event.source_agent == "test-agent-002"
+        assert started_event.agent_id == "test-agent-002"
 
         # Second event should be AgentFailedEvent
         failed_event = received_events[1]
         assert isinstance(failed_event, AgentFailedEvent)
         assert failed_event.source_agent == "test-agent-002"
-        assert failed_event.agent_name == "test-agent-002"
+        assert failed_event.agent_id == "test-agent-002"
         assert "Intentional test failure" in failed_event.error
 
     finally:
         # Stop event bus
         await event_bus.stop()
+
