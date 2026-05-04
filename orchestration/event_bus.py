@@ -7,9 +7,12 @@ Allows agents to publish and subscribe to events asynchronously.
 """
 
 import asyncio
+import logging
 import uuid
 from typing import Type, Callable, Dict, List, Optional
 from orchestration.events import BaseEvent
+
+logger = logging.getLogger(__name__)
 
 
 class EventBus:
@@ -21,6 +24,7 @@ class EventBus:
         self._event_queue: Optional[asyncio.Queue] = None
         self._running = False
         self._processor_task: Optional[asyncio.Task] = None
+        self._lock: Optional[asyncio.Lock] = None
 
     def subscribe(
         self, event_type: Type[BaseEvent], handler: Callable[[BaseEvent], None]
@@ -59,9 +63,13 @@ class EventBus:
 
         Args:
             event: The event to publish
+
+        Raises:
+            RuntimeError: If the EventBus has not been started
         """
-        if self._event_queue is not None:
-            await self._event_queue.put(event)
+        if self._event_queue is None:
+            raise RuntimeError("EventBus not started. Call start() before publishing events.")
+        await self._event_queue.put(event)
 
     async def _process_queue(self) -> None:
         """
@@ -90,32 +98,50 @@ class EventBus:
                             else:
                                 handler(event)
                         except Exception as e:
-                            print(f"Error in event handler: {e}")
+                            logger.error(f"Error in event handler for {event_type.__name__}: {e}", exc_info=True)
 
                 self._event_queue.task_done()
             except Exception as e:
-                print(f"Error processing event queue: {e}")
+                logger.error(f"Error processing event queue: {e}", exc_info=True)
 
     async def start(self) -> None:
         """Start the event bus processing loop"""
-        if self._running:
-            return
+        # Initialize lock on first start
+        if self._lock is None:
+            self._lock = asyncio.Lock()
 
-        self._running = True
-        self._event_queue = asyncio.Queue()
-        self._processor_task = asyncio.create_task(self._process_queue())
+        async with self._lock:
+            if self._running:
+                return
+
+            self._running = True
+            self._event_queue = asyncio.Queue()
+            self._processor_task = asyncio.create_task(self._process_queue())
 
     async def stop(self) -> None:
         """Stop the event bus processing loop"""
-        if not self._running:
-            return
+        # Initialize lock if needed
+        if self._lock is None:
+            self._lock = asyncio.Lock()
 
-        self._running = False
+        async with self._lock:
+            if not self._running:
+                return
 
-        # Send stop signal to queue
-        if self._event_queue is not None:
-            await self._event_queue.put(None)
+            self._running = False
 
-        # Wait for processor to finish
-        if self._processor_task is not None:
-            await self._processor_task
+            # Send stop signal to queue
+            if self._event_queue is not None:
+                await self._event_queue.put(None)
+
+            # Wait for processor to finish with timeout
+            if self._processor_task is not None:
+                try:
+                    await asyncio.wait_for(self._processor_task, timeout=5.0)
+                except asyncio.TimeoutError:
+                    logger.error("EventBus processor shutdown timeout - task did not complete in 5 seconds")
+                    self._processor_task.cancel()
+                    try:
+                        await self._processor_task
+                    except asyncio.CancelledError:
+                        pass
