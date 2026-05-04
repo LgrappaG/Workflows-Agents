@@ -11,6 +11,8 @@ from typing import List, Optional, Dict, Any
 from datetime import datetime
 from enum import Enum
 
+DEFAULT_SKILL_PRIORITY = 5  # Default priority for ready skills
+
 
 class EventType(str, Enum):
     """Enumeration of all event types in the system"""
@@ -49,7 +51,7 @@ class SkillReadyEvent(BaseEvent):
     event_type: EventType = EventType.SKILL_READY
     skill_id: str
     domain: str
-    priority: int = 5
+    priority: int = DEFAULT_SKILL_PRIORITY
 
 
 class GoalStartedEvent(BaseEvent):

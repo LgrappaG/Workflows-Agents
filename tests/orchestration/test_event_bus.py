@@ -8,7 +8,6 @@ Tests subscription, multiple subscribers, and unsubscription.
 
 import asyncio
 import pytest
-from datetime import datetime
 from orchestration.events import (
     BaseEvent,
     SkillValidatedEvent,
@@ -47,8 +46,7 @@ async def test_event_bus_subscribe_and_publish():
         )
         await event_bus.publish(event)
 
-        # Allow async processing
-        await asyncio.sleep(0.1)
+        await event_bus._queue.join()  # Wait for queue to be processed
 
         # Verify event was received
         assert len(received_events) == 1
@@ -89,8 +87,7 @@ async def test_event_bus_multiple_subscribers():
         )
         await event_bus.publish(event)
 
-        # Allow async processing
-        await asyncio.sleep(0.1)
+        await event_bus._queue.join()  # Wait for queue to be processed
 
         # Verify both handlers received the event
         assert len(received_events_1) == 1
@@ -126,7 +123,7 @@ async def test_event_bus_unsubscribe():
             status="passed",
         )
         await event_bus.publish(event1)
-        await asyncio.sleep(0.1)
+        await event_bus._queue.join()  # Wait for queue to be processed
 
         # Unsubscribe
         event_bus.unsubscribe(subscription)
@@ -139,7 +136,7 @@ async def test_event_bus_unsubscribe():
             status="passed",
         )
         await event_bus.publish(event2)
-        await asyncio.sleep(0.1)
+        await event_bus._queue.join()  # Wait for queue to be processed
 
         # Verify only first event was received
         assert len(received_events) == 1
@@ -147,3 +144,40 @@ async def test_event_bus_unsubscribe():
     finally:
         # Stop the event bus
         await event_bus.stop()
+
+
+@pytest.mark.asyncio
+async def test_sync_handlers():
+    """Test that sync handlers work correctly"""
+    bus = EventBus()
+    await bus.start()
+    received = []
+
+    def sync_handler(event: SkillValidatedEvent):  # Sync handler
+        received.append(event)
+
+    bus.subscribe(SkillValidatedEvent, sync_handler)
+
+    event = SkillValidatedEvent(skill_id="test", status="passed", gates=[1,2,3,4,5,6,7,8])
+    await bus.publish(event)
+
+    await bus._queue.join()  # Wait for queue to be processed
+    assert len(received) == 1
+
+
+@pytest.mark.asyncio
+async def test_handler_exception_handling():
+    """Test that handler exceptions are caught and logged"""
+    bus = EventBus()
+    await bus.start()
+
+    def bad_handler(event: SkillValidatedEvent):
+        raise ValueError("Test error in handler")
+
+    bus.subscribe(SkillValidatedEvent, bad_handler)
+
+    event = SkillValidatedEvent(skill_id="test", status="passed", gates=[1,2,3,4,5,6,7,8])
+    await bus.publish(event)
+
+    await bus._queue.join()  # Wait for queue to be processed
+    # Event was published successfully despite handler error
