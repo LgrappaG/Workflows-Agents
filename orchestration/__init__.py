@@ -17,9 +17,7 @@ Version: 1.1 (Phase 7A — Event-Driven Orchestration)
 Status: Development
 """
 
-from orchestration.engine.central_orchestrator import CentralOrchestrator
-from orchestration.engine.state_manager import StateManager
-from orchestration.engine.heartbeat_engine import HeartbeatEngine
+
 from orchestration.event_bus import EventBus, Subscription
 from orchestration.events import (
     BaseEvent,
@@ -44,10 +42,7 @@ from orchestration.graph.conflict_detector import detect_conflicts, detect_cycle
 
 __version__ = "1.1.0"
 __all__ = [
-    # Engine
-    "CentralOrchestrator",
-    "StateManager",
-    "HeartbeatEngine",
+
     # Event Bus
     "EventBus",
     "Subscription",
