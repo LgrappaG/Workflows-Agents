@@ -116,7 +116,7 @@ async def test_event_bus_unsubscribe():
 
     try:
         # Subscribe
-        subscription_id = event_bus.subscribe(SkillValidatedEvent, handler)
+        subscription = event_bus.subscribe(SkillValidatedEvent, handler)
 
         # Publish first event (should be received)
         event1 = SkillValidatedEvent(
@@ -129,7 +129,7 @@ async def test_event_bus_unsubscribe():
         await asyncio.sleep(0.1)
 
         # Unsubscribe
-        event_bus.unsubscribe(SkillValidatedEvent, subscription_id)
+        event_bus.unsubscribe(subscription)
 
         # Publish second event (should NOT be received)
         event2 = SkillValidatedEvent(

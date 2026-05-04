@@ -8,105 +8,29 @@ Allows agents to publish and subscribe to events asynchronously.
 
 import asyncio
 import logging
-import uuid
-from typing import Type, Callable, Dict, List, Optional
+from typing import Callable, Dict, List, Type, Optional
+from uuid import uuid4
 from orchestration.events import BaseEvent
 
 logger = logging.getLogger(__name__)
 
 
-class EventBus:
-    """Async event bus with pub/sub pattern"""
+class Subscription:
+    def __init__(self, event_type: Type[BaseEvent], handler: Callable, subscription_id: str):
+        self.event_type = event_type
+        self.handler = handler
+        self.subscription_id = subscription_id
 
+
+class EventBus:
     def __init__(self):
-        """Initialize the event bus with empty subscriber registry"""
-        self._subscribers: Dict[Type[BaseEvent], Dict[str, Callable]] = {}
-        self._event_queue: Optional[asyncio.Queue] = None
-        self._running = False
+        self._subscriptions: Dict[Type[BaseEvent], List[Subscription]] = {}
+        self._queue: Optional[asyncio.Queue] = None
         self._processor_task: Optional[asyncio.Task] = None
         self._lock: Optional[asyncio.Lock] = None
+        self._running = False
 
-    def subscribe(
-        self, event_type: Type[BaseEvent], handler: Callable[[BaseEvent], None]
-    ) -> str:
-        """
-        Subscribe a handler to an event type.
-
-        Args:
-            event_type: The event type to subscribe to
-            handler: Async function to call when event is published
-
-        Returns:
-            subscription_id: Unique ID for this subscription (for unsubscribing)
-        """
-        if event_type not in self._subscribers:
-            self._subscribers[event_type] = {}
-
-        subscription_id = str(uuid.uuid4())
-        self._subscribers[event_type][subscription_id] = handler
-        return subscription_id
-
-    def unsubscribe(self, event_type: Type[BaseEvent], subscription_id: str) -> None:
-        """
-        Unsubscribe a handler from an event type.
-
-        Args:
-            event_type: The event type to unsubscribe from
-            subscription_id: The subscription ID returned from subscribe()
-        """
-        if event_type in self._subscribers:
-            self._subscribers[event_type].pop(subscription_id, None)
-
-    async def publish(self, event: BaseEvent) -> None:
-        """
-        Publish an event to the queue for processing.
-
-        Args:
-            event: The event to publish
-
-        Raises:
-            RuntimeError: If the EventBus has not been started
-        """
-        if self._event_queue is None:
-            raise RuntimeError("EventBus not started. Call start() before publishing events.")
-        await self._event_queue.put(event)
-
-    async def _process_queue(self) -> None:
-        """
-        Process events from queue continuously.
-
-        Pulls events from the queue and dispatches them to all subscribed handlers.
-        Runs until a None sentinel value is received.
-        """
-        while True:
-            try:
-                event = await self._event_queue.get()
-
-                # None is stop signal
-                if event is None:
-                    break
-
-                # Dispatch event to all subscribers
-                event_type = type(event)
-                if event_type in self._subscribers:
-                    handlers = list(self._subscribers[event_type].values())
-                    for handler in handlers:
-                        try:
-                            # Handle both sync and async handlers
-                            if asyncio.iscoroutinefunction(handler):
-                                await handler(event)
-                            else:
-                                handler(event)
-                        except Exception as e:
-                            logger.error(f"Error in event handler for {event_type.__name__}: {e}", exc_info=True)
-
-                self._event_queue.task_done()
-            except Exception as e:
-                logger.error(f"Error processing event queue: {e}", exc_info=True)
-
-    async def start(self) -> None:
-        """Start the event bus processing loop"""
-        # Initialize lock on first start
+    async def start(self):
         if self._lock is None:
             self._lock = asyncio.Lock()
 
@@ -114,13 +38,12 @@ class EventBus:
             if self._running:
                 return
 
-            self._running = True
-            self._event_queue = asyncio.Queue()
+            self._queue = asyncio.Queue()
             self._processor_task = asyncio.create_task(self._process_queue())
+            self._running = True
+            logger.debug("EventBus started")
 
-    async def stop(self) -> None:
-        """Stop the event bus processing loop"""
-        # Initialize lock if needed
+    async def stop(self):
         if self._lock is None:
             self._lock = asyncio.Lock()
 
@@ -129,19 +52,59 @@ class EventBus:
                 return
 
             self._running = False
+            await self._queue.put(None)  # Stop signal
 
-            # Send stop signal to queue
-            if self._event_queue is not None:
-                await self._event_queue.put(None)
+            try:
+                await asyncio.wait_for(self._processor_task, timeout=5.0)
+            except asyncio.TimeoutError:
+                logger.error("EventBus processor shutdown timeout, cancelling task")
+                self._processor_task.cancel()
+            except Exception as e:
+                logger.error(f"Error stopping EventBus: {e}")
 
-            # Wait for processor to finish with timeout
-            if self._processor_task is not None:
-                try:
-                    await asyncio.wait_for(self._processor_task, timeout=5.0)
-                except asyncio.TimeoutError:
-                    logger.error("EventBus processor shutdown timeout - task did not complete in 5 seconds")
-                    self._processor_task.cancel()
-                    try:
-                        await self._processor_task
-                    except asyncio.CancelledError:
-                        pass
+            logger.debug("EventBus stopped")
+
+    def subscribe(self, event_type: Type[BaseEvent], handler: Callable) -> Subscription:
+        if event_type not in self._subscriptions:
+            self._subscriptions[event_type] = []
+
+        subscription = Subscription(event_type, handler, str(uuid4()))
+        self._subscriptions[event_type].append(subscription)
+        logger.debug(f"Subscription added for {event_type.__name__}")
+        return subscription
+
+    def unsubscribe(self, subscription: Subscription) -> None:
+        if subscription.event_type in self._subscriptions:
+            self._subscriptions[subscription.event_type] = [
+                s for s in self._subscriptions[subscription.event_type]
+                if s.subscription_id != subscription.subscription_id
+            ]
+            logger.debug(f"Subscription removed for {subscription.event_type.__name__}")
+
+    async def publish(self, event: BaseEvent) -> None:
+        if self._queue is None:
+            raise RuntimeError("EventBus not started. Call start() before publishing events.")
+
+        await self._queue.put(event)
+        logger.debug(f"Event published: {type(event).__name__}")
+
+    async def _process_queue(self) -> None:
+        while True:
+            event = await self._queue.get()
+            if event is None:
+                self._queue.task_done()
+                break
+
+            try:
+                event_type = type(event)
+                if event_type in self._subscriptions:
+                    for subscription in self._subscriptions[event_type]:
+                        try:
+                            if asyncio.iscoroutinefunction(subscription.handler):
+                                await subscription.handler(event)
+                            else:
+                                subscription.handler(event)
+                        except Exception as e:
+                            logger.error(f"Error in handler for {event_type.__name__}: {e}", exc_info=True)
+            finally:
+                self._queue.task_done()
