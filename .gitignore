@@ -1,2 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Worktrees
+.worktrees/
+
+# Reports
 .agents/reports/analytics/
-.agents/orchestration/metrics/.worktrees/
+.agents/orchestration/metrics/
