@@ -2,19 +2,26 @@
 Base Agent
 ==========
 
-Abstract base class defining the agent interface contract.
+Abstract base class defining the agent interface and lifecycle with event emission.
 
 All agents must:
 1. Implement execute() method
-2. Define supported goals
-3. Handle errors with self-correction
-4. Track metrics
+2. Have a run() method that emits lifecycle events
+3. Handle errors gracefully
 """
 
+import asyncio
+import time
 from abc import ABC, abstractmethod
-from typing import Dict, List, Any, Optional
-from datetime import datetime
+from typing import Any, Optional
+from uuid import uuid4
 from enum import Enum
+from orchestration.event_bus import EventBus
+from orchestration.events import (
+    AgentStartedEvent,
+    AgentCompletedEvent,
+    AgentFailedEvent,
+)
 
 
 class AgentStatus(Enum):
@@ -30,126 +37,101 @@ class BaseAgent(ABC):
     """
     Abstract base class for all orchestration agents.
 
-    Defines the contract that all agents must implement:
-    - Goal execution
-    - Error handling
-    - Metrics tracking
-    - State management
+    Defines the lifecycle contract that all agents must follow:
+    - Initialize with agent_id, event_bus, and agent_type
+    - Implement execute() method
+    - run() method handles event emission and error handling
     """
 
-    def __init__(self, name: str, specialization: str):
+    def __init__(self, agent_id: str, event_bus: EventBus, agent_type: str):
         """
         Initialize agent.
 
         Args:
-            name: Agent name (deploy, sync, validation, knowledge)
-            specialization: Agent specialization (Build, Version Control, QA, Learning)
+            agent_id: Unique identifier for this agent
+            event_bus: EventBus instance for publishing events
+            agent_type: Type/classification of agent (e.g., "ValidationAgent")
         """
-        self.name = name
-        self.specialization = specialization
-        self.status = AgentStatus.IDLE
-        self.supported_goals = self._define_supported_goals()
-        self.execution_history = []
-        self.error_log = []
+        self.agent_id = agent_id
+        self.event_bus = event_bus
+        self.agent_type = agent_type
+        self.correlation_id = str(uuid4())
 
     @abstractmethod
-    def _define_supported_goals(self) -> List[str]:
+    async def execute(self) -> Any:
         """
-        Define which goals this agent can handle.
+        Execute the agent's task.
+
+        Subclasses must implement this method to define agent-specific behavior.
 
         Returns:
-            List of supported goal names
+            Result data from task execution
+
+        Raises:
+            Any exception should be caught by run() method
         """
         pass
 
-    @abstractmethod
-    def execute(self, goal: str, context: Dict[str, Any], **kwargs) -> Dict[str, Any]:
+    async def run(self) -> None:
         """
-        Execute a goal.
+        Run the agent with full lifecycle event emission.
 
-        Args:
-            goal: Goal name to execute
-            context: Execution context
-            **kwargs: Additional parameters
+        Lifecycle:
+        1. Emit AgentStartedEvent
+        2. Call execute()
+        3. On success: emit AgentCompletedEvent with result and execution_time_ms
+        4. On error: emit AgentFailedEvent with error message
 
-        Returns:
-            Execution result with status, metrics, errors
+        This method handles timing, error catching, and all event emissions.
+        """
+        # Emit start event
+        start_event = AgentStartedEvent(
+            source_agent=self.agent_id,
+            correlation_id=self.correlation_id,
+            agent_name=self.agent_id,
+            task_id=self.correlation_id,
+        )
+        await self.event_bus.publish(start_event)
 
-        Example:
-            result = agent.execute(
-                goal="validate-all-skills",
-                context={"phase": "phase_5_enrichment"},
-                skills_path="path/to/skills"
+        # Measure execution time
+        start_time = time.time()
+
+        try:
+            # Execute the agent's task
+            result = await self.execute()
+
+            # Calculate execution time in milliseconds
+            execution_time_ms = (time.time() - start_time) * 1000
+
+            # Emit completion event with result and timing
+            completion_event = AgentCompletedEvent(
+                source_agent=self.agent_id,
+                correlation_id=self.correlation_id,
+                agent_name=self.agent_id,
+                task_id=self.correlation_id,
+                result={
+                    "status": "success",
+                    "data": result,
+                    "execution_time_ms": execution_time_ms,
+                },
             )
-        """
-        pass
+            await self.event_bus.publish(completion_event)
 
-    @abstractmethod
-    def handle_error(self, error: Dict[str, Any], context: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Handle error with intelligent recovery.
+        except Exception as e:
+            # Calculate execution time even on failure
+            execution_time_ms = (time.time() - start_time) * 1000
 
-        Args:
-            error: Error details
-            context: Execution context
-
-        Returns:
-            Recovery strategy and result
-        """
-        pass
-
-    def can_handle_goal(self, goal: str) -> bool:
-        """Check if agent can handle this goal"""
-        return goal in self.supported_goals
-
-    def get_status(self) -> Dict[str, Any]:
-        """Get agent status"""
-        return {
-            "name": self.name,
-            "specialization": self.specialization,
-            "status": self.status.value,
-            "total_executions": len(self.execution_history),
-            "total_errors": len(self.error_log)
-        }
-
-    def log_execution(self, result: Dict[str, Any]):
-        """Log execution result"""
-        self.execution_history.append({
-            "timestamp": datetime.now().isoformat(),
-            "status": result.get("status"),
-            "duration_ms": result.get("duration_ms"),
-            "goal": result.get("goal"),
-            "errors": len(result.get("errors", []))
-        })
-
-    def log_error(self, error: Dict[str, Any]):
-        """Log error for analysis"""
-        self.error_log.append({
-            "timestamp": datetime.now().isoformat(),
-            "type": error.get("type"),
-            "message": error.get("message"),
-            "context": error.get("context")
-        })
-
-    def get_metrics(self) -> Dict[str, Any]:
-        """Get agent metrics for learning"""
-        if not self.execution_history:
-            return {
-                "agent": self.name,
-                "total_executions": 0,
-                "success_rate": 0,
-                "avg_duration_ms": 0
-            }
-
-        successes = sum(1 for e in self.execution_history if e["status"] == "completed")
-        avg_duration = sum(e["duration_ms"] for e in self.execution_history if e["duration_ms"]) / len(self.execution_history)
-
-        return {
-            "agent": self.name,
-            "total_executions": len(self.execution_history),
-            "successes": successes,
-            "failures": len(self.error_log),
-            "success_rate": successes / len(self.execution_history),
-            "avg_duration_ms": avg_duration,
-            "total_errors": len(self.error_log)
-        }
+            # Emit failure event with error details
+            failure_event = AgentFailedEvent(
+                source_agent=self.agent_id,
+                correlation_id=self.correlation_id,
+                agent_name=self.agent_id,
+                task_id=self.correlation_id,
+                error=str(e),
+                error_details={
+                    "type": type(e).__name__,
+                    "message": str(e),
+                    "execution_time_ms": execution_time_ms,
+                },
+            )
+            await self.event_bus.publish(failure_event)
