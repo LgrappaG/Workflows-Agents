@@ -8,4 +8,4 @@ __pycache__/
 
 # Reports
 .agents/reports/analytics/
-.agents/orchestration/metrics/
+.agents/orchestration/metrics/.worktrees/

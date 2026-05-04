@@ -88,8 +88,8 @@ class BaseAgent(ABC):
         start_event = AgentStartedEvent(
             source_agent=self.agent_id,
             correlation_id=self.correlation_id,
-            agent_name=self.agent_id,
-            task_id=self.correlation_id,
+            agent_id=self.agent_id,
+            agent_type=self.agent_type,
         )
         await self.event_bus.publish(start_event)
 
@@ -107,13 +107,13 @@ class BaseAgent(ABC):
             completion_event = AgentCompletedEvent(
                 source_agent=self.agent_id,
                 correlation_id=self.correlation_id,
-                agent_name=self.agent_id,
-                task_id=self.correlation_id,
+                agent_id=self.agent_id,
                 result={
                     "status": "success",
                     "data": result,
                     "execution_time_ms": execution_time_ms,
                 },
+                execution_time_ms=execution_time_ms,
             )
             await self.event_bus.publish(completion_event)
 
@@ -125,13 +125,8 @@ class BaseAgent(ABC):
             failure_event = AgentFailedEvent(
                 source_agent=self.agent_id,
                 correlation_id=self.correlation_id,
-                agent_name=self.agent_id,
-                task_id=self.correlation_id,
+                agent_id=self.agent_id,
                 error=str(e),
-                error_details={
-                    "type": type(e).__name__,
-                    "message": str(e),
-                    "execution_time_ms": execution_time_ms,
-                },
+                error_code=None,
             )
             await self.event_bus.publish(failure_event)

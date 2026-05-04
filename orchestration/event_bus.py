@@ -8,15 +8,22 @@ Allows agents to publish and subscribe to events asynchronously.
 
 import asyncio
 import logging
-from typing import Callable, Dict, List, Type, Optional
+from typing import Callable, Dict, List, Type, Optional, Union, Any, Coroutine
 from uuid import uuid4
 from orchestration.events import BaseEvent
 
 logger = logging.getLogger(__name__)
 
+PROCESSOR_SHUTDOWN_TIMEOUT = 5.0  # Graceful shutdown timeout in seconds
+
 
 class Subscription:
-    def __init__(self, event_type: Type[BaseEvent], handler: Callable, subscription_id: str):
+    def __init__(
+        self,
+        event_type: Type[BaseEvent],
+        handler: Union[Callable[[BaseEvent], Any], Callable[[BaseEvent], Coroutine[Any, Any, Any]]],
+        subscription_id: str
+    ):
         self.event_type = event_type
         self.handler = handler
         self.subscription_id = subscription_id
@@ -31,14 +38,14 @@ class EventBus:
         self._running = False
 
     async def start(self):
-        if self._lock is None:
-            self._lock = asyncio.Lock()
-
-        async with self._lock:
+        async with self._lock if self._lock else asyncio.Lock():
             if self._running:
                 return
 
+            self._loop = asyncio.get_event_loop()
             self._queue = asyncio.Queue()
+            if self._lock is None:
+                self._lock = asyncio.Lock()
             self._processor_task = asyncio.create_task(self._process_queue())
             self._running = True
             logger.debug("EventBus started")
@@ -55,7 +62,7 @@ class EventBus:
             await self._queue.put(None)  # Stop signal
 
             try:
-                await asyncio.wait_for(self._processor_task, timeout=5.0)
+                await asyncio.wait_for(self._processor_task, timeout=PROCESSOR_SHUTDOWN_TIMEOUT)
             except asyncio.TimeoutError:
                 logger.error("EventBus processor shutdown timeout, cancelling task")
                 self._processor_task.cancel()
